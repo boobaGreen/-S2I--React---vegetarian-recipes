@@ -1,0 +1,394 @@
+{
+  "vegetarian": false,
+  "vegan": false,
+  "glutenFree": false,
+  "dairyFree": false,
+  "veryHealthy": false,
+  "cheap": false,
+  "veryPopular": false,
+  "sustainable": false,
+  "lowFodmap": false,
+  "weightWatcherSmartPoints": 55,
+  "gaps": "no",
+  "preparationMinutes": -1,
+  "cookingMinutes": -1,
+  "aggregateLikes": 25,
+  "healthScore": 31,
+  "creditsText": "If You Can Make That You Can Make This",
+  "sourceName": "If You Can Make That You Can Make This",
+  "pricePerServing": 401.27,
+  "extendedIngredients": [
+    {
+      "id": 10123,
+      "aisle": "Meat",
+      "image": "raw-bacon.png",
+      "consistency": "SOLID",
+      "name": "bacon",
+      "nameClean": "applewood smoked bacon",
+      "original": "4 strips of bacon",
+      "originalName": "bacon",
+      "amount": 4.0,
+      "unit": "strips",
+      "meta": [],
+      "measures": {
+        "us": {
+          "amount": 4.0,
+          "unitShort": "strips",
+          "unitLong": "strips"
+        },
+        "metric": {
+          "amount": 4.0,
+          "unitShort": "strips",
+          "unitLong": "strips"
+        }
+      }
+    },
+    {
+      "id": 1001,
+      "aisle": "Milk, Eggs, Other Dairy",
+      "image": "butter-sliced.jpg",
+      "consistency": "SOLID",
+      "name": "butter",
+      "nameClean": "butter",
+      "original": "4 tbsp butter",
+      "originalName": "butter",
+      "amount": 4.0,
+      "unit": "tbsp",
+      "meta": [],
+      "measures": {
+        "us": {
+          "amount": 4.0,
+          "unitShort": "Tbsps",
+          "unitLong": "Tbsps"
+        },
+        "metric": {
+          "amount": 4.0,
+          "unitShort": "Tbsps",
+          "unitLong": "Tbsps"
+        }
+      }
+    },
+    {
+      "id": 11124,
+      "aisle": "Produce",
+      "image": "sliced-carrot.png",
+      "consistency": "SOLID",
+      "name": "carrots",
+      "nameClean": "carrot",
+      "original": "2 carrots",
+      "originalName": "carrots",
+      "amount": 2.0,
+      "unit": "",
+      "meta": [],
+      "measures": {
+        "us": {
+          "amount": 2.0,
+          "unitShort": "",
+          "unitLong": ""
+        },
+        "metric": {
+          "amount": 2.0,
+          "unitShort": "",
+          "unitLong": ""
+        }
+      }
+    },
+    {
+      "id": 11143,
+      "aisle": "Produce",
+      "image": "celery.jpg",
+      "consistency": "SOLID",
+      "name": "celery",
+      "nameClean": "celery",
+      "original": "1 stick of celery",
+      "originalName": "celery",
+      "amount": 1.0,
+      "unit": "stick",
+      "meta": [],
+      "measures": {
+        "us": {
+          "amount": 1.0,
+          "unitShort": "stick",
+          "unitLong": "stick"
+        },
+        "metric": {
+          "amount": 1.0,
+          "unitShort": "stick",
+          "unitLong": "stick"
+        }
+      }
+    },
+    {
+      "id": 6172,
+      "aisle": "Canned and Jarred",
+      "image": "chicken-broth.png",
+      "consistency": "LIQUID",
+      "name": "chicken stock",
+      "nameClean": "chicken stock",
+      "original": "2 cups chicken stock",
+      "originalName": "chicken stock",
+      "amount": 2.0,
+      "unit": "cups",
+      "meta": [],
+      "measures": {
+        "us": {
+          "amount": 2.0,
+          "unitShort": "cups",
+          "unitLong": "cups"
+        },
+        "metric": {
+          "amount": 480.0,
+          "unitShort": "ml",
+          "unitLong": "milliliters"
+        }
+      }
+    },
+    {
+      "id": 5091,
+      "aisle": "Meat",
+      "image": "chicken-thighs.png",
+      "consistency": "SOLID",
+      "name": "chicken thigh pieces",
+      "nameClean": "boneless skin on chicken thighs",
+      "original": "8 – 10 chicken thigh pieces (skinned and boned)",
+      "originalName": "– 10 chicken thigh pieces (skinned and boned)",
+      "amount": 8.0,
+      "unit": "",
+      "meta": ["(skinned and boned)"],
+      "measures": {
+        "us": {
+          "amount": 8.0,
+          "unitShort": "",
+          "unitLong": ""
+        },
+        "metric": {
+          "amount": 8.0,
+          "unitShort": "",
+          "unitLong": ""
+        }
+      }
+    },
+    {
+      "id": 1053,
+      "aisle": "Milk, Eggs, Other Dairy",
+      "image": "fluid-cream.jpg",
+      "consistency": "LIQUID",
+      "name": "cream",
+      "nameClean": "cream",
+      "original": "½ cup cream",
+      "originalName": "cream",
+      "amount": 0.5,
+      "unit": "cup",
+      "meta": [],
+      "measures": {
+        "us": {
+          "amount": 0.5,
+          "unitShort": "cups",
+          "unitLong": "cups"
+        },
+        "metric": {
+          "amount": 119.0,
+          "unitShort": "ml",
+          "unitLong": "milliliters"
+        }
+      }
+    },
+    {
+      "id": 20081,
+      "aisle": "Baking",
+      "image": "flour.png",
+      "consistency": "SOLID",
+      "name": "flour",
+      "nameClean": "wheat flour",
+      "original": "½ cup flour",
+      "originalName": "flour",
+      "amount": 0.5,
+      "unit": "cup",
+      "meta": [],
+      "measures": {
+        "us": {
+          "amount": 0.5,
+          "unitShort": "cups",
+          "unitLong": "cups"
+        },
+        "metric": {
+          "amount": 62.5,
+          "unitShort": "g",
+          "unitLong": "grams"
+        }
+      }
+    },
+    {
+      "id": 2041,
+      "aisle": "Produce;Spices and Seasonings",
+      "image": "tarragon.jpg",
+      "consistency": "SOLID",
+      "name": "tarragon",
+      "nameClean": "tarragon",
+      "original": "1 tbsp chopped fresh tarragon",
+      "originalName": "chopped fresh tarragon",
+      "amount": 1.0,
+      "unit": "tbsp",
+      "meta": ["fresh", "chopped"],
+      "measures": {
+        "us": {
+          "amount": 1.0,
+          "unitShort": "Tbsp",
+          "unitLong": "Tbsp"
+        },
+        "metric": {
+          "amount": 1.0,
+          "unitShort": "Tbsp",
+          "unitLong": "Tbsp"
+        }
+      }
+    },
+    {
+      "id": 11215,
+      "aisle": "Produce",
+      "image": "garlic.png",
+      "consistency": "SOLID",
+      "name": "garlic",
+      "nameClean": "garlic",
+      "original": "1 clove of garlic",
+      "originalName": "garlic",
+      "amount": 1.0,
+      "unit": "clove",
+      "meta": [],
+      "measures": {
+        "us": {
+          "amount": 1.0,
+          "unitShort": "clove",
+          "unitLong": "clove"
+        },
+        "metric": {
+          "amount": 1.0,
+          "unitShort": "clove",
+          "unitLong": "clove"
+        }
+      }
+    },
+    {
+      "id": 11282,
+      "aisle": "Produce",
+      "image": "brown-onion.png",
+      "consistency": "SOLID",
+      "name": "onions",
+      "nameClean": "onion",
+      "original": "2 onions",
+      "originalName": "onions",
+      "amount": 2.0,
+      "unit": "",
+      "meta": [],
+      "measures": {
+        "us": {
+          "amount": 2.0,
+          "unitShort": "",
+          "unitLong": ""
+        },
+        "metric": {
+          "amount": 2.0,
+          "unitShort": "",
+          "unitLong": ""
+        }
+      }
+    },
+    {
+      "id": 18337,
+      "aisle": "Refrigerated;Frozen",
+      "image": "puff-pastry.png",
+      "consistency": "SOLID",
+      "name": "puff pastry - enough",
+      "nameClean": "puff pastry dough",
+      "original": "2 sheets of puff pastry – enough to cover 4 pie dishes – if your dishes are shallow and flat you may need more",
+      "originalName": "puff pastry – enough to cover 4 pie dishes – if your dishes are shallow and flat you may need more",
+      "amount": 2.0,
+      "unit": "sheets",
+      "meta": [
+        "to cover 4 pie dishes - if your dishes are shallow and flat you may need more"
+      ],
+      "measures": {
+        "us": {
+          "amount": 2.0,
+          "unitShort": "sheets",
+          "unitLong": "sheets"
+        },
+        "metric": {
+          "amount": 2.0,
+          "unitShort": "sheets",
+          "unitLong": "sheets"
+        }
+      }
+    },
+    {
+      "id": 1102047,
+      "aisle": "Spices and Seasonings",
+      "image": "salt-and-pepper.jpg",
+      "consistency": "SOLID",
+      "name": "salt and pepper",
+      "nameClean": "salt and pepper",
+      "original": "Salt and pepper",
+      "originalName": "Salt and pepper",
+      "amount": 4.0,
+      "unit": "servings",
+      "meta": [],
+      "measures": {
+        "us": {
+          "amount": 4.0,
+          "unitShort": "servings",
+          "unitLong": "servings"
+        },
+        "metric": {
+          "amount": 4.0,
+          "unitShort": "servings",
+          "unitLong": "servings"
+        }
+      }
+    },
+    {
+      "id": 14106,
+      "aisle": "Alcoholic Beverages",
+      "image": "white-wine.jpg",
+      "consistency": "LIQUID",
+      "name": "white wine",
+      "nameClean": "dry white wine",
+      "original": "½ cup of white wine",
+      "originalName": "white wine",
+      "amount": 0.5,
+      "unit": "cup",
+      "meta": [],
+      "measures": {
+        "us": {
+          "amount": 0.5,
+          "unitShort": "cups",
+          "unitLong": "cups"
+        },
+        "metric": {
+          "amount": 120.0,
+          "unitShort": "ml",
+          "unitLong": "milliliters"
+        }
+      }
+    }
+  ],
+  "id": 71429,
+  "title": "Chicken Pot Pie",
+  "readyInMinutes": 21,
+  "servings": 4,
+  "sourceUrl": "http://www.ifyoucanmakethatyoucanmakethis.com/archives/687",
+  "image": "https://spoonacular.com/recipeImages/71429-556x370.jpg",
+  "imageType": "jpg",
+  "summary": "The recipe Chicken Pot Pie can be made <b>in about 21 minutes</b>. One serving contains <b>1628 calories</b>, <b>55g of protein</b>, and <b>117g of fat</b>. For <b>$4.01 per serving</b>, this recipe <b>covers 40%</b> of your daily requirements of vitamins and minerals. This recipe serves 4. If you have bacon, butter, puff pastry - enough, and a few other ingredients on hand, you can make it. A couple people really liked this main course. 25 people were impressed by this recipe. It is brought to you by If You Can Make That You Can Make This. All things considered, we decided this recipe <b>deserves a spoonacular score of 87%</b>. This score is outstanding. If you like this recipe, you might also like recipes such as <a href=\"https://spoonacular.com/recipes/healthy-chicken-pot-pie-soup-in-the-crock-pot-whole-30-dairy-free-1750627\">Healthy Chicken Pot Pie Soup in the crock pot (whole 30, dairy free)</a>, <a href=\"https://spoonacular.com/recipes/creamy-chicken-and-mushroom-one-pot-with-pot-pie-toppers-348071\">Creamy Chicken and Mushroom One-Pot with Pot Pie Toppers</a>, and <a href=\"https://spoonacular.com/recipes/dill-chicken-pot-pie-galette-a-pie-for-fall-589648\">Dill Chicken Pot Pie Galette: a Pie for Fall</a>.",
+  "cuisines": [],
+  "dishTypes": ["lunch", "main course", "main dish", "dinner"],
+  "diets": [],
+  "occasions": [],
+  "winePairing": {
+    "pairedWines": [],
+    "pairingText": "",
+    "productMatches": []
+  },
+  "instructions": null,
+  "analyzedInstructions": [],
+  "originalId": null
+}
