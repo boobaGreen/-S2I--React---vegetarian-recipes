@@ -1,9 +1,8 @@
 import { styled } from "styled-components";
 import { useQueryCust } from "../contexts/QueryContext";
 import { useRecipes } from "../feautures/recipes/UseRecipes";
-import Error from "../pages/Error";
+
 import Row from "../ui/Row";
-import Spinner from "../ui/Spinner";
 
 const ButtonStyled = styled.button`
   border-radius: 100px;
@@ -16,7 +15,7 @@ const ButtonStyled = styled.button`
 `;
 
 function Stats() {
-  const { dispatch, search, diet, intolerances, type, number, offset, viewed } =
+  const { dispatch, search, diet, intolerances, type, number, offset } =
     useQueryCust();
 
   const {
@@ -24,18 +23,23 @@ function Stats() {
     recipes: data,
     error,
   } = useRecipes(search, diet, intolerances, type, number, offset);
-  if (isLoading) return <Spinner />;
-  if (error) return <Error />;
+  if (isLoading) return null;
+  if (error) return null;
   const totResultsLast = data.totalResults;
 
-  let page = Math.trunc(offset / number);
+  let page = Math.trunc(offset / number) + 1;
   let nextPageExist = false;
   let prevPageExist = false;
 
-  if (offset + number < totResultsLast) {
+  if (offset + number + 1 < totResultsLast) {
     nextPageExist = true;
+    console.log("offset :", offset);
+    console.log("number :", number);
+    console.log("page :", page);
+    console.log("next :", nextPageExist);
+    console.log("prev :", prevPageExist);
   }
-  if (number - offset < 0) {
+  if (number - offset <= 0) {
     prevPageExist = true;
   }
   function onNextPage() {

@@ -14,9 +14,13 @@ export async function getRecipes(
   offset
 ) {
   const numberString = number?.toString();
+
   const { data, error } = await apiClient.get(
-    `https://api.spoonacular.com/recipes/complexSearch/?apiKey=${KEY}&query=${search}&diet=${diet}&intolerances=${intolerances}&type=${type}&sort=${sort}&sortDirection=${direction}&addRecipeNutrition=true&instructionsRequired=true&number=${numberString}&offset=${offset}`
+    `https://api.spoonacular.com/recipes/complexSearch/?apiKey=${KEY}&query=${search}&diet=${diet}&intolerances=${intolerances}&type=${type}&sustainable=true&sort=${sort}&sortDirection=${direction}&addRecipeNutrition=true&instructionsRequired=true&number=${numberString}&offset=${offset}`
   );
+  // const { data, error } = await apiClient.get(
+  //   `https://api.spoonacular.com/recipes/complexSearch/?apiKey=${KEY}&sustainable=true&addRecipeNutrition=true`
+  // );
 
   if (error) {
     console.error(error);

@@ -17,9 +17,9 @@ function App() {
     defaultOptions: {
       queries: {
         // staleTime: 5*60 * 1000, 5 min
-        // staleTime: 1 * 60 * 1000,
-        staleTime: Infinity,
-        cacheTime: Infinity,
+        // staleTime: 1 * 60 * 1000 1 min,
+        // staleTime: Infinity,
+        // cacheTime: Infinity,
         refetchOnMount: false,
         refetchOnReconnect: false,
         refetchOnWindowFocus: false,

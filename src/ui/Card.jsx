@@ -99,10 +99,10 @@ function Card({
   }
   function clickHandle() {
     if (!alreadyIncludes()) {
-      handleAddRecipe(recipe);
+      handleAddRecipe(recipe.id);
     }
     if (alreadyIncludes()) {
-      handleDeleteRecipe(recipe);
+      handleDeleteRecipe(recipe.id);
     }
   }
 

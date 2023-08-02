@@ -43,7 +43,6 @@ function Recipes() {
   if (isLoading) return <Spinner />;
   if (error) return <Error />;
 
-  // const recipes = data.results;
   const recipes = data.results;
 
   return (

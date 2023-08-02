@@ -1,12 +1,16 @@
 `https://api.spoonacular.com/recipes/complexSearch/?apiKey=${KEY}&query=${query}&diet=${diet}&addRecipeNutrition=true`
 
-far si che quando metto fav da lista principale registri la ricetta specifica e non generale
 
-spostare gli state dei filtri su react router su lista principale
 
-fare carta singola
+far si che quando metto fav da lista principale registri la ricetta specifica dettagliata e non generale
 
-mettere a posta carta generale
+fare carta singola ( forse anche grafico dettagliato nutrienti a barre.... e grammi per proteine ecc)
+
+mettere a posta carta nella lista generale
 
 sezione joke / curiosita
+
+su ingredienti mettere la possibilita' di cambiare per quante persone
+
+ricette simili 
 

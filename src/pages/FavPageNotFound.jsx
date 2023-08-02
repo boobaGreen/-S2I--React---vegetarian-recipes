@@ -4,11 +4,10 @@ import { useMoveBack } from "../hooks/useMoveBack";
 import Heading from "../ui/Heading";
 import Button from "../ui/Button";
 
-const StyledPageNotFound = styled.main`
-  height: 100vh;
+const FavPageNotFound = styled.main`
   background-color: var(--color-grey-50);
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
 `;
 
@@ -28,21 +27,20 @@ const Box = styled.div`
   }
 `;
 
-function PageNotFound() {
+function FavNotFound() {
   const moveBack = useMoveBack();
 
   return (
-    <StyledPageNotFound>
+    <FavPageNotFound>
       <Box>
-        <Heading as="h1">
-          The page you are looking for could not be found 😢
-        </Heading>
-        <Button onClick={moveBack} size="large">
-          &larr; Go back
+        <Heading as="h2">Your favorites list is empty...</Heading>
+        <Heading as="h2">❤️ to add!</Heading>
+        <Button onClick={moveBack} size="medium" style={{ marginTop: "3rem" }}>
+          &larr; Start !
         </Button>
       </Box>
-    </StyledPageNotFound>
+    </FavPageNotFound>
   );
 }
 
-export default PageNotFound;
+export default FavNotFound;

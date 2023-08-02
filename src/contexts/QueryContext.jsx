@@ -2,15 +2,16 @@ import { createContext, useContext, useReducer } from "react";
 
 const QueryContext = createContext();
 
+const offsetStartup = 0;
+const number = 10;
 const initialState = {
   recipesList: [],
   search: "",
-  diet: "vegan",
-  intolerances: "gluten",
-  type: "soup",
-  number: 10,
-  offset: 10,
-  viewed: 0,
+  diet: "",
+  intolerances: "",
+  type: "",
+  number: number,
+  offset: offsetStartup,
 };
 
 function reducer(state, action) {
@@ -19,7 +20,9 @@ function reducer(state, action) {
       return {
         ...state,
         search: action.payload,
+        offset: offsetStartup,
       };
+
     case "page/next":
       return {
         ...state,
@@ -35,24 +38,6 @@ function reducer(state, action) {
         ...state,
         number: action.payload,
       };
-
-    // case "start":
-    //   return {
-    //     ...state,
-    //     status: "active",
-    //     secondsRemaining: state.questions.length * SECS_PER_QUESTION,
-    //   };
-    // case "newAnswer":
-    //   const question = state.questions.at(state.index);
-
-    //   return {
-    //     ...state,
-    //     answer: action.payload,
-    //     points:
-    //       action.payload === question.correctOption
-    //         ? state.points + question.points
-    //         : state.points,
-    //   };
 
     default:
       throw new Error("Action unkonwn");

@@ -1,6 +1,7 @@
 import Card from "../ui/Card";
 import { styled } from "styled-components";
 import { useLocalStorageState } from "../hooks/useLocalStorageState";
+import FavPageNotFound from "./FavPageNotFound";
 
 const StyledRecipeList = styled.ul`
   display: flex;
@@ -16,6 +17,7 @@ function SearchList() {
     [],
     "favouriteList"
   );
+
   function handleAddRecipe(recipe) {
     setFavouriteList((favouriteList) => [...favouriteList, recipe]);
   }
@@ -26,21 +28,25 @@ function SearchList() {
     );
   }
 
-  // const recipes = data.results;
+  const favListLength = favouriteList.length;
 
   return (
     <>
-      <StyledRecipeList>
-        {favouriteList.map((recipe) => (
-          <Card
-            recipe={recipe}
-            key={recipe.id}
-            favouriteList={favouriteList}
-            handleAddRecipe={handleAddRecipe}
-            handleDeleteRecipe={handleDeleteRecipe}
-          />
-        ))}
-      </StyledRecipeList>
+      {favListLength ? (
+        <StyledRecipeList>
+          {favouriteList.map((recipe) => (
+            <Card
+              recipe={recipe}
+              key={recipe.id}
+              favouriteList={favouriteList}
+              handleAddRecipe={handleAddRecipe}
+              handleDeleteRecipe={handleDeleteRecipe}
+            />
+          ))}
+        </StyledRecipeList>
+      ) : (
+        <FavPageNotFound />
+      )}
     </>
   );
 }
