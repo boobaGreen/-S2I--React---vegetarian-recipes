@@ -58,12 +58,7 @@ const StyledBlockScroll = styled.div`
   background-size: cover;
 `;
 
-function Card({
-  recipe: oldRecipe,
-  handleAddRecipe,
-  favouriteList,
-  handleDeleteRecipe,
-}) {
+function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
   const {
     image,
     id,
@@ -73,22 +68,8 @@ function Card({
     glutenFree,
     healthScore,
     vegan,
-    nutrition,
     pricePerServing,
-  } = oldRecipe;
-
-  const recipe = {
-    image,
-    id,
-    title,
-    readyInMinutes,
-    servings,
-    glutenFree,
-    healthScore,
-    vegan,
-    pricePerServing,
-    nutrition,
-  };
+  } = recipe;
 
   const url = "url(" + image + ")";
   const titleAbr = title.length <= 45 ? title : title.slice(0, 40) + "...";
@@ -99,10 +80,10 @@ function Card({
   }
   function clickHandle() {
     if (!alreadyIncludes()) {
-      handleAddRecipe(recipe.id);
+      handleAddRecipe(recipe);
     }
     if (alreadyIncludes()) {
-      handleDeleteRecipe(recipe.id);
+      handleDeleteRecipe(id);
     }
   }
 

@@ -35,9 +35,9 @@ function Recipes() {
     setFavouriteList((favouriteList) => [...favouriteList, recipe]);
   }
 
-  function handleDeleteRecipe(recipeToDelete) {
+  function handleDeleteRecipe(idPass) {
     setFavouriteList((favouriteList) =>
-      favouriteList.filter((recipe) => recipe.id !== recipeToDelete.id)
+      favouriteList.filter((recipe) => recipe.id !== idPass)
     );
   }
   if (isLoading) return <Spinner />;

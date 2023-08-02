@@ -18,17 +18,13 @@ function SearchList() {
     "favouriteList"
   );
 
-  function handleAddRecipe(recipe) {
-    setFavouriteList((favouriteList) => [...favouriteList, recipe]);
-  }
+  const favListLength = favouriteList.length;
 
-  function handleDeleteRecipe(recipeToDelete) {
+  function handleDeleteRecipe(idToDelete) {
     setFavouriteList((favouriteList) =>
-      favouriteList.filter((recipe) => recipe.id !== recipeToDelete.id)
+      favouriteList.filter((recipe) => recipe.id !== idToDelete)
     );
   }
-
-  const favListLength = favouriteList.length;
 
   return (
     <>
@@ -39,7 +35,6 @@ function SearchList() {
               recipe={recipe}
               key={recipe.id}
               favouriteList={favouriteList}
-              handleAddRecipe={handleAddRecipe}
               handleDeleteRecipe={handleDeleteRecipe}
             />
           ))}
