@@ -1,16 +1,20 @@
-`https://api.spoonacular.com/recipes/complexSearch/?apiKey=${KEY}&query=${query}&diet=${diet}&addRecipeNutrition=true`
 
 
 
-far si che quando metto fav da lista principale registri la ricetta specifica dettagliata e non generale
 
-fare carta singola ( forse anche grafico dettagliato nutrienti a barre.... e grammi per proteine ecc)
+sezione  curiosita e joke mettere anche bottone home  oppure solo home o cosi solo back?
 
 mettere a posta carta nella lista generale
 
-sezione joke / curiosita
+fare carta singola ( forse anche grafico dettagliato nutrienti a barre.... e grammi per proteine ecc):
+
+carta standard+istruzioni generiche
+ingredienti
+equipment
+istruzioni dettagliate
+nutrion
+wine
+simili
 
 su ingredienti mettere la possibilita' di cambiare per quante persone
-
-ricette simili 
 

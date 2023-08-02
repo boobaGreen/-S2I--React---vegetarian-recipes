@@ -6,6 +6,7 @@ import {
   // HiOutlineFunnel,
   HiOutlineHeart,
   HiOutlineMagnifyingGlass,
+  HiOutlineFaceSmile,
 } from "react-icons/hi2";
 
 const NavList = styled.ul`
@@ -67,6 +68,18 @@ function MainNav() {
           <StyledNavLink to="/favourite">
             <HiOutlineHeart />
             <span>Favourite</span>
+          </StyledNavLink>
+        </li>
+        <li>
+          <StyledNavLink to="/joke">
+            <HiOutlineFaceSmile />
+            <span>Joke</span>
+          </StyledNavLink>
+        </li>
+        <li>
+          <StyledNavLink to="/curious">
+            <HiOutlineFaceSmile />
+            <span>Curious</span>
           </StyledNavLink>
         </li>
         <li>

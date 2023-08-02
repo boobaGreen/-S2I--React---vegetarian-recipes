@@ -28,6 +28,11 @@ function Stats() {
   const totResultsLast = data.totalResults;
 
   let page = Math.trunc(offset / number) + 1;
+  let pages = 1;
+  if (Math.trunc(totResultsLast / number) > 1) {
+    pages = Math.trunc(totResultsLast / number);
+  }
+
   let nextPageExist = false;
   let prevPageExist = false;
 
@@ -59,8 +64,18 @@ function Stats() {
         </ButtonStyled>
       ) : null}
 
-      <ButtonStyled disabled>
+      {/* <ButtonStyled disabled>
         Page :{page} of {Math.trunc(totResultsLast / number)}
+      </ButtonStyled> */}
+
+      <ButtonStyled disabled>
+        {totResultsLast > 0 ? (
+          <span>
+            Page :{page} of {pages}
+          </span>
+        ) : (
+          <span>🍃 No match for request...</span>
+        )}
       </ButtonStyled>
 
       {nextPageExist ? (
