@@ -1,7 +1,70 @@
 import { useParams } from "react-router-dom";
 import { useRecipe } from "../feautures/recipes/useRecipe";
-
+import { styled } from "styled-components";
+import Spinner from "../ui/Spinner";
 import Error from "./Error";
+import Heading from "../ui/Heading";
+import Info from "../element/Info";
+import Type from "../element/Type";
+
+const StyledGridContainer = styled.div`
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 8fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "photo photo info"
+    "title title type"
+    "nutrition ingredients wine"
+    "istruction istruction istruction";
+  text-align: center;
+  grid-gap: 0.25rem;
+`;
+
+const StyledDivPhoto = styled.div`
+  grid-area: photo;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0.25rem;
+`;
+const StyledInfo = styled.div`
+  background: #1f2128;
+  grid-area: info;
+  padding: 0.25rem;
+`;
+const StyledDivType = styled.div`
+  background: #1f2128;
+  grid-area: type;
+  padding: 0.25rem;
+`;
+const StyledDivNutrion = styled.div`
+  background: #a6b8b9;
+  grid-area: nutrition;
+  padding: 0.25rem;
+`;
+const StyledDivIngredients = styled.div`
+  background: lightpink;
+  grid-area: ingredients;
+  padding: 0.25rem;
+`;
+const StyledDivIstructions = styled.div`
+  background: lightblue;
+  grid-area: istruction;
+  padding: 0.25rem;
+`;
+const StyledDivTitle = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: lightgreen;
+  grid-area: title;
+  padding: 0.25rem;
+`;
+const StyledDivWine = styled.div`
+  background: lightcoral;
+  grid-area: wine;
+  padding: 0.25rem;
+`;
 
 function Recipe() {
   const { id: idCustom } = useParams();
@@ -23,37 +86,22 @@ function Recipe() {
   const info = istruction.step;
   console.log("4.b Istruction Info", info);
 
-  const equipments = istruction.equipment;
-  console.log("4.c Equipments", equipments);
-
-  console.log("4.d Equipments length", equipments.length);
-
-  const equipment = equipments[0];
-  console.log("5.a Equipment id", equipment.id);
-  console.log("5.b Equipment name", equipment.name);
-
-  const vegan = data.vegan;
-  const glutenFree = data.glutenFree;
-  const dairyFree = data.dairyFree;
-  const healthScore = data.healthScore;
-  const sourceName = data.sourceName;
-  console.log(vegan, glutenFree, dairyFree, healthScore, sourceName);
-  const pricePerServing = data.pricePerServing;
-  const id = data.id;
-  const title = data.title;
-  const readyInMinutes = data.readyInMinutes;
-  const servings = data.servings;
-  const image = data.image;
-  const summary = data.summary;
-  console.log(
-    pricePerServing,
-    id,
+  const {
     title,
+    vegan,
+    glutenFree,
+    dairyFree,
+    healthScore,
+    image,
+    id,
     readyInMinutes,
     servings,
-    image,
-    summary
-  );
+    pricePerServing,
+    dishTypes,
+  } = data;
+
+  const summary = data.summary;
+
   const extendedIngredients = data.extendedIngredients;
   console.log(extendedIngredients);
   console.log(extendedIngredients.length);
@@ -78,8 +126,6 @@ function Recipe() {
     unitShort,
     amount
   );
-
-  console.log(vegan, glutenFree, dairyFree, healthScore, sourceName);
 
   const nutrientsTemp = ingredient.nutrition;
   console.log("nutrients", nutrientsTemp);
@@ -107,11 +153,41 @@ function Recipe() {
     percentOfDailyNeedsCal
   );
 
-  //winepairing
-  //diets
-  //dishtypes
+  if (isLoading) return <Spinner />;
+  if (error) return <Error />;
 
-  return <h1>recipe n: {idCustom}</h1>;
+  return (
+    <>
+      <StyledGridContainer>
+        <StyledDivTitle>
+          <Heading as="h2">{title}</Heading>
+        </StyledDivTitle>
+        <StyledDivPhoto
+          style={{
+            backgroundImage: `url(${image})`,
+          }}
+        ></StyledDivPhoto>
+        <StyledInfo>
+          <Info
+            vegan={vegan}
+            dairyFree={dairyFree}
+            glutenFree={glutenFree}
+            healthScore={healthScore}
+            readyInMinutes={readyInMinutes}
+            servings={servings}
+            pricePerServing={pricePerServing}
+          ></Info>
+        </StyledInfo>
+        <StyledDivType>
+          <Type dishTypes={dishTypes} />
+        </StyledDivType>
+        <StyledDivNutrion></StyledDivNutrion>
+        <StyledDivIngredients></StyledDivIngredients>
+        <StyledDivIstructions></StyledDivIstructions>
+        <StyledDivWine></StyledDivWine>
+      </StyledGridContainer>
+    </>
+  );
 }
 
 export default Recipe;

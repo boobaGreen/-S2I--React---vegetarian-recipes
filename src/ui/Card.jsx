@@ -114,7 +114,7 @@ function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
               👨‍👦‍👦{servings}
             </StyledSpan>
             <Tooltip id="serving-person" openOnClick={["click"]} />
-            <Link to={`${id}`}>
+            <Link to={`/recipes/${id}`}>
               <button>BTN</button>
             </Link>
           </StyledDiv>

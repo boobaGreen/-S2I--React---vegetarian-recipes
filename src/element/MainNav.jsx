@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {
   // HiArrowsUpDown,
   HiOutlineCog6Tooth,
+  HiOutlineGift,
   // HiOutlineFunnel,
   HiOutlineHeart,
   HiOutlineMagnifyingGlass,
@@ -78,7 +79,7 @@ function MainNav() {
         </li>
         <li>
           <StyledNavLink to="/curious">
-            <HiOutlineFaceSmile />
+            <HiOutlineGift />
             <span>Curious</span>
           </StyledNavLink>
         </li>
