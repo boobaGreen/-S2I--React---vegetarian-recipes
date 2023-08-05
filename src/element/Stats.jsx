@@ -38,11 +38,6 @@ function Stats() {
 
   if (offset + number + 1 < totResultsLast) {
     nextPageExist = true;
-    console.log("offset :", offset);
-    console.log("number :", number);
-    console.log("page :", page);
-    console.log("next :", nextPageExist);
-    console.log("prev :", prevPageExist);
   }
   if (number - offset <= 0) {
     prevPageExist = true;

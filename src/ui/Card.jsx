@@ -5,7 +5,7 @@ import IconVegan from "./IconVegan";
 import IconGlutenFree from "./IconGlutenFree";
 import IconTimer from "./IconTimer";
 import IconMoney from "./IconMoney";
-import HealthScore from "./HealthScore";
+
 import { Link } from "react-router-dom";
 
 //
@@ -64,7 +64,7 @@ function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
     id,
     title,
     readyInMinutes,
-    servings,
+
     glutenFree,
     healthScore,
     vegan,
@@ -101,19 +101,7 @@ function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
             <StyledSpan onClick={clickHandle}>
               {alreadyIncludes() ? <span>❤️</span> : <span>🤍</span>}
             </StyledSpan>
-            <StyledSpan
-              data-tooltip-id="serving-person"
-              data-tooltip-content="recipe for ' x ' people"
-              style={{
-                backgroundColor: "whitesmoke",
-                borderRadius: "200px",
-                padding: "5px",
-                fontSize: "2rem",
-              }}
-            >
-              👨‍👦‍👦{servings}
-            </StyledSpan>
-            <Tooltip id="serving-person" openOnClick={["click"]} />
+
             <Link to={`/recipes/${id}`}>
               <button>BTN</button>
             </Link>
@@ -122,19 +110,6 @@ function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
         <StyledBlock style={{ width: "50%" }}>
           <StyledBlock style={{ flexDirection: "column" }}>
             <StyledBlock style={{ height: "33%" }}>
-              <StyledBlock
-                style={{
-                  marginTop: "8px",
-                  cursor: "pointer",
-                  width: "6.5rem",
-                  height: "6.5rem",
-                }}
-                data-tooltip-id="hs-tooltip"
-                data-tooltip-content="HealthScore %"
-              >
-                <HealthScore healthScore={healthScore} />
-                <Tooltip id="hs-tooltip" openOnClick={["click"]} />
-              </StyledBlock>
               <StyledBlock
                 style={{
                   justifyContent: "space-around",

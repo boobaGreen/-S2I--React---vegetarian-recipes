@@ -1,20 +1,15 @@
 
-
+-----------FILTRI !!!!!!!!!!!!! ------
 
 
 sezione  curiosita e joke mettere anche bottone home  oppure solo home o cosi solo back?
 
 mettere a posta carta nella lista generale
 
-fare carta singola ( forse anche grafico dettagliato nutrienti a barre.... e grammi per proteine ecc):
+fare carta singola ( forse anche grafico dettagliato nutrienti a barre.... ):
 
-carta standard+istruzioni generiche
-ingredienti
-equipment
-istruzioni dettagliate
-nutrion
-wine
-simili
+
+
 
 su ingredienti mettere la possibilita' di cambiare per quante persone
 

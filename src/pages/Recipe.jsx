@@ -6,16 +6,21 @@ import Error from "./Error";
 import Heading from "../ui/Heading";
 import Info from "../element/Info";
 import Type from "../element/Type";
+import Nutrion from "../element/Nutrion";
+import Istructions from "../element/Istructions";
+import Ingridients from "../element/Ingridients";
+import Wine from "../element/Wine";
+import WinePhoto from "../element/WinePhoto";
 
 const StyledGridContainer = styled.div`
   display: grid;
   height: 100vh;
-  grid-template-rows: 8fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr 1fr;
   grid-template-areas:
+    "istruction istruction nutrition"
     "photo photo info"
-    "title title type"
-    "nutrition ingredients wine"
-    "istruction istruction istruction";
+    "ingredients ingredients type"
+    "wine wine winePhoto";
   text-align: center;
   grid-gap: 0.25rem;
 `;
@@ -52,14 +57,19 @@ const StyledDivIstructions = styled.div`
   grid-area: istruction;
   padding: 0.25rem;
 `;
-const StyledDivTitle = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: lightgreen;
-  grid-area: title;
+// const StyledDivTitle = styled.div`
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   background: lightgreen;
+//   grid-area: title;
+//   padding: 0.25rem;
+// `;
+const StyledDivWinePhoto = styled.div`
+  grid-area: winePhoto;
   padding: 0.25rem;
 `;
+
 const StyledDivWine = styled.div`
   background: lightcoral;
   grid-area: wine;
@@ -72,19 +82,15 @@ function Recipe() {
   const { isLoading, recipe: data, error } = useRecipe(idCustom);
   if (isLoading) return null;
   if (error) return <Error />;
-  console.log("1 general ", data);
-  console.log("2 istructions", data.analyzedInstructions[0].steps);
 
-  console.log("Istructions Lenght", data.analyzedInstructions[0].steps.length);
+  const percentCarbs = data.nutrition.caloricBreakdown.percentCarbs;
+  const percentFat = data.nutrition.caloricBreakdown.percentFat;
+  const percentProtein = data.nutrition.caloricBreakdown.percentProtein;
 
-  const istruction = data.analyzedInstructions[0].steps[0];
-  console.log("3 Istruction", istruction);
-
-  const number = istruction.number;
-  console.log("4.a Istruction Number", number);
-
-  const info = istruction.step;
-  console.log("4.b Istruction Info", info);
+  const amountCalories = data.nutrition.nutrients[0].amount;
+  const percentOfDailyNeedsCal =
+    data.nutrition.nutrients[0].percentOfDailyNeeds;
+  const istructionsArray = data.analyzedInstructions[0].steps;
 
   const {
     title,
@@ -93,80 +99,32 @@ function Recipe() {
     dairyFree,
     healthScore,
     image,
-    id,
+    // id,
     readyInMinutes,
     servings,
     pricePerServing,
     dishTypes,
+    extendedIngredients,
+    winePairing,
   } = data;
-
-  const summary = data.summary;
-
-  const extendedIngredients = data.extendedIngredients;
-  console.log(extendedIngredients);
-  console.log(extendedIngredients.length);
-
-  const ingredient = data.extendedIngredients[0];
-  console.log("ingredient", ingredient);
-
-  const aisle = ingredient.aisle;
-  const amountDescr = ingredient.amount;
-  const recipeId = ingredient.id;
-  const recipeImage = ingredient.image;
-  const original = ingredient.original;
-  const unitShort = ingredient.measures.metric.unitShort;
-  const amount = ingredient.measures.metric.amount;
-
-  console.log(
-    aisle,
-    amountDescr,
-    recipeId,
-    recipeImage,
-    original,
-    unitShort,
-    amount
-  );
-
-  const nutrientsTemp = ingredient.nutrition;
-  console.log("nutrients", nutrientsTemp);
-
-  const caloricBreakdown = data.nutrition.caloricBreakdown;
-  const percentCarbs = caloricBreakdown.percentCarbs;
-  const percentFat = caloricBreakdown.percentFat;
-  const percentProtein = caloricBreakdown.percentProtein;
-  console.log("% carb,fat,prot", percentCarbs, percentFat, percentProtein);
-  const nutrients = data.nutrition.nutrients;
-  const caloriesGen = data.nutrition.nutrients[0];
-  const amountCalories = data.nutrition.nutrients[0].amount;
-  const nameCalories = data.nutrition.nutrients[0].name;
-
-  const percentOfDailyNeedsCal =
-    data.nutrition.nutrients[0].percentOfDailyNeeds;
-  const unitCal = data.nutrition.nutrients[0].unit;
-  console.log(
-    "Calories :",
-    nutrients,
-    caloriesGen,
-    amountCalories,
-    nameCalories,
-    unitCal,
-    percentOfDailyNeedsCal
-  );
-
+  const productMatches = winePairing.productMatches;
+  const pairingText = winePairing.pairingText;
   if (isLoading) return <Spinner />;
   if (error) return <Error />;
 
   return (
     <>
       <StyledGridContainer>
-        <StyledDivTitle>
+        {/* <StyledDivTitle>
           <Heading as="h2">{title}</Heading>
-        </StyledDivTitle>
+        </StyledDivTitle> */}
         <StyledDivPhoto
           style={{
             backgroundImage: `url(${image})`,
           }}
-        ></StyledDivPhoto>
+        >
+          <Heading as="h2">{title}</Heading>
+        </StyledDivPhoto>
         <StyledInfo>
           <Info
             vegan={vegan}
@@ -181,10 +139,28 @@ function Recipe() {
         <StyledDivType>
           <Type dishTypes={dishTypes} />
         </StyledDivType>
-        <StyledDivNutrion></StyledDivNutrion>
-        <StyledDivIngredients></StyledDivIngredients>
-        <StyledDivIstructions></StyledDivIstructions>
-        <StyledDivWine></StyledDivWine>
+        <StyledDivNutrion>
+          <Nutrion
+            percentCarbs={percentCarbs}
+            percentFat={percentFat}
+            percentProtein={percentProtein}
+            percentOfDailyNeedsCal={percentOfDailyNeedsCal}
+            amountCalories={amountCalories}
+          />
+        </StyledDivNutrion>
+
+        <StyledDivIngredients>
+          <Ingridients extendedIngredients={extendedIngredients} />
+        </StyledDivIngredients>
+        <StyledDivIstructions>
+          <Istructions istructionsArray={istructionsArray} />
+        </StyledDivIstructions>
+        <StyledDivWine>
+          <Wine pairingText={pairingText} />
+        </StyledDivWine>
+        <StyledDivWinePhoto>
+          <WinePhoto productMatches={productMatches} />
+        </StyledDivWinePhoto>
       </StyledGridContainer>
     </>
   );
