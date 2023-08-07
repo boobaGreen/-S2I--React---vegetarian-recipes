@@ -2,8 +2,8 @@ import apiClient from "./http-common";
 import { ApiKey } from "../const/const";
 
 const KEY = ApiKey;
-const sort = "price";
-const direction = "asc";
+
+// const direction = "asc";
 
 export async function getRecipes(
   search,
@@ -11,12 +11,15 @@ export async function getRecipes(
   intolerances,
   type,
   number,
-  offset
+  offset,
+  maxReadyTime,
+  sort,
+  direction
 ) {
   const numberString = number?.toString();
 
   const { data, error } = await apiClient.get(
-    `https://api.spoonacular.com/recipes/complexSearch/?apiKey=${KEY}&query=${search}&diet=${diet}&intolerances=${intolerances}&type=${type}&sustainable=true&sort=${sort}&sortDirection=${direction}&addRecipeNutrition=true&instructionsRequired=true&number=${numberString}&offset=${offset}`
+    `https://api.spoonacular.com/recipes/complexSearch/?apiKey=${KEY}&query=${search}&diet=${diet}&intolerances=${intolerances}&type=${type}&maxReadyTime=${maxReadyTime}&sort=${sort}&sortDirection=${direction}&addRecipeNutrition=true&instructionsRequired=true&number=${numberString}&offset=${offset}`
   );
   // const { data, error } = await apiClient.get(
   //   `https://api.spoonacular.com/recipes/complexSearch/?apiKey=${KEY}&sustainable=true&addRecipeNutrition=true`

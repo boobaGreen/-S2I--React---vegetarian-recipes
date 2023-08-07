@@ -64,9 +64,7 @@ function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
     id,
     title,
     readyInMinutes,
-
     glutenFree,
-    healthScore,
     vegan,
     pricePerServing,
   } = recipe;
@@ -103,7 +101,17 @@ function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
             </StyledSpan>
 
             <Link to={`/recipes/${id}`}>
-              <button>BTN</button>
+              <button
+                style={{
+                  backgroundColor: "#10B981",
+                  padding: "0.5rem 1rem",
+                  marginLeft: "1rem",
+                  marginBottom: "1rem",
+                  borderRadius: "40px",
+                }}
+              >
+                More Info
+              </button>
             </Link>
           </StyledDiv>
         </StyledBlock>
@@ -194,7 +202,12 @@ function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
               >
                 <Tooltip id="money-tooltip" openOnClick={["click"]} />
                 <IconMoney />
-                <Heading as="h4">{(pricePerServing / 100).toFixed(2)}$</Heading>
+                <Heading as="h4">
+                  {pricePerServing < 5
+                    ? 0.05
+                    : (pricePerServing / 100).toFixed(2)}
+                  $
+                </Heading>
               </StyledBlock>
             </StyledBlock>
           </StyledBlock>

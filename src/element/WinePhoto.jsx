@@ -1,3 +1,4 @@
+import Heading from "../ui/Heading";
 function WinePhoto({ productMatches }) {
   const length = productMatches?.length;
 
@@ -8,16 +9,32 @@ function WinePhoto({ productMatches }) {
 
   // const description = productMatches[index].description;
   return (
-    <div
-      style={{
-        backgroundImage: url,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "contain",
-        height: "100%",
-      }}
-    >
-      {title}
-    </div>
+    <>
+      <Heading
+        style={{
+          fontSize: "1.5rem",
+        }}
+      >
+        <p
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyItems: "center",
+          }}
+        >
+          {title}
+        </p>
+      </Heading>
+      <div
+        style={{
+          marginTop: "1rem",
+          backgroundImage: url,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "contain",
+          height: "80%",
+        }}
+      ></div>
+    </>
   );
 }
 

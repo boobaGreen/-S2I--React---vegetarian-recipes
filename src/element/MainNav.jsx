@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import {
   // HiArrowsUpDown,
-  HiOutlineCog6Tooth,
+  // HiOutlineCog6Tooth,
   HiOutlineGift,
   // HiOutlineFunnel,
   HiOutlineHeart,
@@ -81,12 +81,6 @@ function MainNav() {
           <StyledNavLink to="/curious">
             <HiOutlineGift />
             <span>Curious</span>
-          </StyledNavLink>
-        </li>
-        <li>
-          <StyledNavLink to="/settings">
-            <HiOutlineCog6Tooth />
-            <span>Settings</span>
           </StyledNavLink>
         </li>
       </NavList>

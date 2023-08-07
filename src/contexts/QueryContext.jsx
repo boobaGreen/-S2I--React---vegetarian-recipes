@@ -3,8 +3,11 @@ import { createContext, useContext, useReducer } from "react";
 const QueryContext = createContext();
 
 const offsetStartup = 0;
-const number = 10;
+const number = 12;
+const mdr = 999999;
+
 const initialState = {
+  maxReadyTime: mdr,
   recipesList: [],
   search: "",
   diet: "",
@@ -12,6 +15,8 @@ const initialState = {
   type: "",
   number: number,
   offset: offsetStartup,
+  sort: "",
+  direction: "asc", //desc
 };
 
 function reducer(state, action) {
@@ -38,6 +43,36 @@ function reducer(state, action) {
         ...state,
         number: action.payload,
       };
+    case "filter/diet":
+      return {
+        ...state,
+        diet: action.payload,
+      };
+    case "filter/intolerances":
+      return {
+        ...state,
+        intolerances: action.payload,
+      };
+    case "filter/type":
+      return {
+        ...state,
+        type: action.payload,
+      };
+    case "filter/time":
+      return {
+        ...state,
+        maxReadyTime: action.payload,
+      };
+    case "filter/order":
+      return {
+        ...state,
+        sort: action.payload,
+      };
+    case "filter/direction":
+      return {
+        ...state,
+        order: action.payload,
+      };
 
     default:
       throw new Error("Action unkonwn");
@@ -46,7 +81,19 @@ function reducer(state, action) {
 
 function QueryProvider({ children }) {
   const [
-    { search, intolerances, diet, type, number, offset, viewed, recipesList },
+    {
+      search,
+      intolerances,
+      diet,
+      type,
+      number,
+      offset,
+      viewed,
+      recipesList,
+      maxReadyTime,
+      sort,
+      direction,
+    },
     dispatch,
   ] = useReducer(reducer, initialState);
 
@@ -61,6 +108,9 @@ function QueryProvider({ children }) {
         offset,
         viewed,
         recipesList,
+        maxReadyTime,
+        sort,
+        direction,
         dispatch,
       }}
     >

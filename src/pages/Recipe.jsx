@@ -6,80 +6,68 @@ import Error from "./Error";
 import Heading from "../ui/Heading";
 import Info from "../element/Info";
 import Type from "../element/Type";
-import Nutrion from "../element/Nutrion";
+import Nutrition from "../element/Nutrition";
 import Istructions from "../element/Istructions";
-import Ingridients from "../element/Ingridients";
+import Ingredients from "../element/Ingredients";
 import Wine from "../element/Wine";
 import WinePhoto from "../element/WinePhoto";
 
 const StyledGridContainer = styled.div`
   display: grid;
-  height: 100vh;
-  grid-template-rows: 1fr 2fr 1fr 1fr;
+  grid-template-rows: min-content auto min-content auto;
+  grid-template-columns: 75% 1fr;
   grid-template-areas:
-    "istruction istruction nutrition"
-    "photo photo info"
-    "ingredients ingredients type"
-    "wine wine winePhoto";
+    "photo info"
+    "ingredients type"
+    "istructions istructions"
+    "wine winePhoto"
+    "nutrition nutrition";
   text-align: center;
-  grid-gap: 0.25rem;
+  grid-gap: 5rem;
 `;
 
 const StyledDivPhoto = styled.div`
+  background: var(--color-grey-200);
   grid-area: photo;
-
   background-repeat: no-repeat;
   background-size: cover;
   padding: 0.25rem;
 `;
 const StyledInfo = styled.div`
-  background: #1f2128;
   grid-area: info;
   padding: 0.25rem;
 `;
 const StyledDivType = styled.div`
-  background: #1f2128;
   grid-area: type;
   padding: 0.25rem;
 `;
 const StyledDivNutrion = styled.div`
-  background: #a6b8b9;
   grid-area: nutrition;
   padding: 0.25rem;
 `;
 const StyledDivIngredients = styled.div`
-  background: lightpink;
   grid-area: ingredients;
   padding: 0.25rem;
 `;
 const StyledDivIstructions = styled.div`
-  background: lightblue;
-  grid-area: istruction;
+  grid-area: istructions;
   padding: 0.25rem;
 `;
-// const StyledDivTitle = styled.div`
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   background: lightgreen;
-//   grid-area: title;
-//   padding: 0.25rem;
-// `;
+
 const StyledDivWinePhoto = styled.div`
   grid-area: winePhoto;
   padding: 0.25rem;
 `;
 
 const StyledDivWine = styled.div`
-  background: lightcoral;
   grid-area: wine;
   padding: 0.25rem;
 `;
 
-function Recipe() {
+function Recipe({ recipe }) {
   const { id: idCustom } = useParams();
-
   const { isLoading, recipe: data, error } = useRecipe(idCustom);
+
   if (isLoading) return null;
   if (error) return <Error />;
 
@@ -87,7 +75,7 @@ function Recipe() {
   const percentFat = data.nutrition.caloricBreakdown.percentFat;
   const percentProtein = data.nutrition.caloricBreakdown.percentProtein;
 
-  const amountCalories = data.nutrition.nutrients[0].amount;
+  // const amountCalories = data.nutrition.nutrients[0].amount;
   const percentOfDailyNeedsCal =
     data.nutrition.nutrients[0].percentOfDailyNeeds;
   const istructionsArray = data.analyzedInstructions[0].steps;
@@ -97,7 +85,6 @@ function Recipe() {
     vegan,
     glutenFree,
     dairyFree,
-    healthScore,
     image,
     // id,
     readyInMinutes,
@@ -109,58 +96,95 @@ function Recipe() {
   } = data;
   const productMatches = winePairing.productMatches;
   const pairingText = winePairing.pairingText;
+  const dataPieNutrient = {
+    labels: ["Carb", "Prot", "Fats"],
+    datasets: [
+      {
+        label: "%",
+        data: [percentCarbs, percentProtein, percentFat],
+        backgroundColor: [
+          "rgba(255, 99, 132, 0.2)",
+          "rgba(54, 162, 235, 0.2)",
+          "rgba(255, 206, 86, 0.2)",
+        ],
+        borderColor: [
+          "rgba(255, 99, 132, 1)",
+          "rgba(54, 162, 235, 1)",
+          "rgba(255, 206, 86, 1)",
+        ],
+        borderWidth: 1,
+      },
+    ],
+  };
+  const dataPieCalories = {
+    labels: [`kcal per serving`, `kcal rest of the day`],
+    datasets: [
+      {
+        label: `%`,
+        data: [percentOfDailyNeedsCal, 100 - percentOfDailyNeedsCal],
+        backgroundColor: ["rgba(255, 99, 132, 0.2)", "rgba(54, 162, 235, 0.2)"],
+        borderColor: ["rgba(255, 99, 132, 1)", "rgba(54, 162, 235, 1)"],
+        borderWidth: 1,
+      },
+    ],
+  };
   if (isLoading) return <Spinner />;
   if (error) return <Error />;
 
   return (
     <>
       <StyledGridContainer>
-        {/* <StyledDivTitle>
-          <Heading as="h2">{title}</Heading>
-        </StyledDivTitle> */}
+        <StyledDivIstructions>
+          <Istructions istructionsArray={istructionsArray} />
+        </StyledDivIstructions>
         <StyledDivPhoto
           style={{
             backgroundImage: `url(${image})`,
+            overflow: "hidden",
+            padding: "1rem",
           }}
         >
-          <Heading as="h2">{title}</Heading>
+          <Heading
+            style={{
+              fontSize: "1.2rem",
+              backgroundColor: "var(--color-grey-200)",
+              width: "max-content",
+              height: "max-content",
+              borderRadius: "20px",
+              padding: "1rem",
+            }}
+          >
+            {title}
+          </Heading>
         </StyledDivPhoto>
         <StyledInfo>
           <Info
             vegan={vegan}
             dairyFree={dairyFree}
             glutenFree={glutenFree}
-            healthScore={healthScore}
             readyInMinutes={readyInMinutes}
             servings={servings}
             pricePerServing={pricePerServing}
           ></Info>
         </StyledInfo>
+        <StyledDivIngredients>
+          <Ingredients extendedIngredients={extendedIngredients} />
+        </StyledDivIngredients>
         <StyledDivType>
           <Type dishTypes={dishTypes} />
         </StyledDivType>
-        <StyledDivNutrion>
-          <Nutrion
-            percentCarbs={percentCarbs}
-            percentFat={percentFat}
-            percentProtein={percentProtein}
-            percentOfDailyNeedsCal={percentOfDailyNeedsCal}
-            amountCalories={amountCalories}
-          />
-        </StyledDivNutrion>
-
-        <StyledDivIngredients>
-          <Ingridients extendedIngredients={extendedIngredients} />
-        </StyledDivIngredients>
-        <StyledDivIstructions>
-          <Istructions istructionsArray={istructionsArray} />
-        </StyledDivIstructions>
         <StyledDivWine>
           <Wine pairingText={pairingText} />
         </StyledDivWine>
         <StyledDivWinePhoto>
           <WinePhoto productMatches={productMatches} />
         </StyledDivWinePhoto>
+        <StyledDivNutrion>
+          <Nutrition
+            dataPieCalories={dataPieCalories}
+            dataPieNutrient={dataPieNutrient}
+          />
+        </StyledDivNutrion>
       </StyledGridContainer>
     </>
   );

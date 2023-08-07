@@ -19,13 +19,33 @@ const StyledRecipeList = styled.ul`
 `;
 
 function Recipes() {
-  const { search, diet, intolerances, type, number, offset } = useQueryCust();
+  const {
+    search,
+    diet,
+    intolerances,
+    type,
+    number,
+    offset,
+    maxReadyTime,
+    sort,
+    direction,
+  } = useQueryCust();
 
   const {
     isLoading,
     recipes: data,
     error,
-  } = useRecipes(search, diet, intolerances, type, number, offset);
+  } = useRecipes(
+    search,
+    diet,
+    intolerances,
+    type,
+    number,
+    offset,
+    maxReadyTime,
+    sort,
+    direction
+  );
 
   const [favouriteList, setFavouriteList] = useLocalStorageState(
     [],
