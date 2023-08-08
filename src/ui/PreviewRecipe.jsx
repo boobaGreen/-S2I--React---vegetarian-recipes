@@ -103,8 +103,7 @@ function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
             <Link to={`/recipes/${id}`}>
               <button
                 style={{
-                  color: "#1f2937",
-                  backgroundColor: "#A7F3D0",
+                  backgroundColor: "#10B981",
                   padding: "0.5rem 1rem",
                   marginLeft: "1rem",
                   marginBottom: "1rem",

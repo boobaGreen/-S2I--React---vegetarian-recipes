@@ -3,11 +3,11 @@ import FilterSection from "./FilterSection";
 import Search from "./Search";
 import Stats from "./Stats";
 
-function Option() {
+function Option({ showFilter }) {
   return (
     <Row>
       <Search />
-      <FilterSection />
+      {showFilter ? <FilterSection /> : null}
       <Stats />
     </Row>
   );

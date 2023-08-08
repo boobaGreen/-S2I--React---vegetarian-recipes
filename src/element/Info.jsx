@@ -50,8 +50,10 @@ function Info({
       <p
         style={{ color: "#059669", marginRight: "3rem", marginLeft: "1.5rem" }}
       >
-        <HiOutlineUserGroup style={{ fontSize: "4.5rem" }} />
-        <span style={{ marginLeft: "1.5rem" }}>{servings}</span>
+        <HiOutlineUserGroup
+          style={{ marginRight: "2rem", fontSize: "4.5rem" }}
+        />
+        <span style={{ marginLeft: "1rem" }}>{servings}</span>
       </p>
     </div>
   );

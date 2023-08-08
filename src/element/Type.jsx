@@ -1,4 +1,9 @@
+import { styled } from "styled-components";
 import Heading from "../ui/Heading";
+const StyledSpan = styled.span`
+  color: var(--color-grey-plate);
+  font-size: 6rem;
+`;
 function Type({ dishTypes }) {
   let dishTypeExists = false;
   if (dishTypes.length > 0) {
@@ -7,7 +12,9 @@ function Type({ dishTypes }) {
   if (!dishTypeExists) return null;
   return (
     <>
-      <Heading style={{ fontSize: "6rem" }}>🍽</Heading>
+      <Heading as="h1">
+        <StyledSpan>🍽</StyledSpan> Type
+      </Heading>
       <div
         style={{
           display: "flex",
@@ -29,6 +36,8 @@ function Type({ dishTypes }) {
               marginRight: "1rem",
               marginBottom: "1rem",
               height: "min-content",
+              disabled: "true",
+              cursor: "auto",
             }}
           >
             {type}

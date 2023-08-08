@@ -3,7 +3,6 @@ import { useRecipe } from "../feautures/recipes/useRecipe";
 import { styled } from "styled-components";
 import Spinner from "../ui/Spinner";
 import Error from "./Error";
-import Heading from "../ui/Heading";
 import Info from "../element/Info";
 import Type from "../element/Type";
 import Nutrition from "../element/Nutrition";
@@ -143,20 +142,7 @@ function Recipe({ recipe }) {
             overflow: "hidden",
             padding: "1rem",
           }}
-        >
-          <Heading
-            style={{
-              fontSize: "1.2rem",
-              backgroundColor: "var(--color-grey-200)",
-              width: "max-content",
-              height: "max-content",
-              borderRadius: "20px",
-              padding: "1rem",
-            }}
-          >
-            {title}
-          </Heading>
-        </StyledDivPhoto>
+        ></StyledDivPhoto>
         <StyledInfo>
           <Info
             vegan={vegan}

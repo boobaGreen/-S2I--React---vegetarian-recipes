@@ -17,7 +17,7 @@ function Istructions({ istructionsArray }) {
 
   return (
     <div>
-      <Heading style={{ fontSize: "6rem" }}></Heading>
+      <Heading as="h1">Instructions</Heading>
       <div
         style={{
           display: "flex",
@@ -36,9 +36,21 @@ function Istructions({ istructionsArray }) {
             }}
             onClick={handlePrevClick}
           >
-            step {index}
+            Step {index} &lt;
           </button>
-        ) : null}
+        ) : (
+          <button
+            style={{
+              padding: "1rem",
+              borderRadius: "10px",
+              disable: "true",
+              cursor: "auto",
+              visibility: "hidden",
+            }}
+          >
+            Step s s
+          </button>
+        )}
         <span>
           <span style={{ fontSize: "6rem" }}>🍳</span>
         </span>
@@ -52,9 +64,21 @@ function Istructions({ istructionsArray }) {
             }}
             onClick={handleNextClick}
           >
-            step {index + 2}
+            &gt; {index + 2} Step
           </button>
-        ) : null}
+        ) : (
+          <button
+            style={{
+              padding: "1rem",
+              borderRadius: "10px",
+              disable: "true",
+              cursor: "auto",
+              visibility: "hidden",
+            }}
+          >
+            Step s s
+          </button>
+        )}
       </div>
       <p>
         <span>{step}</span>

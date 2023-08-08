@@ -19,7 +19,9 @@ function Ingredients({ extendedIngredients }) {
         alignItems: "start",
       }}
     >
-      <Heading style={{ marginBottom: "2rem" }}> 📌 Ingredients </Heading>
+      <Heading as="h1" style={{ marginBottom: "2rem" }}>
+        📌 Ingredients{" "}
+      </Heading>
       {uniqueIngredients.map((ingredient) => (
         <div key={ingredient.id}>
           <p>

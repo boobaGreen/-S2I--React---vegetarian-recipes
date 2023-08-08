@@ -10,7 +10,7 @@ const initialState = {
   maxReadyTime: mdr,
   recipesList: [],
   search: "",
-  diet: "",
+  diet: "vegetarian",
   intolerances: "",
   type: "",
   number: number,

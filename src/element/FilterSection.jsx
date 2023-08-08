@@ -2,8 +2,15 @@ import Select from "react-select";
 import { styled } from "styled-components";
 import { useQueryCust } from "../contexts/QueryContext";
 
+const optionsArray = [
+  { value: 6, label: "6" },
+  { value: 12, label: "12-results/page" },
+  { value: 24, label: "24" },
+  { value: 48, label: "48" },
+  { value: 96, label: "96" },
+];
 const dietArray = [
-  { value: "vegetarian", label: "vegetarian" },
+  { value: "vegetarian", label: "diet-vegetarian" },
   { value: "lacto-vegetarian", label: "lacto-vegetarian" },
   { value: "vegan", label: "vegan" },
 ];
@@ -52,19 +59,30 @@ const orderArray = [
   { value: "calories", label: "calories" },
   { value: "max-used-ingredients", label: "max-used-ingredients" },
 ];
-const StyledFilterSection = styled.div`
+const StyledFilterSectionMain = styled.div`
+  color: black;
+  margin-top: 2.5rem;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 `;
-const StyledFilter = styled.div`
+const StyledFilterSectionSub = styled.div`
+  /* width: 100%; */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  gap: 2rem;
 `;
+
 function FilterSection() {
   const { dispatch } = useQueryCust();
+  const handleChangeNumber = (selectedOption) => {
+    dispatch({
+      type: "filter/number",
+      payload: selectedOption.value,
+    });
+  };
   const handleChangeDiet = (selectedOption) => {
     dispatch({
       type: "filter/diet",
@@ -96,8 +114,22 @@ function FilterSection() {
     });
   };
   return (
-    <StyledFilterSection style={{ color: "black" }}>
-      <StyledFilter>
+    <StyledFilterSectionMain>
+      <StyledFilterSectionSub>
+        <Select
+          onChange={handleChangeNumber}
+          autoFocus={true}
+          className="basic-single"
+          classNamePrefix="select"
+          defaultValue={optionsArray[1]}
+          isDisabled={false}
+          isLoading={false}
+          isClearable={false}
+          isRtl={false}
+          isSearchable={false}
+          name="Result per page"
+          options={optionsArray}
+        />
         <Select
           onChange={handleChangeDiet}
           autoFocus={true}
@@ -112,8 +144,8 @@ function FilterSection() {
           name="Diet"
           options={dietArray}
         />
-      </StyledFilter>
-      <StyledFilter>
+      </StyledFilterSectionSub>
+      <StyledFilterSectionSub>
         <Select
           onChange={handleChangeIntolerances}
           autoFocus={true}
@@ -125,11 +157,9 @@ function FilterSection() {
           isClearable={false}
           isRtl={false}
           isSearchable={false}
-          name="Diet"
+          name="Intollerances"
           options={intolerancesArray}
         />
-      </StyledFilter>
-      <StyledFilter>
         <Select
           onChange={handleChangeType}
           autoFocus={true}
@@ -144,8 +174,8 @@ function FilterSection() {
           name="Type"
           options={typeArray}
         />
-      </StyledFilter>
-      <StyledFilter>
+      </StyledFilterSectionSub>
+      <StyledFilterSectionSub>
         <Select
           onChange={handleChangeTime}
           autoFocus={true}
@@ -160,8 +190,6 @@ function FilterSection() {
           name="Type"
           options={timeArray}
         />
-      </StyledFilter>
-      <StyledFilter>
         <Select
           onChange={handleChangeOrder}
           autoFocus={true}
@@ -176,8 +204,8 @@ function FilterSection() {
           name="Type"
           options={orderArray}
         />
-      </StyledFilter>
-    </StyledFilterSection>
+      </StyledFilterSectionSub>
+    </StyledFilterSectionMain>
   );
 }
 

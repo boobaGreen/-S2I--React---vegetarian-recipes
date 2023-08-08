@@ -9,6 +9,34 @@ import { useCurious } from "../feautures/recipes/useCurious";
 
 import Spinner from "../ui/Spinner";
 import Error from "./Error";
+const StyledSpeechBubble = styled.main`
+  color: var(--color-brand-800);
+  background: #efefef;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  line-height: 1.3;
+  margin: 0 auto 40px;
+  max-width: 400px;
+  padding: 15px;
+  position: relative;
+
+  p {
+    margin: 0 0 10px;
+
+    :last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &::after {
+    border-left: 20px solid transparent;
+    border-top: 20px solid #efefef;
+    bottom: -20px;
+    content: "";
+    position: absolute;
+    right: 20px;
+  }
+`;
 const StyledCuriousPage = styled.main`
   background-color: var(--color-grey-50);
   display: flex;
@@ -58,16 +86,31 @@ function CuriousPage() {
     // </div>
     <StyledCuriousPage>
       <Box>
-        <Heading as="h3">{curious.text}</Heading>
-        <Row>
+        {/* <Heading as="h3">{curious.text}</Heading> */}
+        <StyledSpeechBubble>{curious.text}</StyledSpeechBubble>
+        <Row type="horizontal" style={{ justifyContent: "space-around" }}>
           <Button
             onClick={handleClick}
             size="small"
-            style={{ marginTop: "3rem" }}
+            style={{
+              marginTop: "3rem",
+              backgroundColor: "#A7F3D0",
+              color: "#1f2937",
+              padding: "3px 6px",
+            }}
           >
             Another...
           </Button>
-          <Button onClick={moveBack} size="samll" style={{ marginTop: "3rem" }}>
+          <Button
+            onClick={moveBack}
+            size="small"
+            style={{
+              marginTop: "3rem",
+              backgroundColor: "#A7F3D0",
+              color: "#1f2937",
+              padding: "3px 6px",
+            }}
+          >
             &larr; Back !
           </Button>
         </Row>

@@ -40,6 +40,8 @@ const GlobalStyles = createGlobalStyle`
 
     --image-grayscale: 0;
   --image-opacity: 100%;
+
+  --color-grey-plate: #047857;
   }
   
   &.dark-mode {
@@ -54,6 +56,8 @@ const GlobalStyles = createGlobalStyle`
 --color-grey-700: #e5e7eb;
 --color-grey-800: #f3f4f6;
 --color-grey-900: #f9fafb;
+
+
 
 --color-blue-100: #075985;
 --color-blue-700: #e0f2fe;
@@ -78,6 +82,8 @@ const GlobalStyles = createGlobalStyle`
 
 --image-grayscale: 10%;
 --image-opacity: 90%;
+
+--color-grey-plate:#f3f4f6;
   }
   
   /* Indigo */

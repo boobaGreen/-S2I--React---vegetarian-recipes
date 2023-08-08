@@ -1,17 +1,9 @@
-import Select from "react-select";
 import { styled } from "styled-components";
 import { useQueryCust } from "../contexts/QueryContext";
 import { useRecipes } from "../feautures/recipes/UseRecipes";
 
 import Row from "../ui/Row";
 
-const options = [
-  { value: 6, label: "6" },
-  { value: 12, label: "12" },
-  { value: 24, label: "24" },
-  { value: 48, label: "48" },
-  { value: 96, label: "96" },
-];
 const ButtonStyled = styled.button`
   border-radius: 100px;
   color: var(--color-grey-700);
@@ -50,13 +42,16 @@ function Stats() {
   if (isLoading) return null;
   if (error) return null;
   const totResultsLast = data.totalResults;
+  console.log("tot results : ", totResultsLast);
+  console.log("offset : ", offset);
 
   let page = Math.trunc(offset / number) + 1;
+  console.log("page : ", page);
   let pages = 1;
   if (Math.trunc(totResultsLast / number) > 1) {
-    pages = Math.trunc(totResultsLast / number);
+    pages = Math.trunc(totResultsLast / number) + 1;
   }
-
+  console.log("pages : ", pages);
   let nextPageExist = false;
   let prevPageExist = false;
 
@@ -66,45 +61,38 @@ function Stats() {
   if (number - offset <= 0) {
     prevPageExist = true;
   }
+
   function onNextPage() {
     dispatch({ type: "page/next" });
   }
   function onPrevPage() {
     dispatch({ type: "page/prev" });
   }
-  const handleChange = (selectedOption) => {
-    dispatch({
-      type: "filter/number",
-      payload: selectedOption.value,
-    });
 
-    console.log(`Option selected:`, selectedOption);
-  };
   return (
     <>
-      <Select
-        onChange={handleChange}
-        autoFocus={true}
-        className="basic-single"
-        classNamePrefix="select"
-        defaultValue={options[1]}
-        isDisabled={false}
-        isLoading={false}
-        isClearable={false}
-        isRtl={false}
-        isSearchable={false}
-        name="Result per page"
-        options={options}
-      />
+      {console.log(prevPageExist, " : prev ex page")}
+      {console.log(nextPageExist, " : next ex page")}
       <Row
         type="horizotal"
         style={{ justifyContent: "space-evenly", width: "100%" }}
       >
         {prevPageExist ? (
-          <ButtonStyled style={{ cursor: "pointer" }} onClick={onPrevPage}>
+          <ButtonStyled
+            style={{
+              cursor: "pointer",
+              backgroundColor: "#A7F3D0",
+              color: "#1f2937",
+            }}
+            onClick={onPrevPage}
+          >
             Prev Page
           </ButtonStyled>
-        ) : null}
+        ) : (
+          <ButtonStyled style={{ cursor: "auto", visibility: "hidden" }}>
+            Prev Page
+          </ButtonStyled>
+        )}
 
         <ButtonStyled disabled>
           {totResultsLast > 0 ? (
@@ -117,10 +105,21 @@ function Stats() {
         </ButtonStyled>
 
         {nextPageExist ? (
-          <ButtonStyled style={{ cursor: "pointer" }} onClick={onNextPage}>
+          <ButtonStyled
+            style={{
+              cursor: "pointer",
+              backgroundColor: "#A7F3D0",
+              color: "#1f2937",
+            }}
+            onClick={onNextPage}
+          >
             Next Page
           </ButtonStyled>
-        ) : null}
+        ) : (
+          <ButtonStyled style={{ cursor: "auto", visibility: "hidden" }}>
+            Next Page
+          </ButtonStyled>
+        )}
       </Row>
     </>
   );

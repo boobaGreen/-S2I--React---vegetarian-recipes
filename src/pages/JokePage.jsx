@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import { useMoveBack } from "../hooks/useMoveBack";
-import Heading from "../ui/Heading";
+
 import Button from "../ui/Button";
 import { useState } from "react";
 import Row from "../ui/Row";
@@ -14,9 +14,38 @@ const StyledJokePage = styled.main`
   align-items: start;
   justify-content: center;
 `;
+const StyledSpeechBubble = styled.main`
+  color: var(--color-brand-800);
+  background: #efefef;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  line-height: 1.3;
+  margin: 0 auto 40px;
+  max-width: 400px;
+  padding: 15px;
+  position: relative;
+
+  p {
+    margin: 0 0 10px;
+
+    :last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &::after {
+    border-left: 20px solid transparent;
+    border-top: 20px solid #efefef;
+    bottom: -20px;
+    content: "";
+    position: absolute;
+    right: 20px;
+  }
+`;
 
 const Box = styled.div`
   /* box */
+
   background-color: var(--color-grey-0);
   border: 1px solid var(--color-grey-100);
   border-radius: var(--border-radius-md);
@@ -49,19 +78,33 @@ function JokePage() {
   if (error) return <Error />;
 
   return (
-
     <StyledJokePage>
       <Box>
-        <Heading as="h3">{joke.text}</Heading>
-        <Row>
+        <StyledSpeechBubble>{joke.text}</StyledSpeechBubble>
+        <Row type="horizontal" style={{ justifyContent: "space-around" }}>
           <Button
             onClick={handleClick}
             size="small"
-            style={{ marginTop: "3rem" }}
+            style={{
+              marginTop: "3rem",
+              backgroundColor: "#A7F3D0",
+              color: "#1f2937",
+              padding: "3px 6px",
+            }}
           >
             Another...
           </Button>
-          <Button onClick={moveBack} size="samll" style={{ marginTop: "3rem" }}>
+
+          <Button
+            onClick={moveBack}
+            size="small"
+            style={{
+              marginTop: "3rem",
+              backgroundColor: "#A7F3D0",
+              color: "#1f2937",
+              padding: "3px 6px",
+            }}
+          >
             &larr; Back !
           </Button>
         </Row>

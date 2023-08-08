@@ -1,11 +1,24 @@
-mettere e togliere da preferiti in zoom recipe - forse no...
+TITOLO SU RECIPE SINGOLA!!!!!!!!
+
+NUTRION TITOLO E' PIU PICCOLO AGGIUSTARE
 
 sezione  curiosita e joke mettere anche bottone home  oppure solo home o cosi solo back?
-+ imbellire tipo fumetto?
 
 mettere a posta carta nella lista generale-da rifare
 
-metetre se asc o desc nell'ordine
+mettere se asc o desc nell'ordine
+
+SPINNER SU RECIPE SINGOLA CARICAMENTO (foto?)
+
+GESTIONE ERRORI!!!!!!
+
+SEZIONE INFO E FOOTER
+
+mediaquery
+
+filtro con piu intolleranze 
+
+
 
 
 

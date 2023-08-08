@@ -14,7 +14,7 @@ const StyledSearch = styled.input`
   border-radius: 100px;
   width: 40rem;
   transition: all 0.3s;
-  color: var(--color-grey-700);
+  color: #1f2937;
   background-color: var(--color-brand-300);
   &:focus {
     outline: none;
