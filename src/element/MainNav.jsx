@@ -80,7 +80,7 @@ function MainNav() {
         <li>
           <StyledNavLink to="/curious">
             <HiOutlineGift />
-            <span>Curious</span>
+            <span>Curiousity</span>
           </StyledNavLink>
         </li>
       </NavList>

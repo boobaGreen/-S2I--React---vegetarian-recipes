@@ -17,7 +17,9 @@ function Istructions({ istructionsArray }) {
 
   return (
     <div>
-      <Heading as="h1">Instructions</Heading>
+      <Heading as="h1" style={{ fontSize: "4rem" }}>
+        Instructions
+      </Heading>
       <div
         style={{
           display: "flex",
@@ -81,7 +83,7 @@ function Istructions({ istructionsArray }) {
         )}
       </div>
       <p>
-        <span>{step}</span>
+        <span> - Step N.{index + 1} - </span> <span>{step}</span>
       </p>
     </div>
   );

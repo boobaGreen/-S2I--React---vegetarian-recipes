@@ -71,6 +71,8 @@ function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
 
   const url = "url(" + image + ")";
   const titleAbr = title.length <= 45 ? title : title.slice(0, 40) + "...";
+  const titleToPass = title.replace(/\//g, " ");
+  // str = str.replace (/\//g, "_");
 
   function alreadyIncludes() {
     let check = favouriteList.some((el) => el.id === id);
@@ -100,7 +102,7 @@ function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
               {alreadyIncludes() ? <span>❤️</span> : <span>🤍</span>}
             </StyledSpan>
 
-            <Link to={`/recipes/${id}`}>
+            <Link to={`/recipes/${id}/${titleToPass}`}>
               <button
                 style={{
                   color: "#1f2937",

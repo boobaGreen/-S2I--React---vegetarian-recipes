@@ -8,6 +8,7 @@ import Row from "../ui/Row";
 import { useJoke } from "../feautures/recipes/useJoke";
 import Spinner from "../ui/Spinner";
 import Error from "./Error";
+import { Link } from "react-router-dom";
 const StyledJokePage = styled.main`
   background-color: var(--color-grey-50);
   display: flex;
@@ -47,6 +48,9 @@ const Box = styled.div`
   /* box */
 
   background-color: var(--color-grey-0);
+  background-image: url("/6.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   border: 1px solid var(--color-grey-100);
   border-radius: var(--border-radius-md);
   color: var(--color-brand-500);
@@ -95,18 +99,19 @@ function JokePage() {
             Another...
           </Button>
 
-          <Button
-            onClick={moveBack}
-            size="small"
-            style={{
-              marginTop: "3rem",
-              backgroundColor: "#A7F3D0",
-              color: "#1f2937",
-              padding: "3px 6px",
-            }}
-          >
-            &larr; Back !
-          </Button>
+          <Link to={`/`}>
+            <Button
+              size="small"
+              style={{
+                marginTop: "3rem",
+                backgroundColor: "#A7F3D0",
+                color: "#1f2937",
+                padding: "3px 6px",
+              }}
+            >
+              &larr; Home
+            </Button>
+          </Link>
         </Row>
       </Box>
     </StyledJokePage>

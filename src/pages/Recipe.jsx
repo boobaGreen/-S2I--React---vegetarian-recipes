@@ -14,7 +14,7 @@ import WinePhoto from "../element/WinePhoto";
 const StyledGridContainer = styled.div`
   display: grid;
   grid-template-rows: min-content auto min-content auto;
-  grid-template-columns: 75% 1fr;
+  grid-template-columns: 55% 1fr;
   grid-template-areas:
     "photo info"
     "ingredients type"
@@ -80,7 +80,6 @@ function Recipe({ recipe }) {
   const istructionsArray = data.analyzedInstructions[0].steps;
 
   const {
-    title,
     vegan,
     glutenFree,
     dairyFree,
@@ -141,6 +140,7 @@ function Recipe({ recipe }) {
             backgroundImage: `url(${image})`,
             overflow: "hidden",
             padding: "1rem",
+            borderRadius: "2rem",
           }}
         ></StyledDivPhoto>
         <StyledInfo>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import { useMoveBack } from "../hooks/useMoveBack";
-import Heading from "../ui/Heading";
+
 import Button from "../ui/Button";
 import { useState } from "react";
 import Row from "../ui/Row";
@@ -9,6 +9,7 @@ import { useCurious } from "../feautures/recipes/useCurious";
 
 import Spinner from "../ui/Spinner";
 import Error from "./Error";
+import { Link } from "react-router-dom";
 const StyledSpeechBubble = styled.main`
   color: var(--color-brand-800);
   background: #efefef;
@@ -46,6 +47,9 @@ const StyledCuriousPage = styled.main`
 
 const Box = styled.div`
   /* box */
+  background-image: url("/1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: var(--color-grey-0);
   border: 1px solid var(--color-grey-100);
   border-radius: var(--border-radius-md);
@@ -101,18 +105,19 @@ function CuriousPage() {
           >
             Another...
           </Button>
-          <Button
-            onClick={moveBack}
-            size="small"
-            style={{
-              marginTop: "3rem",
-              backgroundColor: "#A7F3D0",
-              color: "#1f2937",
-              padding: "3px 6px",
-            }}
-          >
-            &larr; Back !
-          </Button>
+          <Link to={`/`}>
+            <Button
+              size="small"
+              style={{
+                marginTop: "3rem",
+                backgroundColor: "#A7F3D0",
+                color: "#1f2937",
+                padding: "3px 6px",
+              }}
+            >
+              &larr; Home
+            </Button>
+          </Link>
         </Row>
       </Box>
     </StyledCuriousPage>

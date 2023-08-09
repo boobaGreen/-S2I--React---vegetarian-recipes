@@ -40,7 +40,7 @@ function App() {
                 <Route element={<AppLayout />}>
                   <Route index element={<Navigate replace to="recipes" />} />
                   <Route path="recipes" element={<Recipes />} />
-                  <Route path="recipes/:id" element={<Recipe />} />
+                  <Route path="recipes/:id/:title" element={<Recipe />} />
                   <Route path="favourite" element={<FavouriteList />} />
                   <Route path="joke" element={<Joke />} />
                   <Route path="curious" element={<Curious />} />

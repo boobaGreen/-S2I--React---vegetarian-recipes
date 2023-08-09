@@ -1,7 +1,7 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 
 import styled from "styled-components";
-
+import { HiOutlineFunnel } from "react-icons/hi2";
 import Row from "../ui/Row";
 import Option from "./Option";
 import DarkModeToggle from "../ui/DarkModeToggle";
@@ -10,6 +10,7 @@ import { useState } from "react";
 
 const StyledHeader = styled.div`
   background-color: var(--color-grey-50);
+
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -24,8 +25,8 @@ const StyledBtn = styled.button`
   padding: 5px 10px;
   border-radius: 100%;
 `;
-
 function Header() {
+  const { title } = useParams();
   const location = useLocation();
 
   const pageTest = location.pathname;
@@ -34,13 +35,16 @@ function Header() {
 
   function handleShowFilter() {
     setShowFilter((showFilter) => !showFilter);
-    // setIsDarkMode((isDark) => !isDark);
   }
 
   return (
     <StyledHeader>
       <Row type="horizontal" justify="center">
-        <Heading as="h1">Vegetarian Recipes</Heading>
+        {title ? (
+          <Heading as="h1">{title}</Heading>
+        ) : (
+          <Heading as="h1">Vegetarian Recipes</Heading>
+        )}
       </Row>
       <Row
         type="horizontal"
@@ -52,11 +56,13 @@ function Header() {
       >
         {pageTest === "/recipes" ? (
           <StyledBtn onClick={handleShowFilter}>
-            Advanced<span style={{ fontSize: "2.8rem" }}>🧐</span>
+            {/* Advanced<span style={{ fontSize: "2.8rem" }}>🧐</span> */}
+            <HiOutlineFunnel />
           </StyledBtn>
         ) : (
           <StyledBtn style={{ visibility: "hidden", cursor: "auto" }}>
-            Advanced<span style={{ fontSize: "2.8rem" }}>🧐</span>🧐
+            {/* Advanced<span style={{ fontSize: "2.8rem" }}>🧐</span> */}
+            <HiOutlineFunnel />
           </StyledBtn>
         )}
         <DarkModeToggle />

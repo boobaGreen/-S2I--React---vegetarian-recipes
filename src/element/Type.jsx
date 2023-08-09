@@ -12,7 +12,7 @@ function Type({ dishTypes }) {
   if (!dishTypeExists) return null;
   return (
     <>
-      <Heading as="h1">
+      <Heading as="h1" style={{ fontSize: "4rem" }}>
         <StyledSpan>🍽</StyledSpan> Type
       </Heading>
       <div

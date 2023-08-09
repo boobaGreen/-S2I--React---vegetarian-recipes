@@ -4,7 +4,9 @@ import Heading from "../ui/Heading";
 function Nutrition({ dataPieNutrient, dataPieCalories }) {
   return (
     <>
-      <Heading style={{ marginBottom: "4rem" }}>🧪 Nutrition</Heading>
+      <Heading as="h1" style={{ marginBottom: "4rem", fontSize: "4rem" }}>
+        🧪 Nutrition
+      </Heading>
       <div
         style={{
           display: "flex",

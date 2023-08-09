@@ -42,16 +42,14 @@ function Stats() {
   if (isLoading) return null;
   if (error) return null;
   const totResultsLast = data.totalResults;
-  console.log("tot results : ", totResultsLast);
-  console.log("offset : ", offset);
 
   let page = Math.trunc(offset / number) + 1;
-  console.log("page : ", page);
+
   let pages = 1;
   if (Math.trunc(totResultsLast / number) > 1) {
     pages = Math.trunc(totResultsLast / number) + 1;
   }
-  console.log("pages : ", pages);
+
   let nextPageExist = false;
   let prevPageExist = false;
 
@@ -71,8 +69,6 @@ function Stats() {
 
   return (
     <>
-      {console.log(prevPageExist, " : prev ex page")}
-      {console.log(nextPageExist, " : next ex page")}
       <Row
         type="horizotal"
         style={{ justifyContent: "space-evenly", width: "100%" }}

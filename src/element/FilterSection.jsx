@@ -3,11 +3,11 @@ import { styled } from "styled-components";
 import { useQueryCust } from "../contexts/QueryContext";
 
 const optionsArray = [
-  { value: 6, label: "6" },
-  { value: 12, label: "12-results/page" },
-  { value: 24, label: "24" },
-  { value: 48, label: "48" },
-  { value: 96, label: "96" },
+  { value: 6, label: "6 per page" },
+  { value: 12, label: "12 per page" },
+  { value: 24, label: "24 per page" },
+  { value: 48, label: "48 per page" },
+  { value: 96, label: "96 per page" },
 ];
 const dietArray = [
   { value: "vegetarian", label: "diet-vegetarian" },
@@ -54,10 +54,38 @@ const timeArray = [
 const orderArray = [
   { value: "", label: "Order...", disabled: true },
   { value: "random", label: "random" },
-  { value: "price", label: "price" },
-  { value: "time", label: "time" },
-  { value: "calories", label: "calories" },
-  { value: "max-used-ingredients", label: "max-used-ingredients" },
+  {
+    value: { order: "price", direction: "asc" },
+    label: "↑ price",
+  },
+  {
+    value: { order: "price", direction: "desc" },
+    label: "↓ price",
+  },
+  {
+    value: { order: "time", direction: "asc" },
+    label: "↑ time",
+  },
+  {
+    value: { order: "time", direction: "desc" },
+    label: "↓ time",
+  },
+  {
+    value: { order: "calories", direction: "asc" },
+    label: "↑ calories",
+  },
+  {
+    value: { order: "calories", direction: "desc" },
+    label: "↓ calories",
+  },
+  {
+    value: { order: "max-used-ingredients", direction: "asc" },
+    label: "↑ nº ingredients",
+  },
+  {
+    value: { order: "max-used-ingredients", direction: "desc" },
+    label: "↓ nº ingredients",
+  },
 ];
 const StyledFilterSectionMain = styled.div`
   color: black;
@@ -90,9 +118,21 @@ function FilterSection() {
     });
   };
   const handleChangeIntolerances = (selectedOption) => {
+    const newIntolerances = selectedOption
+      ?.map((el) => {
+        if (el.value === "") {
+          return "";
+        }
+        return el.value;
+      })
+      ?.filter((word) => word !== "")
+      ?.join(",");
+
+    console.log("new :", newIntolerances);
+    console.log("inotlerrances in dispatch :", newIntolerances);
     dispatch({
       type: "filter/intolerances",
-      payload: selectedOption.value,
+      payload: newIntolerances,
     });
   };
   const handleChangeType = (selectedOption) => {
@@ -147,11 +187,13 @@ function FilterSection() {
       </StyledFilterSectionSub>
       <StyledFilterSectionSub>
         <Select
+          isMulti
           onChange={handleChangeIntolerances}
           autoFocus={true}
+          multiple={true}
           className="basic-single"
           classNamePrefix="select"
-          defaultValue={intolerancesArray[0]}
+          defaultValue={[intolerancesArray[0]]}
           isDisabled={false}
           isLoading={false}
           isClearable={false}

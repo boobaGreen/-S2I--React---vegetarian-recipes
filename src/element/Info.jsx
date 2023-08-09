@@ -5,6 +5,7 @@ import IconMoney from "../ui/IconMoney";
 
 import { LuMilkOff } from "react-icons/lu";
 import { HiOutlineUserGroup } from "react-icons/hi2";
+import Heading from "../ui/Heading";
 
 function Info({
   vegan,
@@ -16,6 +17,9 @@ function Info({
 }) {
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>
+      <Heading as="h1" style={{ fontSize: "4rem" }}>
+        ℹ️ Info
+      </Heading>
       <div
         style={{
           display: "flex",

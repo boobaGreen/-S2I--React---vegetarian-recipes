@@ -49,6 +49,11 @@ function reducer(state, action) {
         diet: action.payload,
       };
     case "filter/intolerances":
+      // let newIntolerances = "";
+      // console.log(typeof action.payload);
+      // if (action.payload?.length > 0)
+      //   newIntolerances = action.payload.join(",");
+      // console.log("newIntolerances : ", newIntolerances);
       return {
         ...state,
         intolerances: action.payload,
@@ -59,14 +64,17 @@ function reducer(state, action) {
         type: action.payload,
       };
     case "filter/time":
+      console.log("time:", action.payload);
       return {
         ...state,
         maxReadyTime: action.payload,
       };
     case "filter/order":
+      console.log("action-payload :", action.payload);
       return {
         ...state,
-        sort: action.payload,
+        sort: action.payload.order,
+        direction: action.payload.direction,
       };
     case "filter/direction":
       return {
@@ -88,7 +96,6 @@ function QueryProvider({ children }) {
       type,
       number,
       offset,
-      viewed,
       recipesList,
       maxReadyTime,
       sort,
@@ -106,7 +113,6 @@ function QueryProvider({ children }) {
         type,
         number,
         offset,
-        viewed,
         recipesList,
         maxReadyTime,
         sort,

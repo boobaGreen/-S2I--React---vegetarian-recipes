@@ -1,24 +1,28 @@
-TITOLO SU RECIPE SINGOLA!!!!!!!!
 
-NUTRION TITOLO E' PIU PICCOLO AGGIUSTARE
-
-sezione  curiosita e joke mettere anche bottone home  oppure solo home o cosi solo back?
-
-mettere a posta carta nella lista generale-da rifare
-
-mettere se asc o desc nell'ordine
-
-SPINNER SU RECIPE SINGOLA CARICAMENTO (foto?)
-
-GESTIONE ERRORI!!!!!!
 
 SEZIONE INFO E FOOTER
 
+section xche' vegani?
+
+SPINNER SU RECIPE SINGOLA CARICAMENTO (foto?)
+
+mettere a posta carta nella lista generale-da rifare
+
+favicon!!!!!!!
+
 mediaquery
 
-filtro con piu intolleranze 
+abbassare qualita' foto in webp
+
+GESTIONE ERRORI!!!!!!
 
 
 
 
 
+
+
+
+https://www.pexels.com/
+
+  background-image: url("/wallBirgo.jpg");

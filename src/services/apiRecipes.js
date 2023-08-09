@@ -21,9 +21,6 @@ export async function getRecipes(
   const { data, error } = await apiClient.get(
     `https://api.spoonacular.com/recipes/complexSearch/?apiKey=${KEY}&query=${search}&diet=${diet}&intolerances=${intolerances}&type=${type}&maxReadyTime=${maxReadyTime}&sort=${sort}&sortDirection=${direction}&addRecipeNutrition=true&instructionsRequired=true&number=${numberString}&offset=${offset}`
   );
-  // const { data, error } = await apiClient.get(
-  //   `https://api.spoonacular.com/recipes/complexSearch/?apiKey=${KEY}&sustainable=true&addRecipeNutrition=true`
-  // );
 
   if (error) {
     console.error(error);
