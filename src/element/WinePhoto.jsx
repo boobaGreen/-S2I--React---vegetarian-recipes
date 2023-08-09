@@ -1,5 +1,6 @@
 import Heading from "../ui/Heading";
 function WinePhoto({ productMatches }) {
+  if (!productMatches) return null;
   const length = productMatches?.length;
 
   if (length < 1) return null;

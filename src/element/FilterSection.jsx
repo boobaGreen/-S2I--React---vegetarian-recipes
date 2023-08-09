@@ -199,7 +199,7 @@ function FilterSection() {
           isClearable={false}
           isRtl={false}
           isSearchable={false}
-          name="Intollerances"
+          name="Intolerances"
           options={intolerancesArray}
         />
         <Select
@@ -229,7 +229,7 @@ function FilterSection() {
           isClearable={false}
           isRtl={false}
           isSearchable={false}
-          name="Type"
+          name="Time"
           options={timeArray}
         />
         <Select
@@ -243,7 +243,7 @@ function FilterSection() {
           isClearable={false}
           isRtl={false}
           isSearchable={false}
-          name="Type"
+          name="Order"
           options={orderArray}
         />
       </StyledFilterSectionSub>

@@ -74,17 +74,19 @@ function Recipe({ recipe }) {
   const percentFat = data.nutrition.caloricBreakdown.percentFat;
   const percentProtein = data.nutrition.caloricBreakdown.percentProtein;
 
-  // const amountCalories = data.nutrition.nutrients[0].amount;
   const percentOfDailyNeedsCal =
     data.nutrition.nutrients[0].percentOfDailyNeeds;
-  const istructionsArray = data.analyzedInstructions[0].steps;
+  let istructionsArray = [{ number: 1, step: "😢" }];
+  if (data.analyzedInstructions[0]) {
+    istructionsArray = data.analyzedInstructions[0]?.steps;
+  }
+  console.log("istruction array", istructionsArray);
 
   const {
     vegan,
     glutenFree,
     dairyFree,
     image,
-    // id,
     readyInMinutes,
     servings,
     pricePerServing,
@@ -94,6 +96,8 @@ function Recipe({ recipe }) {
   } = data;
   const productMatches = winePairing.productMatches;
   const pairingText = winePairing.pairingText;
+  console.log("productMatches : ", productMatches);
+  console.log("pairingText : ", pairingText);
   const dataPieNutrient = {
     labels: ["Carb", "Prot", "Fats"],
     datasets: [

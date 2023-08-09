@@ -2,7 +2,7 @@ import { useState } from "react";
 import Heading from "../ui/Heading";
 function Istructions({ istructionsArray }) {
   const [index, setIndex] = useState(0);
-  const length = istructionsArray.length;
+  const length = istructionsArray?.length;
 
   const step = istructionsArray[index]?.step;
   let nextPageExist = index < length - 1;
