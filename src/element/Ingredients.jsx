@@ -13,22 +13,30 @@ function Ingredients({ extendedIngredients }) {
   return (
     <div
       style={{
-        padding: "2rem",
+        padding: "4rem",
         display: "flex",
         flexDirection: "column",
         alignItems: "start",
+        borderRadius: "5rem",
+        backgroundImage: "url(/paper.jpg",
+        width: "max-content",
       }}
     >
-      <Heading as="h1" style={{ marginBottom: "2rem", fontSize: "4rem" }}>
+      <Heading
+        as="h1"
+        style={{ marginBottom: "2rem", fontSize: "4rem", color: "#184d19" }}
+      >
         📌 Ingredients
       </Heading>
       {uniqueIngredients.map((ingredient) => (
         <div key={ingredient.id}>
           <p>
             <span>
-              <TbPoint />
+              <TbPoint color="#184d19" />
             </span>
-            <span style={{ marginLeft: "10px" }}>{ingredient.original}</span>
+            <span style={{ marginLeft: "10px", color: "#184d19" }}>
+              {ingredient.original}
+            </span>
           </p>
         </div>
       ))}

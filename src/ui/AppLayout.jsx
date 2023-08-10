@@ -4,6 +4,7 @@ import Sidebar from "../element/Sidebar";
 import Header from "../element/Header";
 
 const StyledAppLayout = styled.div`
+  background-image: url("/paper.jpg");
   display: grid;
   grid-template-columns: 20rem 1fr;
   grid-template-rows: auto 1fr;
@@ -11,8 +12,8 @@ const StyledAppLayout = styled.div`
 `;
 
 const Main = styled.main`
-  background-color: var(--color-grey-50);
-  /* background-image: url("/wallBirgo.jpg"); */
+  /* background-color: var(--color-grey-50); */
+
   padding: 4rem 4.8rem 6.4rem;
   overflow: scroll;
 `;
@@ -27,7 +28,7 @@ const Container = styled.div`
 
 function AppLayout() {
   return (
-    <StyledAppLayout>
+    <StyledAppLayout style={{ backgroundImage: "url(/wallBirgo.jpg)" }}>
       <Header />
       <Sidebar />
       <Main>

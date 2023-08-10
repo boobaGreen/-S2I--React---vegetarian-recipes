@@ -11,6 +11,8 @@ import {
 } from "react-icons/hi2";
 
 const NavList = styled.ul`
+  /* background-image: url("/paper.jpg"); */
+  background-color: var(--color-my-700);
   display: flex;
   flex-direction: column;
   gap: 0.8rem;

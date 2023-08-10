@@ -10,6 +10,7 @@ import { useRecipes } from "../feautures/recipes/UseRecipes";
 // import { useQueryCust } from "../contexts/QueryContext";
 
 const StyledRecipeList = styled.ul`
+
   display: flex;
   flex-wrap: wrap;
   list-style: none;

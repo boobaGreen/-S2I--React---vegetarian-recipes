@@ -1,9 +1,19 @@
+// #fcf6b9
+//#017f00 vegan logo
+// #184d19
+//#184d19
+//#f3f4f6
+//"#059669" pen on chart
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
 :root {
   &, &.light-mode {
   /* Grey */
+  --color-vegan-logo:#017f00;
+  --color-my-plate:#f3f4f6;
+  --color-my-700:#dcf9d7;
+  --color-pen--700:#3e4a3c;
   --color-grey-0: #fff;
   --color-grey-50: #f9fafb;
   --color-grey-100: #f3f4f6;
@@ -45,6 +55,9 @@ const GlobalStyles = createGlobalStyle`
   }
   
   &.dark-mode {
+    --color-my-green:#184d19;
+    --color-my-700:#184d19;
+    --color-pen-700:#dcf9d7;
     --color-grey-0: #18212f;
 --color-grey-50: #111827;
 --color-grey-100: #1f2937;

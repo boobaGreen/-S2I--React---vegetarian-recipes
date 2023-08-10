@@ -144,7 +144,7 @@ function Recipe({ recipe }) {
             backgroundImage: `url(${image})`,
             overflow: "hidden",
             padding: "1rem",
-            borderRadius: "2rem",
+            borderRadius: "4rem",
           }}
         ></StyledDivPhoto>
         <StyledInfo>

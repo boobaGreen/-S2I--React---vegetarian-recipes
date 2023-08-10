@@ -6,8 +6,17 @@ import Row from "../ui/Row";
 
 const ButtonStyled = styled.button`
   border-radius: 100px;
-  color: var(--color-grey-700);
-  background-color: var(--color-grey-100);
+  color: var(--color-pen-700);
+  background-color: var(--color-my-700);
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  cursor: auto;
+  padding: 0.5rem;
+`;
+const ButtonNoClickStyled = styled.button`
+  border-radius: 100px;
+  color: var(--color-pen-700);
+  background-color: var(--color-vegan-logo);
   font-size: 1.2rem;
   margin-top: 2rem;
   cursor: auto;
@@ -77,8 +86,8 @@ function Stats() {
           <ButtonStyled
             style={{
               cursor: "pointer",
-              backgroundColor: "#A7F3D0",
-              color: "#1f2937",
+              color: "var(--color-pen-700)",
+              backgroundColor: "var(--color-my-700)",
             }}
             onClick={onPrevPage}
           >
@@ -90,7 +99,7 @@ function Stats() {
           </ButtonStyled>
         )}
 
-        <ButtonStyled disabled>
+        <ButtonNoClickStyled disabled>
           {totResultsLast > 0 ? (
             <span>
               Page :{page} of {pages}
@@ -98,14 +107,12 @@ function Stats() {
           ) : (
             <span>🍃 No match for request...</span>
           )}
-        </ButtonStyled>
+        </ButtonNoClickStyled>
 
         {nextPageExist ? (
           <ButtonStyled
             style={{
               cursor: "pointer",
-              backgroundColor: "#A7F3D0",
-              color: "#1f2937",
             }}
             onClick={onNextPage}
           >

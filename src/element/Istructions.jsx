@@ -16,7 +16,13 @@ function Istructions({ istructionsArray }) {
   if (length < 1) return null;
 
   return (
-    <div>
+    <div
+      style={{
+        backgroundImage: "url(/paper.jpg)",
+        borderRadius: "4rem",
+        padding: "2rem",
+      }}
+    >
       <Heading as="h1" style={{ fontSize: "4rem" }}>
         Instructions
       </Heading>
@@ -32,7 +38,8 @@ function Istructions({ istructionsArray }) {
         {prevPageExist ? (
           <button
             style={{
-              backgroundColor: "#10B981",
+              color: "var(color-pen-700)",
+              backgroundColor: "var(--color-my-700)",
               padding: "1rem",
               borderRadius: "10px",
             }}
@@ -60,7 +67,8 @@ function Istructions({ istructionsArray }) {
         {nextPageExist ? (
           <button
             style={{
-              backgroundColor: "#10B981",
+              color: "var(color-pen-700)",
+              backgroundColor: "var(--color-my-700)",
               padding: "1rem",
               borderRadius: "10px",
             }}

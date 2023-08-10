@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 import Heading from "../ui/Heading";
 const StyledSpan = styled.span`
-  color: var(--color-grey-plate);
+  color: var(--color-my-plate);
   font-size: 6rem;
 `;
 function Type({ dishTypes }) {
@@ -11,8 +11,14 @@ function Type({ dishTypes }) {
   }
   if (!dishTypeExists) return null;
   return (
-    <>
-      <Heading as="h1" style={{ fontSize: "4rem" }}>
+    <div
+      style={{
+        backgroundImage: "url(/paper.jpg)",
+        borderRadius: "4rem",
+        padding: "2rem",
+      }}
+    >
+      <Heading as="h1" style={{ fontSize: "4rem", color: "#184d19" }}>
         <StyledSpan>🍽</StyledSpan> Type
       </Heading>
       <div
@@ -30,7 +36,10 @@ function Type({ dishTypes }) {
           <button
             key={i}
             style={{
+              border: "solid 5px  #fcf6b9",
+              color: "#fcf6b9",
               backgroundColor: "transparent",
+              backgroundImage: "url(/wood.webp)",
               borderRadius: "40px",
               padding: "3px 6px",
               marginRight: "1rem",
@@ -44,7 +53,7 @@ function Type({ dishTypes }) {
           </button>
         ))}
       </div>
-    </>
+    </div>
   );
 }
 

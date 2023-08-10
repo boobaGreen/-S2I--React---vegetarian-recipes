@@ -10,7 +10,15 @@ function WinePhoto({ productMatches }) {
 
   // const description = productMatches[index].description;
   return (
-    <>
+    <div
+      style={{
+        backgroundImage: "url(/paper.jpg)",
+        borderRadius: "4rem",
+        padding: "2rem",
+        height: "30rem",
+        width: "15rem",
+      }}
+    >
       <Heading
         style={{
           fontSize: "1.5rem",
@@ -35,7 +43,7 @@ function WinePhoto({ productMatches }) {
           height: "80%",
         }}
       ></div>
-    </>
+    </div>
   );
 }
 

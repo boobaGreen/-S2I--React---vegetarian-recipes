@@ -88,7 +88,7 @@ const orderArray = [
   },
 ];
 const StyledFilterSectionMain = styled.div`
-  color: black;
+  /* color: var(--color-pen-700); */
   margin-top: 2.5rem;
   width: 100%;
   display: flex;

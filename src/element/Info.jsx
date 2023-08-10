@@ -16,8 +16,18 @@ function Info({
   pricePerServing,
 }) {
   return (
-    <div style={{ display: "flex", flexDirection: "column" }}>
-      <Heading as="h1" style={{ fontSize: "4rem" }}>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        backgroundImage: "url(/paper.jpg",
+        width: "max-content",
+        borderRadius: "3rem",
+        padding: "1rem",
+        color: "#184d19",
+      }}
+    >
+      <Heading as="h1" style={{ fontSize: "4rem", color: "#184d19" }}>
         ℹ️ Info
       </Heading>
       <div
@@ -26,25 +36,29 @@ function Info({
           justifyContent: "center",
           alignItems: "center",
           marginTop: "3rem",
-          marginLeft: "3rem",
+          // marginLeft: "3rem",
           height: "10rem",
-          gap: "2.5rem",
+          gap: "2rem",
+          color: "#184d19",
         }}
       >
         <p>{vegan ? <IconVegan /> : null}</p>
         <p>{glutenFree ? <IconGlutenFree /> : null}</p>
-        <div style={{ color: "#059669" }}>
-          {dairyFree ? <LuMilkOff style={{ fontSize: "4.5rem" }} /> : null}
+        <div style={{ color: "#184d19" }}>
+          {dairyFree ? (
+            <LuMilkOff style={{ fontSize: "4.5rem", color: "#184d19" }} />
+          ) : null}
         </div>
       </div>
-      <p style={{ color: "#059669" }}>
-        <IconTimer />
-        <span style={{ marginLeft: "1.5rem" }}>{readyInMinutes}min</span>
+      <p>
+        <IconTimer style={{ color: "#184d19", margin: "3rem" }} />
+        <span style={{ marginLeft: "1.5rem", color: "#184d19" }}>
+          {readyInMinutes}min
+        </span>
       </p>
-      <p style={{ color: "#059669", margin: "3rem" }}>
+      <p style={{ color: "#184d19", margin: "3rem" }}>
         <IconMoney />
-        <span style={{ marginLeft: "1.5rem" }}>
-          {" "}
+        <span style={{ marginLeft: "1.5rem", color: "#184d19" }}>
           {pricePerServing < 5
             ? "0.05$"
             : `${(pricePerServing / 100).toFixed(2)}$`}
@@ -52,12 +66,12 @@ function Info({
       </p>
 
       <p
-        style={{ color: "#059669", marginRight: "3rem", marginLeft: "1.5rem" }}
+        style={{ color: "#184d19", marginRight: "3rem", marginLeft: "1.5rem" }}
       >
         <HiOutlineUserGroup
-          style={{ marginRight: "2rem", fontSize: "4.5rem" }}
+          style={{ marginRight: "2rem", fontSize: "4.5rem", color: "#184d19" }}
         />
-        <span style={{ marginLeft: "1rem" }}>{servings}</span>
+        <span style={{ marginLeft: "1rem", color: "#184d19" }}>{servings}</span>
       </p>
     </div>
   );

@@ -14,8 +14,8 @@ const StyledSearch = styled.input`
   border-radius: 100px;
   width: 40rem;
   transition: all 0.3s;
-  color: #1f2937;
-  background-color: var(--color-brand-300);
+  color: var(--color-pen-700);
+  background-color: var(--color-my-700);
   &:focus {
     outline: none;
     box-shadow: 0 2.4rem 2.4rem rgba(0, 0, 0, 0.1);

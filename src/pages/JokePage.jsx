@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-import { useMoveBack } from "../hooks/useMoveBack";
-
 import Button from "../ui/Button";
 import { useState } from "react";
 import Row from "../ui/Row";
@@ -10,7 +8,9 @@ import Spinner from "../ui/Spinner";
 import Error from "./Error";
 import { Link } from "react-router-dom";
 const StyledJokePage = styled.main`
-  background-color: var(--color-grey-50);
+  background-image: url("/paper.jpg");
+
+  /* background-color: var(--color-grey-50); */
   display: flex;
   align-items: start;
   justify-content: center;
@@ -46,14 +46,8 @@ const StyledSpeechBubble = styled.main`
 
 const Box = styled.div`
   /* box */
-
-  background-color: var(--color-grey-0);
-  background-image: url("/6.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  border: 1px solid var(--color-grey-100);
-  border-radius: var(--border-radius-md);
-  color: var(--color-brand-500);
+  /* 
+  background-color: var(--color-grey-0); */
 
   padding: 4.8rem;
   flex: 0 1 96rem;
@@ -64,7 +58,6 @@ const Box = styled.div`
   }
 `;
 function JokePage() {
-  const moveBack = useMoveBack();
   const currentDate = new Date();
   const timestamp = currentDate.getTime();
   // const [more, setMore] = useState(false);
@@ -90,10 +83,13 @@ function JokePage() {
             onClick={handleClick}
             size="small"
             style={{
-              marginTop: "3rem",
-              backgroundColor: "#A7F3D0",
-              color: "#1f2937",
-              padding: "3px 6px",
+              cursor: "pointer",
+              color: "var(--color-pen-700)",
+              backgroundColor: "var(--color-my-700)",
+              padding: "0.5rem 1rem",
+              marginLeft: "1rem",
+              marginBottom: "1rem",
+              borderRadius: "40px",
             }}
           >
             Another...
@@ -103,10 +99,13 @@ function JokePage() {
             <Button
               size="small"
               style={{
-                marginTop: "3rem",
-                backgroundColor: "#A7F3D0",
-                color: "#1f2937",
-                padding: "3px 6px",
+                cursor: "pointer",
+                color: "var(--color-pen-700)",
+                backgroundColor: "var(--color-my-700)",
+                padding: "0.5rem 1rem",
+                marginLeft: "1rem",
+                marginBottom: "1rem",
+                borderRadius: "40px",
               }}
             >
               &larr; Home

@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-import { useMoveBack } from "../hooks/useMoveBack";
-
 import Button from "../ui/Button";
 import { useState } from "react";
 import Row from "../ui/Row";
@@ -39,21 +37,19 @@ const StyledSpeechBubble = styled.main`
   }
 `;
 const StyledCuriousPage = styled.main`
-  background-color: var(--color-grey-50);
+  background-image: url("/paper.jpg");
+  /* background-image: url("/wallBirgo.jpg"); */
+  background-size: cover;
+  /* background-color: var(--color-grey-50); */
   display: flex;
   align-items: start;
   justify-content: center;
 `;
 
 const Box = styled.div`
+  /* background-image: url("/wood.webp"); */
+  /* background-image: url("/WallBirgo.jpg"); */
   /* box */
-  background-image: url("/1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: var(--color-grey-0);
-  border: 1px solid var(--color-grey-100);
-  border-radius: var(--border-radius-md);
-  color: var(--color-brand-500);
 
   padding: 4.8rem;
   flex: 0 1 96rem;
@@ -64,7 +60,6 @@ const Box = styled.div`
   }
 `;
 function CuriousPage() {
-  const moveBack = useMoveBack();
   const currentDate = new Date();
   const timestamp = currentDate.getTime();
   // const [more, setMore] = useState(false);

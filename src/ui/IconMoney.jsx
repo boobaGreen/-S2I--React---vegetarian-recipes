@@ -11,7 +11,7 @@ function IconMoney() {
       viewBox="0 0 24 24"
       height={42}
       width={42}
-      stroke="#059669"
+      stroke="#184d19"
     >
       <defs />
       <path

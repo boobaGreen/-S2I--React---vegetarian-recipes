@@ -3,7 +3,13 @@ import Heading from "../ui/Heading";
 
 function Nutrition({ dataPieNutrient, dataPieCalories }) {
   return (
-    <>
+    <div
+      style={{
+        backgroundImage: "url(/paper.jpg)",
+        borderRadius: "4rem",
+        padding: "2rem",
+      }}
+    >
       <Heading as="h1" style={{ marginBottom: "4rem", fontSize: "4rem" }}>
         🧪 Nutrition
       </Heading>
@@ -32,7 +38,7 @@ function Nutrition({ dataPieNutrient, dataPieCalories }) {
           />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

@@ -9,7 +9,8 @@ import Heading from "../ui/Heading";
 import { useState } from "react";
 
 const StyledHeader = styled.div`
-  background-color: var(--color-grey-50);
+  /* background-color: var(--color-grey-50); */
+  /* background-image: url("/wood.webp"); */
 
   display: flex;
   flex-direction: column;
@@ -18,10 +19,10 @@ const StyledHeader = styled.div`
 `;
 const StyledBtn = styled.button`
   font-size: 1.8rem;
-  color: #1f2937;
+  color: var(--color-pen-700);
   height: auto;
   width: auto;
-  background-color: var(--color-brand-200);
+  background-color: var(--color-my-700);
   padding: 5px 10px;
   border-radius: 100%;
 `;
@@ -39,11 +40,41 @@ function Header() {
 
   return (
     <StyledHeader>
-      <Row type="horizontal" justify="center">
+      <Row
+        type="horizontal"
+        justify="center"
+        style={
+          {
+            // backgroundImage: "url(/wallBirgo.jpg)",
+          }
+        }
+      >
         {title ? (
-          <Heading as="h1">{title}</Heading>
+          <Heading
+            as="h1"
+            style={{
+              color: `var(--color-pen-700)`,
+              backgroundColor: `var(--color-vegan-logo)`,
+              borderRadius: "5rem",
+              padding: "1rem 3rem",
+              margin: "1rem",
+            }}
+          >
+            {title}
+          </Heading>
         ) : (
-          <Heading as="h1">Vegetarian Recipes</Heading>
+          <Heading
+            as="h1"
+            style={{
+              color: `var(--color-pen-700)`,
+              backgroundColor: `var(--color-vegan-logo)`,
+              borderRadius: "5rem",
+              padding: "1rem 3rem",
+              margin: "1rem",
+            }}
+          >
+            Vegetarian Recipes
+          </Heading>
         )}
       </Row>
       <Row

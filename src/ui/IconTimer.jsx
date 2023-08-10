@@ -11,7 +11,7 @@ function IconTimer() {
       xmlns="http://www.w3.org/2000/svg"
       height={48}
       width={48}
-      stroke="#059669"
+      stroke="#184d19"
     >
       <path
         d="M12 12.746 4.404 2.534"

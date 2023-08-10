@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 
 //
 const StyledCardContainer = styled.ul`
+  /* background-image: url("/wallBirgo.jpg"); */
   //background: var(--color-red-700);
   overflow: hidden;
   display: flex;
@@ -31,8 +32,9 @@ const StyledSpan = styled.span`
   font-size: 2.5rem;
 `;
 const StyledCard = styled.li`
-  background-color: var(--color-grey-100);
-
+  /* background-color: var(--color-grey-100); */
+  /* background-image: url("/wood.webp");
+  background-image: url("/wallBirgo.jpg"); */
   box-shadow: var(--shadow-lg);
 
   display: flex;
@@ -49,14 +51,6 @@ const StyledBlock = styled.div`
 `;
 
 const StyledDiv = styled.div``;
-
-const StyledBlockScroll = styled.div`
-  display: flex;
-  flex-grow: 1;
-  overflow: hidden;
-  background-repeat: no-repeat;
-  background-size: cover;
-`;
 
 function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
   const {
@@ -89,8 +83,12 @@ function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
 
   return (
     <StyledCardContainer>
-      <StyledCard>
-        <StyledBlock style={{ backgroundImage: url, width: "45%" }}>
+      <StyledCard
+        style={{ backgroundImage: "url(/paper.jpg)", borderRadius: "4rem" }}
+      >
+        <StyledBlock
+          style={{ backgroundImage: url, width: "45%", borderRadius: "2rem" }}
+        >
           <StyledDiv
             style={{
               flexDirection: "column",
@@ -98,15 +96,16 @@ function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
               justifyContent: "space-between",
             }}
           >
-            <StyledSpan onClick={clickHandle}>
+            <StyledSpan onClick={clickHandle} style={{ marginLeft: "0.5rem" }}>
               {alreadyIncludes() ? <span>❤️</span> : <span>🤍</span>}
             </StyledSpan>
 
             <Link to={`/recipes/${id}/${titleToPass}`}>
               <button
                 style={{
-                  color: "#1f2937",
-                  backgroundColor: "#A7F3D0",
+                  cursor: "pointer",
+                  color: "var(--color-pen-700)",
+                  backgroundColor: "var(--color-my-700)",
                   padding: "0.5rem 1rem",
                   marginLeft: "1rem",
                   marginBottom: "1rem",
@@ -119,7 +118,12 @@ function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
           </StyledDiv>
         </StyledBlock>
         <StyledBlock style={{ width: "50%" }}>
-          <StyledBlock style={{ flexDirection: "column" }}>
+          <StyledBlock
+            style={{
+              flexDirection: "column",
+              // backgroundImage: "url(/wood.webp)",
+            }}
+          >
             <StyledBlock style={{ height: "33%" }}>
               <StyledBlock
                 style={{
@@ -154,16 +158,14 @@ function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
             <StyledBlock style={{ height: "33%" }}>
               <StyledBlock
                 style={{
+                  // backgroundImage: "url(/paper.jpg)",
+
                   flexDirection: "column",
                   alignItems: "start",
                   justifyContent: "center",
                 }}
               >
-                <StyledBlockScroll
-                  style={{ flexDirection: "column", marginTop: "1.8rem" }}
-                >
-                  <Heading as="h2">{titleAbr} </Heading>
-                </StyledBlockScroll>
+                <Heading as="h2">{titleAbr}</Heading>
               </StyledBlock>
             </StyledBlock>
             <StyledBlock
@@ -179,7 +181,6 @@ function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
                   maxWidth: "100%",
                   justifyContent: "space-around",
                   alignItems: "center",
-
                   cursor: "pointer",
                 }}
                 data-tooltip-id="timer-tooltip"

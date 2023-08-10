@@ -1,5 +1,3 @@
-
-
 SEZIONE INFO E FOOTER
 
 section xche' vegani?
@@ -8,21 +6,14 @@ SPINNER SU RECIPE SINGOLA CARICAMENTO (foto?)
 
 mettere a posta carta nella lista generale-da rifare
 
-favicon!!!!!!!
-
 mediaquery
-
-abbassare qualita' foto in webp
 
 GESTIONE ERRORI!!!!!!
 
-
-
 http://localhost:5173/recipes/649703/Lemon%20Or%20Lime%20Glaze%20For%20Chicken,%20Fish,%20Or%20Vegetables
-
-
-
 
 https://www.pexels.com/
 
-  background-image: url("/wallBirgo.jpg");
+background-image: url("/wallBirgo.jpg");
+
+readme
