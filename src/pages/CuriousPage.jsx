@@ -92,10 +92,13 @@ function CuriousPage() {
             onClick={handleClick}
             size="small"
             style={{
-              marginTop: "3rem",
-              backgroundColor: "#A7F3D0",
-              color: "#1f2937",
-              padding: "3px 6px",
+              cursor: "pointer",
+              color: "var(--color-pen-700)",
+              backgroundColor: "var(--color-my-700)",
+              padding: "0.5rem 1rem",
+              marginLeft: "1rem",
+              marginBottom: "1rem",
+              borderRadius: "40px",
             }}
           >
             Another...
@@ -104,10 +107,13 @@ function CuriousPage() {
             <Button
               size="small"
               style={{
-                marginTop: "3rem",
-                backgroundColor: "#A7F3D0",
-                color: "#1f2937",
-                padding: "3px 6px",
+                cursor: "pointer",
+                color: "var(--color-pen-700)",
+                backgroundColor: "var(--color-my-700)",
+                padding: "0.5rem 1rem",
+                marginLeft: "1rem",
+                marginBottom: "1rem",
+                borderRadius: "40px",
               }}
             >
               &larr; Home

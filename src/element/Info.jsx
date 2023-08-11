@@ -23,7 +23,7 @@ function Info({
         backgroundImage: "url(/paper.jpg",
         width: "max-content",
         borderRadius: "3rem",
-        padding: "1rem",
+        padding: "4rem",
         color: "#184d19",
       }}
     >

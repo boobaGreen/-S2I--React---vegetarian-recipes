@@ -5,7 +5,6 @@ import { HiOutlineFunnel } from "react-icons/hi2";
 import Row from "../ui/Row";
 import Option from "./Option";
 import DarkModeToggle from "../ui/DarkModeToggle";
-import Heading from "../ui/Heading";
 import { useState } from "react";
 
 const StyledHeader = styled.div`
@@ -15,6 +14,7 @@ const StyledHeader = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
   padding: 1rem;
 `;
 const StyledBtn = styled.button`
@@ -25,6 +25,25 @@ const StyledBtn = styled.button`
   background-color: var(--color-my-700);
   padding: 5px 10px;
   border-radius: 100%;
+`;
+const StyledTitle = styled.div`
+  margin-top: 2rem;
+  transform: rotate(12deg);
+  font-size: 3rem;
+  font-weight: 700;
+  border: 0.25rem solid #555;
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  text-transform: uppercase;
+  font-family: "Courier";
+  -webkit-mask-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/8399/grunge.png");
+  -webkit-mask-size: 944px 604px;
+  mix-blend-mode: multiply;
+  color: var(--color-vegan-logo);
+  border: 0.5rem solid --color-vegan-logo;
+  -webkit-mask-position: 13rem 6rem;
+  transform: rotate(-3deg);
+  border-radius: 0;
 `;
 function Header() {
   const { title } = useParams();
@@ -43,44 +62,22 @@ function Header() {
       <Row
         type="horizontal"
         justify="center"
-        style={
-          {
-            // backgroundImage: "url(/wallBirgo.jpg)",
-          }
-        }
+        style={{
+          backgroundImage: "url(/paper.jpg)",
+          padding: "1rem 3rem 2.5rem 3rem",
+          paddingBottom: "2.8rem ",
+        }}
       >
         {title ? (
-          <Heading
-            as="h1"
-            style={{
-              color: `var(--color-pen-700)`,
-              backgroundColor: `var(--color-vegan-logo)`,
-              borderRadius: "5rem",
-              padding: "1rem 3rem",
-              margin: "1rem",
-            }}
-          >
-            {title}
-          </Heading>
+          <StyledTitle> {title}</StyledTitle>
         ) : (
-          <Heading
-            as="h1"
-            style={{
-              color: `var(--color-pen-700)`,
-              backgroundColor: `var(--color-vegan-logo)`,
-              borderRadius: "5rem",
-              padding: "1rem 3rem",
-              margin: "1rem",
-            }}
-          >
-            Vegetarian Recipes
-          </Heading>
+          <StyledTitle>Vegetarian Recipes</StyledTitle>
         )}
       </Row>
       <Row
         type="horizontal"
         style={{
-          width: "100%",
+          width: "90%",
           justifyContent: "space-between",
           marginRight: "5rem",
         }}

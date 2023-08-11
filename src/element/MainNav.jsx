@@ -13,6 +13,7 @@ import {
 const NavList = styled.ul`
   /* background-image: url("/paper.jpg"); */
   background-color: var(--color-my-700);
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
@@ -25,7 +26,7 @@ const StyledNavLink = styled(NavLink)`
     align-items: center;
     gap: 1.2rem;
 
-    color: var(--color-grey-600);
+    color: var(--color-pen-700);
     font-size: 1.6rem;
     font-weight: 500;
     padding: 1.2rem 2.4rem;
@@ -37,8 +38,8 @@ const StyledNavLink = styled(NavLink)`
   &:active,
   &.active:link,
   &.active:visited {
-    color: var(--color-grey-800);
-    background-color: var(--color-grey-50);
+    color: var(--color-pen--700);
+    background-color: var(--color-nav-hover);
     border-radius: var(--border-radius-sm);
   }
 

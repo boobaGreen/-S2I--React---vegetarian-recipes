@@ -10,9 +10,12 @@ const GlobalStyles = createGlobalStyle`
 :root {
   &, &.light-mode {
   /* Grey */
+  --color-nav-hover:#ffe4a2;
+  --color-nav-link:black;
+
   --color-vegan-logo:#017f00;
   --color-my-plate:#f3f4f6;
-  --color-my-700:#dcf9d7;
+  --color-my-700:#fcf6b9;
   --color-pen--700:#3e4a3c;
   --color-grey-0: #fff;
   --color-grey-50: #f9fafb;
@@ -55,6 +58,7 @@ const GlobalStyles = createGlobalStyle`
   }
   
   &.dark-mode {
+    --color-nav-hover:#017f00;
     --color-my-green:#184d19;
     --color-my-700:#184d19;
     --color-pen-700:#dcf9d7;
