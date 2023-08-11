@@ -7,7 +7,7 @@ const StyledSidebar = styled.aside`
   /* background-image: url("/wallBirgo.jpg"); */
   /* background-image: url("/paper.jpg"); */
   padding: 3.2rem 2.4rem;
-  border-right: 1px solid var(--color-grey-100);
+  /* border-right: 1px solid var(--color-grey-100); */
 
   grid-row: 1 / -1;
   display: flex;

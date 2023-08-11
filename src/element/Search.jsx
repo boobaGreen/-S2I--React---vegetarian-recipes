@@ -8,7 +8,7 @@ import { styled } from "styled-components";
 const StyledSearch = styled.input`
   cursor: pointer;
   justify-self: center;
-  border: none;
+  border: solid 0.5rem white;
   padding: 1.1rem 1.6rem;
   font-size: 1.8rem;
   border-radius: 100px;

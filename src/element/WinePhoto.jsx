@@ -36,7 +36,7 @@ function WinePhoto({ productMatches }) {
       </Heading>
       <div
         style={{
-          marginTop: "1rem",
+          marginTop: "2.5rem",
           backgroundImage: url,
           backgroundRepeat: "no-repeat",
           backgroundSize: "contain",

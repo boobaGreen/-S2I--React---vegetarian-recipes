@@ -67,7 +67,7 @@ function Istructions({ istructionsArray }) {
         {nextPageExist ? (
           <button
             style={{
-              color: "var(color-pen-700)",
+              color: "var(--color-pen-700)",
               backgroundColor: "var(--color-my-700)",
               padding: "1rem",
               borderRadius: "10px",
@@ -90,8 +90,9 @@ function Istructions({ istructionsArray }) {
           </button>
         )}
       </div>
-      <p>
-        <span> - Step N.{index + 1} - </span> <span>{step}</span>
+      <p style={{ color: "#184d19" }}>
+        <span> - Step N.{index + 1} - </span>
+        <span>{step}</span>
       </p>
     </div>
   );

@@ -142,6 +142,7 @@ function Recipe({ recipe }) {
         <StyledDivPhoto
           style={{
             backgroundImage: `url(${image})`,
+            backgroundSize: "cover",
             overflow: "hidden",
             padding: "1rem",
             borderRadius: "4rem",

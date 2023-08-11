@@ -66,6 +66,7 @@ function Header() {
           backgroundImage: "url(/paper.jpg)",
           padding: "1rem 3rem 2.5rem 3rem",
           paddingBottom: "2.8rem ",
+          borderRadius: "2rem",
         }}
       >
         {title ? (

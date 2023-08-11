@@ -13,6 +13,8 @@ import {
 const NavList = styled.ul`
   /* background-image: url("/paper.jpg"); */
   background-color: var(--color-my-700);
+
+  border: solid 0.5rem white;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
