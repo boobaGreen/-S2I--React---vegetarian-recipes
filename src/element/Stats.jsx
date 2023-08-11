@@ -17,7 +17,7 @@ const ButtonNoClickStyled = styled.button`
   border-radius: 100px;
   color: #184d19;
 
-  background-color: var(white);
+  background-color: white;
   font-size: 1.2rem;
   margin-top: 2rem;
   cursor: auto;
