@@ -1,11 +1,27 @@
 import { styled } from "styled-components";
 import Heading from "../ui/Heading";
+import { useMediaQuery } from "react-responsive";
 const StyledSpan = styled.span`
   color: var(--color-my-plate);
   font-size: 6rem;
 `;
+const styleHeader = {
+  marginBottom: "2rem",
+  fontSize: "4rem",
+  color: "#184d19",
+};
+
+const styledHeaderMini = {
+  marginBottom: "1rem",
+  fontSize: "3.2rem",
+  color: "#184d19",
+};
 function Type({ dishTypes }) {
+  const isLittle = useMediaQuery({
+    query: "screen and (max-width: 700px)",
+  });
   let dishTypeExists = false;
+  const styleIf = isLittle ? styledHeaderMini : styleHeader;
   if (dishTypes.length > 0) {
     dishTypeExists = true;
   }
@@ -16,9 +32,13 @@ function Type({ dishTypes }) {
         backgroundImage: "url(/paper.jpg)",
         borderRadius: "4rem",
         padding: "2rem",
+        border: "solid 0.5rem var(--color-my-700)",
+        width: "80%",
+        marginLeft: "2rem",
+        marginRight: "2rem",
       }}
     >
-      <Heading as="h1" style={{ fontSize: "4rem", color: "#184d19" }}>
+      <Heading as="h1" style={styleIf}>
         <StyledSpan>🍽</StyledSpan> Type
       </Heading>
       <div

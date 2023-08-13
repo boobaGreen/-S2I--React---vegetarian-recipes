@@ -1,6 +1,10 @@
 import { useState } from "react";
 import Heading from "../ui/Heading";
+import { useMediaQuery } from "react-responsive";
 function Istructions({ istructionsArray }) {
+  const isLittle = useMediaQuery({
+    query: "screen and (max-width: 700px)",
+  });
   const [index, setIndex] = useState(0);
   const length = istructionsArray?.length;
 
@@ -14,16 +18,31 @@ function Istructions({ istructionsArray }) {
     setIndex((index) => index + 1);
   }
   if (length < 1) return null;
+  const styleHeader = {
+    marginBottom: "2rem",
+    fontSize: "4rem",
+    color: "#184d19",
+  };
 
+  const styledHeaderMini = {
+    marginBottom: "1rem",
+    fontSize: "3.2rem",
+    color: "#184d19",
+  };
+  const styleIf = isLittle ? styledHeaderMini : styleHeader;
   return (
     <div
       style={{
         backgroundImage: "url(/paper.jpg)",
         borderRadius: "4rem",
         padding: "2rem",
+        border: "solid 0.5rem var(--color-my-700)",
+        maxWidth: "95%",
+        marginLeft: "2rem",
+        marginRight: "2rem",
       }}
     >
-      <Heading as="h1" style={{ fontSize: "4rem" }}>
+      <Heading as="h1" style={styleIf}>
         Instructions
       </Heading>
       <div

@@ -1,6 +1,7 @@
 import Select from "react-select";
 import { styled } from "styled-components";
 import { useQueryCust } from "../contexts/QueryContext";
+import { devices } from "../const/constants";
 
 const optionsArray = [
   { value: 6, label: "6 per page" },
@@ -88,19 +89,21 @@ const orderArray = [
   },
 ];
 const StyledFilterSectionMain = styled.div`
-  /* color: var(--color-pen-700); */
-  margin-top: 2.5rem;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-`;
-const StyledFilterSectionSub = styled.div`
-  /* width: 100%; */
+  margin-top: 1rem;
+  margin-left: 3rem;
+  border: solid 1rem var(--color-my-700);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  gap: 2rem;
+
+  @media ${devices.md} {
+    flex-direction: row;
+  }
+`;
+const StyledFilterSectionSub = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 `;
 
 function FilterSection() {
@@ -128,8 +131,6 @@ function FilterSection() {
       ?.filter((word) => word !== "")
       ?.join(",");
 
-    console.log("new :", newIntolerances);
-    console.log("inotlerrances in dispatch :", newIntolerances);
     dispatch({
       type: "filter/intolerances",
       payload: newIntolerances,
@@ -154,7 +155,7 @@ function FilterSection() {
     });
   };
   return (
-    <StyledFilterSectionMain>
+    <StyledFilterSectionMain style={{ color: `var(--color-vegan-logo)` }}>
       <StyledFilterSectionSub>
         <Select
           onChange={handleChangeNumber}
@@ -169,6 +170,15 @@ function FilterSection() {
           isSearchable={false}
           name="Result per page"
           options={optionsArray}
+          theme={(theme) => ({
+            ...theme,
+            borderRadius: 0,
+            colors: {
+              ...theme.colors,
+              primary25: "var(--color-my-700)",
+              primary: "var(--color-nav-hover)",
+            },
+          })}
         />
         <Select
           onChange={handleChangeDiet}
@@ -183,6 +193,15 @@ function FilterSection() {
           isSearchable={false}
           name="Diet"
           options={dietArray}
+          theme={(theme) => ({
+            ...theme,
+            borderRadius: 0,
+            colors: {
+              ...theme.colors,
+              primary25: "var(--color-my-700)",
+              primary: "var(--color-nav-hover)",
+            },
+          })}
         />
       </StyledFilterSectionSub>
       <StyledFilterSectionSub>
@@ -201,6 +220,15 @@ function FilterSection() {
           isSearchable={false}
           name="Intolerances"
           options={intolerancesArray}
+          theme={(theme) => ({
+            ...theme,
+            borderRadius: 0,
+            colors: {
+              ...theme.colors,
+              primary25: "var(--color-my-700)",
+              primary: "var(--color-nav-hover)",
+            },
+          })}
         />
         <Select
           onChange={handleChangeType}
@@ -215,6 +243,15 @@ function FilterSection() {
           isSearchable={false}
           name="Type"
           options={typeArray}
+          theme={(theme) => ({
+            ...theme,
+            borderRadius: 0,
+            colors: {
+              ...theme.colors,
+              primary25: "var(--color-my-700)",
+              primary: "var(--color-nav-hover)",
+            },
+          })}
         />
       </StyledFilterSectionSub>
       <StyledFilterSectionSub>
@@ -231,6 +268,15 @@ function FilterSection() {
           isSearchable={false}
           name="Time"
           options={timeArray}
+          theme={(theme) => ({
+            ...theme,
+            borderRadius: 0,
+            colors: {
+              ...theme.colors,
+              primary25: "var(--color-my-700)",
+              primary: "var(--color-nav-hover)",
+            },
+          })}
         />
         <Select
           onChange={handleChangeOrder}
@@ -245,6 +291,15 @@ function FilterSection() {
           isSearchable={false}
           name="Order"
           options={orderArray}
+          theme={(theme) => ({
+            ...theme,
+            borderRadius: 0,
+            colors: {
+              ...theme.colors,
+              primary25: "var(--color-my-700)",
+              primary: "var(--color-nav-hover)",
+            },
+          })}
         />
       </StyledFilterSectionSub>
     </StyledFilterSectionMain>

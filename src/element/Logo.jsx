@@ -16,7 +16,7 @@ function Logo() {
   return (
     <Link to={`/`}>
       <StyledLogo>
-        <Img src="/logo-dark.png" alt="Logo" />
+        <Img src="/logo-light.png" alt="Logo" />
       </StyledLogo>
     </Link>
   );

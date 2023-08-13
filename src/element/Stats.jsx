@@ -2,8 +2,6 @@ import { styled } from "styled-components";
 import { useQueryCust } from "../contexts/QueryContext";
 import { useRecipes } from "../feautures/recipes/UseRecipes";
 
-import Row from "../ui/Row";
-
 const ButtonStyled = styled.button`
   border-radius: 100px;
   color: var(--color-pen-700);
@@ -78,54 +76,54 @@ function Stats() {
   }
 
   return (
-    <>
-      <Row
-        type="horizotal"
-        style={{ justifyContent: "space-evenly", width: "100%" }}
-      >
-        {prevPageExist ? (
-          <ButtonStyled
-            style={{
-              cursor: "pointer",
-              color: "var(--color-pen-700)",
-              backgroundColor: "var(--color-my-700)",
-            }}
-            onClick={onPrevPage}
-          >
-            Prev Page
-          </ButtonStyled>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        width: "100%",
+        gap: "1rem",
+      }}
+    >
+      {prevPageExist ? (
+        <ButtonStyled
+          style={{
+            cursor: "pointer",
+            color: "var(--color-pen-700)",
+            backgroundColor: "var(--color-my-700)",
+          }}
+          onClick={onPrevPage}
+        >
+          Prev Page
+        </ButtonStyled>
+      ) : (
+        <ButtonStyled style={{ cursor: "auto", visibility: "hidden" }}>
+          Prev Page
+        </ButtonStyled>
+      )}
+      <ButtonNoClickStyled disabled>
+        {totResultsLast > 0 ? (
+          <span>
+            Page :{page} of {pages}
+          </span>
         ) : (
-          <ButtonStyled style={{ cursor: "auto", visibility: "hidden" }}>
-            Prev Page
-          </ButtonStyled>
+          <span>🍃 No match for request...</span>
         )}
-
-        <ButtonNoClickStyled disabled>
-          {totResultsLast > 0 ? (
-            <span>
-              Page :{page} of {pages}
-            </span>
-          ) : (
-            <span>🍃 No match for request...</span>
-          )}
-        </ButtonNoClickStyled>
-
-        {nextPageExist ? (
-          <ButtonStyled
-            style={{
-              cursor: "pointer",
-            }}
-            onClick={onNextPage}
-          >
-            Next Page
-          </ButtonStyled>
-        ) : (
-          <ButtonStyled style={{ cursor: "auto", visibility: "hidden" }}>
-            Next Page
-          </ButtonStyled>
-        )}
-      </Row>
-    </>
+      </ButtonNoClickStyled>
+      {nextPageExist ? (
+        <ButtonStyled
+          style={{
+            cursor: "pointer",
+          }}
+          onClick={onNextPage}
+        >
+          Next Page
+        </ButtonStyled>
+      ) : (
+        <ButtonStyled style={{ cursor: "auto", visibility: "hidden" }}>
+          Next Page
+        </ButtonStyled>
+      )}
+    </div>
   );
 }
 

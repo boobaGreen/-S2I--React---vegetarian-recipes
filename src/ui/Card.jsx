@@ -10,18 +10,16 @@ import { Link } from "react-router-dom";
 
 //
 const StyledCardContainer = styled.ul`
-  /* background-image: url("/wallBirgo.jpg"); */
-  //background: var(--color-red-700);
   overflow: hidden;
   display: flex;
   padding: 1rem;
   height: 30rem;
   width: 100%;
 
-  @media (min-width: 55rem) {
+  @media (min-width: 800px) {
     width: 50%;
   }
-  @media (min-width: 75rem) {
+  @media (min-width: 1400px) {
     width: 33.3333%;
   }
 `;
@@ -36,7 +34,7 @@ const StyledCard = styled.li`
   /* background-image: url("/wood.webp");
   background-image: url("/wallBirgo.jpg"); */
   box-shadow: var(--shadow-lg);
-
+  border: solid 0.5rem var(--color-my-700);
   display: flex;
   padding: 1rem;
   width: 100%;
@@ -87,7 +85,12 @@ function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
         style={{ backgroundImage: "url(/paper.jpg)", borderRadius: "4rem" }}
       >
         <StyledBlock
-          style={{ backgroundImage: url, width: "45%", borderRadius: "2rem" }}
+          style={{
+            backgroundImage: url,
+            width: "45%",
+            borderRadius: "2rem",
+            border: "solid 0.25rem var(--color-my-700)",
+          }}
         >
           <StyledDiv
             style={{

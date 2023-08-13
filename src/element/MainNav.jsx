@@ -1,24 +1,21 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import { useMediaQuery } from "react-responsive";
 import {
-  // HiArrowsUpDown,
-  // HiOutlineCog6Tooth,
   HiOutlineGift,
-  // HiOutlineFunnel,
   HiOutlineHeart,
   HiOutlineMagnifyingGlass,
   HiOutlineFaceSmile,
 } from "react-icons/hi2";
 
 const NavList = styled.ul`
-  /* background-image: url("/paper.jpg"); */
   background-color: var(--color-my-700);
-
   border: solid 0.5rem white;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
+  min-width: 6rem;
 `;
 
 const StyledNavLink = styled(NavLink)`
@@ -26,11 +23,12 @@ const StyledNavLink = styled(NavLink)`
   &:visited {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 1.2rem;
-
     color: var(--color-pen-700);
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 500;
+
     padding: 1.2rem 2.4rem;
     transition: all 0.3s;
   }
@@ -61,31 +59,38 @@ const StyledNavLink = styled(NavLink)`
 `;
 
 function MainNav() {
+  const isDesktopOrLaptop = useMediaQuery({
+    query: "screen and (min-width: 1024px)",
+  });
+  const styleIf = {
+    padding: !isDesktopOrLaptop ? "1.2rem 1.2rem" : "1.2rem 2.4rem",
+  };
+
   return (
     <nav>
       <NavList>
         <li>
-          <StyledNavLink to="/recipes">
+          <StyledNavLink to="/recipes" style={styleIf}>
             <HiOutlineMagnifyingGlass />
-            <span>Search</span>
+            {isDesktopOrLaptop ? <span>Search</span> : null}
           </StyledNavLink>
         </li>
         <li>
-          <StyledNavLink to="/favourite">
+          <StyledNavLink to="/favourite" style={styleIf}>
             <HiOutlineHeart />
-            <span>Favourite</span>
+            {isDesktopOrLaptop ? <span>Favourite</span> : null}
           </StyledNavLink>
         </li>
         <li>
-          <StyledNavLink to="/joke">
+          <StyledNavLink to="/joke" style={styleIf}>
             <HiOutlineFaceSmile />
-            <span>Joke</span>
+            {isDesktopOrLaptop ? <span>Joke</span> : null}
           </StyledNavLink>
         </li>
         <li>
-          <StyledNavLink to="/curious">
+          <StyledNavLink to="/curious" style={styleIf}>
             <HiOutlineGift />
-            <span>Curiousity</span>
+            {isDesktopOrLaptop ? <span>Curiousity</span> : null}
           </StyledNavLink>
         </li>
       </NavList>

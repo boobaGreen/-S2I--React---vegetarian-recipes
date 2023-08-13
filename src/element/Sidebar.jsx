@@ -1,25 +1,28 @@
 import styled from "styled-components";
 import Logo from "./Logo";
 import MainNav from "./MainNav";
+import { useMediaQuery } from "react-responsive";
+import LogoMini from "./LogoMini";
 
 const StyledSidebar = styled.aside`
-  /* background-color: var(--color-grey-0); */
-  /* background-image: url("/wallBirgo.jpg"); */
-  /* background-image: url("/paper.jpg"); */
-  padding: 3.2rem 2.4rem;
-  /* border-right: 1px solid var(--color-grey-100); */
-
   grid-row: 1 / -1;
   display: flex;
   flex-direction: column;
+  padding: 3.2rem 2.4rem;
   gap: 3.2rem;
+`;
+const StyledLogoEmpty = styled.div`
+  min-height: 12rem;
 `;
 
 function Sidebar() {
+  const isDesktopOrLaptop = useMediaQuery({
+    query: "(min-width: 1024px)",
+  });
+  console.log(isDesktopOrLaptop);
   return (
     <StyledSidebar>
-      <Logo />
-
+      {isDesktopOrLaptop ? <Logo /> : <LogoMini />}
       <MainNav />
     </StyledSidebar>
   );

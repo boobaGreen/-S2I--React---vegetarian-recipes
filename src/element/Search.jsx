@@ -1,21 +1,28 @@
-// import { useRef } from "react";
-// import { useKey } from "./hooks/useKey";
-// import { useContext } from "react";
-// import { QueryContext } from "../contexts/QueryContext";
 import { useQueryCust } from "../contexts/QueryContext";
 import { styled } from "styled-components";
+import { devices } from "../const/constants";
+import { useMediaQuery } from "react-responsive";
 
 const StyledSearch = styled.input`
+  //sm
+  width: 20rem;
   cursor: pointer;
   justify-self: center;
   border: solid 0.5rem white;
   padding: 1.1rem 1.6rem;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   border-radius: 100px;
-  width: 40rem;
   transition: all 0.3s;
   color: var(--color-pen-700);
   background-color: var(--color-my-700);
+  @media ${devices.md} {
+    width: 40rem;
+    font-size: 1.6rem;
+  }
+  @media ${devices.lg} {
+    width: 60rem;
+    font-size: 1.8rem;
+  }
   &:focus {
     outline: none;
     box-shadow: 0 2.4rem 2.4rem rgba(0, 0, 0, 0.1);
@@ -24,29 +31,31 @@ const StyledSearch = styled.input`
 `;
 
 function Search() {
+  const isSm = useMediaQuery({
+    query: "(max-width: 700px)",
+  });
+  const isMd = useMediaQuery({
+    query: "(max-width: 1024px)",
+  });
   const { dispatch, search } = useQueryCust();
-  // const inputEl = useRef(null);
 
-  // useKey("Enter", function () {
-  //   if (document.activeElement === inputEl.current) return;
-  //   inputEl.current.focus();
-  //   setQuery("");
-  // });
+  const place = isSm
+    ? "Search..."
+    : isMd
+    ? "Search ingredients..."
+    : "Search ingredients,equipments,title...";
 
   return (
-    <div>
-      <StyledSearch
-        className="search"
-        type="text"
-        placeholder="Search ingredient,equipment,title..."
-        value={search}
-        // value={search}
-        onChange={(e) =>
-          dispatch({ type: "search/update", payload: e.target.value })
-        }
-        // ref={inputEl}
-      />
-    </div>
+    <StyledSearch
+      className="search"
+      type="text"
+      placeholder={place}
+      // placeholder="Search.."
+      value={search}
+      onChange={(e) =>
+        dispatch({ type: "search/update", payload: e.target.value })
+      }
+    />
   );
 }
 

@@ -44,15 +44,7 @@ function App() {
                   <Route path="favourite" element={<FavouriteList />} />
                   <Route path="joke" element={<Joke />} />
                   <Route path="curious" element={<Curious />} />
-
-                  {/* <Route path="bookings/:bookingId" element={<Booking />} />
-            <Route path="checkin/:bookingId" element={<Checkin />} />
-            <Route path="cabins" element={<Cabins />} />
-            <Route path="users" element={<Users />} />
-            <Route path="settings" element={<Settings />} />
-          <Route path="account" element={<Account />} /> */}
                 </Route>
-
                 <Route path="*" element={<PageNotFound />} />
               </Routes>
             </BrowserRouter>

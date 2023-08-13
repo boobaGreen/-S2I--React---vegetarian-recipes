@@ -6,7 +6,18 @@ import IconMoney from "../ui/IconMoney";
 import { LuMilkOff } from "react-icons/lu";
 import { HiOutlineUserGroup } from "react-icons/hi2";
 import Heading from "../ui/Heading";
+import { useMediaQuery } from "react-responsive";
+const styleHeader = {
+  marginBottom: "2rem",
+  fontSize: "4rem",
+  color: "#184d19",
+};
 
+const styledHeaderMini = {
+  marginBottom: "1rem",
+  fontSize: "3.2rem",
+  color: "#184d19",
+};
 function Info({
   vegan,
   dairyFree,
@@ -15,10 +26,15 @@ function Info({
   servings,
   pricePerServing,
 }) {
+  const isLittle = useMediaQuery({
+    query: "screen and (max-width: 700px)",
+  });
+  const styleIf = isLittle ? styledHeaderMini : styleHeader;
   const badge = vegan || glutenFree || dairyFree;
   return (
     <div
       style={{
+        width: "80%",
         display: "flex",
         flexDirection: "column",
         backgroundImage: "url(/paper.jpg",
@@ -26,9 +42,12 @@ function Info({
         borderRadius: "3rem",
         padding: "4rem",
         color: "#184d19",
+        border: "solid 0.5rem var(--color-my-700)",
+        marginLeft: "2rem",
+        marginRight: "2rem",
       }}
     >
-      <Heading as="h1" style={{ fontSize: "4rem", color: "#184d19" }}>
+      <Heading as="h1" style={styleIf}>
         ℹ️ Info
       </Heading>
       {badge ? (

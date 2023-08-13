@@ -17,6 +17,7 @@ function WinePhoto({ productMatches }) {
         padding: "2rem",
         height: "30rem",
         width: "15rem",
+        border: "solid 0.5rem var(--color-my-700)",
       }}
     >
       <Heading
@@ -40,7 +41,8 @@ function WinePhoto({ productMatches }) {
           backgroundImage: url,
           backgroundRepeat: "no-repeat",
           backgroundSize: "contain",
-          height: "80%",
+          height: "60%",
+          borderRadius: "10px",
         }}
       ></div>
     </div>

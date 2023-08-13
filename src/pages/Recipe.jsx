@@ -10,27 +10,57 @@ import Istructions from "../element/Istructions";
 import Ingredients from "../element/Ingredients";
 import Wine from "../element/Wine";
 import WinePhoto from "../element/WinePhoto";
+import { devices } from "../const/constants";
 
 const StyledGridContainer = styled.div`
   display: grid;
-  grid-template-rows: min-content auto min-content auto;
-  grid-template-columns: 55% 1fr;
+  grid-template-rows: 20rem auto min-content auto auto auto auto auto;
+  grid-template-columns: 100%;
   grid-template-areas:
-    "photo info"
-    "ingredients type"
-    "istructions istructions"
-    "wine winePhoto"
-    "nutrition nutrition";
+    /* "photo info" */
+    "photo"
+    "info"
+    "type"
+    "ingredients"
+    "istructions"
+    "wine"
+    "winePhoto"
+    "nutrition";
+
   text-align: center;
-  grid-gap: 5rem;
+  grid-gap: 2rem;
+
+  @media (${devices.sm}) {
+    grid-template-rows: min-content auto min-content auto;
+    grid-template-columns: 55% 1fr;
+    grid-template-areas:
+      "photo info"
+      "ingredients type"
+      "istructions istructions"
+      "wine winePhoto"
+      "nutrition nutrition";
+    grid-gap: 5rem;
+  }
 `;
 
 const StyledDivPhoto = styled.div`
   background: var(--color-grey-200);
   grid-area: photo;
+  width: 25rem;
   background-repeat: no-repeat;
+
   background-size: cover;
   padding: 0.25rem;
+  overflow: hidden;
+  padding: 1rem;
+  border-radius: 4rem;
+  border: solid 0.5rem var(--color-my-700);
+
+  margin-left: 2rem;
+  margin-right: 2rem;
+  @media (${devices.sm}) {
+    width: 100%;
+  }
 `;
 const StyledInfo = styled.div`
   grid-area: info;
@@ -45,8 +75,10 @@ const StyledDivNutrion = styled.div`
   padding: 0.25rem;
 `;
 const StyledDivIngredients = styled.div`
+  width: 100%;
   grid-area: ingredients;
   padding: 0.25rem;
+  display: flex;
 `;
 const StyledDivIstructions = styled.div`
   grid-area: istructions;
@@ -80,7 +112,6 @@ function Recipe({ recipe }) {
   if (data.analyzedInstructions[0]) {
     istructionsArray = data.analyzedInstructions[0]?.steps;
   }
-  console.log("istruction array", istructionsArray);
 
   const {
     vegan,
@@ -96,8 +127,7 @@ function Recipe({ recipe }) {
   } = data;
   const productMatches = winePairing.productMatches;
   const pairingText = winePairing.pairingText;
-  console.log("productMatches : ", productMatches);
-  console.log("pairingText : ", pairingText);
+
   const dataPieNutrient = {
     labels: ["Carb", "Prot", "Fats"],
     datasets: [
@@ -142,10 +172,6 @@ function Recipe({ recipe }) {
         <StyledDivPhoto
           style={{
             backgroundImage: `url(${image})`,
-            backgroundSize: "cover",
-            overflow: "hidden",
-            padding: "1rem",
-            borderRadius: "4rem",
           }}
         ></StyledDivPhoto>
         <StyledInfo>

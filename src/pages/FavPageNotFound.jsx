@@ -5,22 +5,22 @@ import Heading from "../ui/Heading";
 import Button from "../ui/Button";
 
 const FavPageNotFound = styled.main`
-  background-color: var(--color-grey-50);
+  margin: auto;
+  width: 80%;
+  border: solid 0.1rem var(--color-my-700);
+  background-image: url("/paper.jpg");
   display: flex;
   align-items: start;
+  border-radius: var(--border-radius-md);
   justify-content: center;
 `;
 
 const Box = styled.div`
-  /* box */
-  background-color: var(--color-grey-0);
-  border: 1px solid var(--color-grey-100);
   border-radius: var(--border-radius-md);
-  color: var(--color-brand-500);
-
   padding: 4.8rem;
-  flex: 0 1 96rem;
+  width: 100%;
   text-align: center;
+  border: solid 0.5rem var(--color-my-700);
 
   & h1 {
     margin-bottom: 3.2rem;

@@ -7,6 +7,7 @@ function Wine({ pairingText }) {
         backgroundImage: "url(/paper.jpg)",
         borderRadius: "4rem",
         padding: "2rem",
+        border: "solid 0.5rem var(--color-my-700)",
       }}
     >
       <Heading style={{ fontSize: "4rem" }}>🍷 Wine</Heading>

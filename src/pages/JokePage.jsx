@@ -8,11 +8,9 @@ import Spinner from "../ui/Spinner";
 import Error from "./Error";
 import { Link } from "react-router-dom";
 const StyledJokePage = styled.main`
-  background-image: url("/paper.jpg");
-
-  /* background-color: var(--color-grey-50); */
+  width: 100%;
   display: flex;
-  align-items: start;
+  align-items: center;
   justify-content: center;
 `;
 const StyledSpeechBubble = styled.main`
@@ -48,10 +46,10 @@ const Box = styled.div`
   /* box */
   /* 
   background-color: var(--color-grey-0); */
-
+  height: 80%;
   padding: 4.8rem;
-  flex: 0 1 96rem;
   text-align: center;
+  margin-bottom: 2rem;
 
   & h1 {
     margin-bottom: 3.2rem;
@@ -76,7 +74,13 @@ function JokePage() {
 
   return (
     <StyledJokePage>
-      <Box>
+      <Box
+        style={{
+          backgroundImage: "url(/paper.jpg)",
+          borderRadius: "var(--border-radius-md)",
+          border: "solid 0.5rem var(--color-my-700)",
+        }}
+      >
         <StyledSpeechBubble>{joke.text}</StyledSpeechBubble>
         <Row type="horizontal" style={{ justifyContent: "space-around" }}>
           <Button

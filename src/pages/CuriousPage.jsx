@@ -4,7 +4,6 @@ import Button from "../ui/Button";
 import { useState } from "react";
 import Row from "../ui/Row";
 import { useCurious } from "../feautures/recipes/useCurious";
-
 import Spinner from "../ui/Spinner";
 import Error from "./Error";
 import { Link } from "react-router-dom";
@@ -37,20 +36,12 @@ const StyledSpeechBubble = styled.main`
   }
 `;
 const StyledCuriousPage = styled.main`
-  background-image: url("/paper.jpg");
-  /* background-image: url("/wallBirgo.jpg"); */
-  background-size: cover;
-  /* background-color: var(--color-grey-50); */
   display: flex;
-  align-items: start;
+  align-items: center;
   justify-content: center;
 `;
 
 const Box = styled.div`
-  /* background-image: url("/wood.webp"); */
-  /* background-image: url("/WallBirgo.jpg"); */
-  /* box */
-
   padding: 4.8rem;
   flex: 0 1 96rem;
   text-align: center;
@@ -62,7 +53,7 @@ const Box = styled.div`
 function CuriousPage() {
   const currentDate = new Date();
   const timestamp = currentDate.getTime();
-  // const [more, setMore] = useState(false);
+
   const [timeStampKey, setTimeStampKey] = useState(timestamp);
 
   // const uid = useRef(timestamp);
@@ -77,15 +68,14 @@ function CuriousPage() {
   if (error) return <Error />;
 
   return (
-    // <div>
-    //   <p>JOKE !</p>
-    //   {/* <p>{timestamp}</p> */}
-    //   <p>{joke.text}</p>
-    //   <button onClick={handleClick}>MORE</button>
-    // </div>
     <StyledCuriousPage>
-      <Box>
-        {/* <Heading as="h3">{curious.text}</Heading> */}
+      <Box
+        style={{
+          backgroundImage: "url(/paper.jpg)",
+          borderRadius: "var(--border-radius-md)",
+          border: "solid 0.5rem var(--color-my-700)",
+        }}
+      >
         <StyledSpeechBubble>{curious.text}</StyledSpeechBubble>
         <Row type="horizontal" style={{ justifyContent: "space-around" }}>
           <Button
