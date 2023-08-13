@@ -10,6 +10,14 @@ const ButtonStyled = styled.button`
   margin-top: 2rem;
   cursor: auto;
   padding: 0.5rem;
+  cursor: "pointer";
+
+  &:hover {
+    outline: none;
+    box-shadow: 0 2.4rem 2.4rem rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+    background-color: var(--color-nav-hover);
+  }
 `;
 const ButtonNoClickStyled = styled.button`
   border-radius: 100px;
@@ -85,16 +93,7 @@ function Stats() {
       }}
     >
       {prevPageExist ? (
-        <ButtonStyled
-          style={{
-            cursor: "pointer",
-            color: "var(--color-pen-700)",
-            backgroundColor: "var(--color-my-700)",
-          }}
-          onClick={onPrevPage}
-        >
-          Prev Page
-        </ButtonStyled>
+        <ButtonStyled onClick={onPrevPage}>Prev Page</ButtonStyled>
       ) : (
         <ButtonStyled style={{ cursor: "auto", visibility: "hidden" }}>
           Prev Page

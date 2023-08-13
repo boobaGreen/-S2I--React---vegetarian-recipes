@@ -1,6 +1,20 @@
 import { useState } from "react";
 import Heading from "../ui/Heading";
 import { useMediaQuery } from "react-responsive";
+import { styled } from "styled-components";
+
+const ButtonStyled = styled.button`
+  color: var(--color-pen-700);
+  background-color: var(--color-my-700);
+  padding: 1rem;
+  border-radius: 10px;
+  &:hover {
+    outline: none;
+    background-color: var(--color-nav-hover);
+    box-shadow: 0 2.4rem 2.4rem rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+`;
 function Istructions({ istructionsArray }) {
   const isLittle = useMediaQuery({
     query: "screen and (max-width: 700px)",
@@ -38,8 +52,7 @@ function Istructions({ istructionsArray }) {
         padding: "2rem",
         border: "solid 0.5rem var(--color-my-700)",
         maxWidth: "95%",
-        marginLeft: "2rem",
-        marginRight: "2rem",
+        margin: "0rem 2rem",
       }}
     >
       <Heading as="h1" style={styleIf}>
@@ -55,17 +68,9 @@ function Istructions({ istructionsArray }) {
         }}
       >
         {prevPageExist ? (
-          <button
-            style={{
-              color: "var(color-pen-700)",
-              backgroundColor: "var(--color-my-700)",
-              padding: "1rem",
-              borderRadius: "10px",
-            }}
-            onClick={handlePrevClick}
-          >
+          <ButtonStyled onClick={handlePrevClick}>
             Step {index} &lt;
-          </button>
+          </ButtonStyled>
         ) : (
           <button
             style={{
@@ -84,29 +89,11 @@ function Istructions({ istructionsArray }) {
         </span>
 
         {nextPageExist ? (
-          <button
-            style={{
-              color: "var(--color-pen-700)",
-              backgroundColor: "var(--color-my-700)",
-              padding: "1rem",
-              borderRadius: "10px",
-            }}
-            onClick={handleNextClick}
-          >
+          <ButtonStyled onClick={handleNextClick}>
             &gt; {index + 2} Step
-          </button>
+          </ButtonStyled>
         ) : (
-          <button
-            style={{
-              padding: "1rem",
-              borderRadius: "10px",
-              disable: "true",
-              cursor: "auto",
-              visibility: "hidden",
-            }}
-          >
-            Step s s
-          </button>
+          <ButtonStyled>Step s s</ButtonStyled>
         )}
       </div>
       <p style={{ color: "#184d19" }}>

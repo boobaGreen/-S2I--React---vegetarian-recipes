@@ -39,10 +39,19 @@ function Ingredients({ extendedIngredients }) {
     fontSize: "3.2rem",
     color: "#184d19",
   };
+  const styledSpanMini = {
+    fontSize: "1.2rem",
+    color: "#184d19",
+  };
+  const styledSpan = {
+    fontSize: "1.8rem",
+    color: "#184d19",
+  };
   const isLittle = useMediaQuery({
     query: "screen and (max-width: 700px)",
   });
   const styleIf = isLittle ? styledHeaderMini : styleHeader;
+  const styleIf2 = isLittle ? styledSpanMini : styledSpan;
   return (
     <StyledIngredients>
       <Heading as="h1" style={styleIf}>
@@ -54,9 +63,7 @@ function Ingredients({ extendedIngredients }) {
             <span>
               <TbPoint color="#184d19" />
             </span>
-            <span style={{ marginLeft: "10px", color: "#184d19" }}>
-              {ingredient.original}
-            </span>
+            <span style={styleIf2}>{ingredient.original}</span>
           </p>
         </div>
       ))}

@@ -39,6 +39,8 @@ const StyledCuriousPage = styled.main`
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 85%;
+  margin-left: 10%;
 `;
 
 const Box = styled.div`

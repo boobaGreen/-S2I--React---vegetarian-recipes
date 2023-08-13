@@ -47,6 +47,21 @@ const StyledBlock = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
 `;
+const StyledButton = styled.button`
+  color: var(--color-pen-700);
+  background-color: var(--color-my-700);
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 40px;
+  cursor: pointer;
+  &:hover {
+    outline: none;
+    background-color: var(--color-nav-hover);
+    box-shadow: 0 2.4rem 2.4rem rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+`;
 
 const StyledDiv = styled.div``;
 
@@ -104,19 +119,19 @@ function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
             </StyledSpan>
 
             <Link to={`/recipes/${id}/${titleToPass}`}>
-              <button
-                style={{
-                  cursor: "pointer",
-                  color: "var(--color-pen-700)",
-                  backgroundColor: "var(--color-my-700)",
-                  padding: "0.5rem 1rem",
-                  marginLeft: "1rem",
-                  marginBottom: "1rem",
-                  borderRadius: "40px",
-                }}
+              <StyledButton
+              // style={{
+              //   cursor: "pointer",
+              //   color: "var(--color-pen-700)",
+              //   backgroundColor: "var(--color-my-700)",
+              //   padding: "0.5rem 1rem",
+              //   marginLeft: "1rem",
+              //   marginBottom: "1rem",
+              //   borderRadius: "40px",
+              // }}
               >
                 More Info
-              </button>
+              </StyledButton>
             </Link>
           </StyledDiv>
         </StyledBlock>

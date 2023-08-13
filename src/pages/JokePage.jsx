@@ -8,10 +8,11 @@ import Spinner from "../ui/Spinner";
 import Error from "./Error";
 import { Link } from "react-router-dom";
 const StyledJokePage = styled.main`
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 85%;
+  margin-left: 10%;
 `;
 const StyledSpeechBubble = styled.main`
   color: var(--color-brand-800);

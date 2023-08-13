@@ -38,7 +38,6 @@ function Info({
         display: "flex",
         flexDirection: "column",
         backgroundImage: "url(/paper.jpg",
-        width: "max-content",
         borderRadius: "3rem",
         padding: "4rem",
         color: "#184d19",

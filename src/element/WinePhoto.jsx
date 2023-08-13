@@ -41,7 +41,7 @@ function WinePhoto({ productMatches }) {
           backgroundImage: url,
           backgroundRepeat: "no-repeat",
           backgroundSize: "contain",
-          height: "60%",
+          height: "50%",
           borderRadius: "10px",
         }}
       ></div>

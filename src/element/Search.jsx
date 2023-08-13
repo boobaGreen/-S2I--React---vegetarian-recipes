@@ -27,6 +27,7 @@ const StyledSearch = styled.input`
     outline: none;
     box-shadow: 0 2.4rem 2.4rem rgba(0, 0, 0, 0.1);
     transform: translateY(-2px);
+    background-color: var(--color-nav-hover);
   }
 `;
 

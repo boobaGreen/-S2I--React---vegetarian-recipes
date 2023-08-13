@@ -11,6 +11,12 @@ const StyledBtn = styled.button`
   background-color: var(--color-my-700);
   padding: 5px 10px;
   border-radius: 100%;
+  &:hover {
+    outline: none;
+    background-color: var(--color-nav-hover);
+    box-shadow: 0 2.4rem 2.4rem rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
 `;
 function DarkModeToggle() {
   const { isDarkMode, toggleDarkMode } = useDarkMode();

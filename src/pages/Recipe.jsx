@@ -55,7 +55,7 @@ const StyledDivPhoto = styled.div`
   padding: 1rem;
   border-radius: 4rem;
   border: solid 0.5rem var(--color-my-700);
-
+  width: 85%;
   margin-left: 2rem;
   margin-right: 2rem;
   @media (${devices.sm}) {
