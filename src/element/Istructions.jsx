@@ -56,7 +56,7 @@ function Istructions({ istructionsArray }) {
       }}
     >
       <Heading as="h1" style={styleIf}>
-        Instructions
+        {!isLittle ? <span>Instructions</span> : <span>Steps</span>}
       </Heading>
       <div
         style={{
@@ -69,7 +69,7 @@ function Istructions({ istructionsArray }) {
       >
         {prevPageExist ? (
           <ButtonStyled onClick={handlePrevClick}>
-            Step {index} &lt;
+            {!isLittle ? <span>Step {index}</span> : null} &lt;
           </ButtonStyled>
         ) : (
           <button
@@ -90,7 +90,8 @@ function Istructions({ istructionsArray }) {
 
         {nextPageExist ? (
           <ButtonStyled onClick={handleNextClick}>
-            &gt; {index + 2} Step
+            &gt;
+            {!isLittle ? <span> {index + 2} Step</span> : null}
           </ButtonStyled>
         ) : (
           <button

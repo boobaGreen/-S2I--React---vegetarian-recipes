@@ -5,8 +5,8 @@ const StyledLogo = styled.div`
   /* background-image: url(/wallBirgo.jpg); */
   text-align: center;
   padding: 1rem;
-  height: 6rem;
-  width: 6rem;
+  height: 7rem;
+  width: 7rem;
 `;
 
 const Img = styled.img``;
