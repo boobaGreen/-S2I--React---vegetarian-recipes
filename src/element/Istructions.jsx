@@ -93,7 +93,17 @@ function Istructions({ istructionsArray }) {
             &gt; {index + 2} Step
           </ButtonStyled>
         ) : (
-          <ButtonStyled>Step s s</ButtonStyled>
+          <button
+            style={{
+              padding: "1rem",
+              borderRadius: "10px",
+              disable: "true",
+              cursor: "auto",
+              visibility: "hidden",
+            }}
+          >
+            Step s s
+          </button>
         )}
       </div>
       <p style={{ color: "#184d19" }}>

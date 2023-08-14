@@ -78,7 +78,7 @@ function MainNav() {
         <li>
           <StyledNavLink to="/favourite" style={styleIf}>
             <HiOutlineHeart />
-            {isDesktopOrLaptop ? <span>Favourite</span> : null}
+            {isDesktopOrLaptop ? <span>Favorites</span> : null}
           </StyledNavLink>
         </li>
         <li>

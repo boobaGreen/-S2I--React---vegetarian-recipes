@@ -4,13 +4,13 @@ const Svg = styled.svg`
   background-color: transparent;
 `;
 
-function IconGlutenFree() {
+function IconGlutenFree({ dim }) {
   return (
     <Svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
-      height={48}
-      width={48}
+      height={dim}
+      width={dim}
       stroke="#184d19"
     >
       <defs />

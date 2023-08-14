@@ -7,6 +7,7 @@ import IconTimer from "./IconTimer";
 import IconMoney from "./IconMoney";
 
 import { Link } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
 
 //
 const StyledCardContainer = styled.ul`
@@ -30,9 +31,6 @@ const StyledSpan = styled.span`
   font-size: 2.5rem;
 `;
 const StyledCard = styled.li`
-  /* background-color: var(--color-grey-100); */
-  /* background-image: url("/wood.webp");
-  background-image: url("/wallBirgo.jpg"); */
   box-shadow: var(--shadow-lg);
   border: solid 0.5rem var(--color-my-700);
   display: flex;
@@ -77,7 +75,26 @@ function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
   } = recipe;
 
   const url = "url(" + image + ")";
-  const titleAbr = title.length <= 45 ? title : title.slice(0, 40) + "...";
+
+  const isLittle = useMediaQuery({
+    query: "screen and (max-width: 700px)",
+  });
+
+  const isXxs = useMediaQuery({
+    query: "screen and (max-width: 350px)",
+  });
+
+  let dim;
+  isLittle ? (dim = 32) : (dim = 42);
+  if (isXxs) {
+    dim = 26;
+  }
+
+  let titleAbr;
+  !isLittle
+    ? (titleAbr = title.length <= 45 ? title : title.slice(0, 40) + "...")
+    : (titleAbr = title.length <= 25 ? title : title.slice(0, 22) + "...");
+
   const titleToPass = title.replace(/\//g, " ");
   // str = str.replace (/\//g, "_");
 
@@ -119,19 +136,13 @@ function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
             </StyledSpan>
 
             <Link to={`/recipes/${id}/${titleToPass}`}>
-              <StyledButton
-              // style={{
-              //   cursor: "pointer",
-              //   color: "var(--color-pen-700)",
-              //   backgroundColor: "var(--color-my-700)",
-              //   padding: "0.5rem 1rem",
-              //   marginLeft: "1rem",
-              //   marginBottom: "1rem",
-              //   borderRadius: "40px",
-              // }}
-              >
-                More Info
-              </StyledButton>
+              {!isLittle ? (
+                <StyledButton>More Info</StyledButton>
+              ) : !isXxs ? (
+                <StyledButton>+ Info</StyledButton>
+              ) : (
+                <StyledButton>+</StyledButton>
+              )}
             </Link>
           </StyledDiv>
         </StyledBlock>
@@ -139,7 +150,6 @@ function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
           <StyledBlock
             style={{
               flexDirection: "column",
-              // backgroundImage: "url(/wood.webp)",
             }}
           >
             <StyledBlock style={{ height: "33%" }}>
@@ -157,7 +167,7 @@ function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
                     data-tooltip-id="gluten-tooltip"
                     data-tooltip-content="Gluten-Free"
                   >
-                    <IconGlutenFree />
+                    <IconGlutenFree dim={dim} />
                     <Tooltip id="gluten-tooltip" openOnClick={["click"]} />
                   </StyledDiv>
                 ) : null}
@@ -166,7 +176,7 @@ function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
                     data-tooltip-id="vegan-tooltip"
                     data-tooltip-content="Vegan"
                   >
-                    <IconVegan />
+                    <IconVegan dim={dim} />
                     <Tooltip id="vegan-tooltip" openOnClick={["click"]} />
                   </StyledDiv>
                 ) : null}
@@ -176,8 +186,6 @@ function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
             <StyledBlock style={{ height: "33%" }}>
               <StyledBlock
                 style={{
-                  // backgroundImage: "url(/paper.jpg)",
-
                   flexDirection: "column",
                   alignItems: "start",
                   justifyContent: "center",
@@ -204,7 +212,7 @@ function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
                 data-tooltip-id="timer-tooltip"
                 data-tooltip-content="Time for Preparation & Cooking"
               >
-                <IconTimer />
+                <IconTimer dim={dim} />
                 <Heading as="h4">{readyInMinutes} min</Heading>
                 <Tooltip id="timer-tooltip" openOnClick={["click"]} />
               </StyledBlock>
@@ -223,7 +231,7 @@ function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
                 data-tooltip-variant="success"
               >
                 <Tooltip id="money-tooltip" openOnClick={["click"]} />
-                <IconMoney />
+                <IconMoney dim={dim} />
                 <Heading as="h4">
                   {pricePerServing < 5
                     ? 0.05

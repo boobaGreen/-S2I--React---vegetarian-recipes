@@ -62,8 +62,8 @@ function Info({
             color: "#184d19",
           }}
         >
-          <p>{vegan ? <IconVegan /> : null}</p>
-          <p>{glutenFree ? <IconGlutenFree /> : null}</p>
+          <p>{vegan ? <IconVegan dim={48} /> : null}</p>
+          <p>{glutenFree ? <IconGlutenFree dim={48} /> : null}</p>
           <div style={{ color: "#184d19" }}>
             {dairyFree ? (
               <LuMilkOff style={{ fontSize: "4.5rem", color: "#184d19" }} />
@@ -72,13 +72,13 @@ function Info({
         </div>
       ) : null}
       <p style={{ marginTop: "1.8rem" }}>
-        <IconTimer style={{ color: "#184d19", margin: "3rem" }} />
+        <IconTimer dim={48} style={{ color: "#184d19", margin: "3rem" }} />
         <span style={{ marginLeft: "1.5rem", color: "#184d19" }}>
           {readyInMinutes}min
         </span>
       </p>
       <p style={{ color: "#184d19", margin: "3rem" }}>
-        <IconMoney />
+        <IconMoney dim={48} />
         <span style={{ marginLeft: "1.5rem", color: "#184d19" }}>
           {pricePerServing < 5
             ? "0.05$"

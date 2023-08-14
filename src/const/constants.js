@@ -1,5 +1,5 @@
 const breakpoints = {
-  // xs: "320px",
+  xs: "350px",
   sm: "700px",
   md: "1024px",
   lg: "1400px",

@@ -15,7 +15,7 @@ const initialState = {
   type: "",
   number: number,
   offset: offsetStartup,
-  sort: "",
+  sort: "random",
   direction: "asc", //desc
 };
 
@@ -49,11 +49,6 @@ function reducer(state, action) {
         diet: action.payload,
       };
     case "filter/intolerances":
-      // let newIntolerances = "";
-      // console.log(typeof action.payload);
-      // if (action.payload?.length > 0)
-      //   newIntolerances = action.payload.join(",");
-      // console.log("newIntolerances : ", newIntolerances);
       return {
         ...state,
         intolerances: action.payload,

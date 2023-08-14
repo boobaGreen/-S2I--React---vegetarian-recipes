@@ -4,13 +4,13 @@ const Svg = styled.svg`
   background-color: transparent;
 `;
 
-function IconVegan() {
+function IconVegan({ dim }) {
   return (
     <Svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
-      height={48}
-      width={48}
+      height={dim}
+      width={dim}
     >
       <defs />
       <path
