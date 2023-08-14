@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 import { useQueryCust } from "../contexts/QueryContext";
-import { useRecipes } from "../feautures/recipes/UseRecipes";
+import { useRecipes } from "../feautures/useRecipes";
 
 const ButtonStyled = styled.button`
   border-radius: 100px;

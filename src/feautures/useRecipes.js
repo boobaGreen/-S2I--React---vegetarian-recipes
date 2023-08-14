@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { getRecipes } from "../../services/apiRecipes";
+import { getRecipes } from "../services/apiRecipes";
 
 export function useRecipes(
   search,

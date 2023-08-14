@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { getJoke } from "../../services/apiJoke";
+import { getJoke } from "../services/apiJoke";
 
 export function useJoke(uid) {
   const {

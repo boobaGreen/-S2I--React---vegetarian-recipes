@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { getCurious } from "../../services/apiCurious";
+import { getCurious } from "../services/apiCurious";
 
 export function useCurious(uid) {
   const {

@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useRecipe } from "../feautures/recipes/useRecipe";
+import { useRecipe } from "../feautures/useRecipe";
 import { styled } from "styled-components";
 import Spinner from "../ui/Spinner";
 import Error from "./Error";

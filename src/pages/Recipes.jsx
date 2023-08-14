@@ -5,9 +5,7 @@ import { styled } from "styled-components";
 import { useLocalStorageState } from "../hooks/useLocalStorageState";
 
 import { useQueryCust } from "../contexts/QueryContext";
-import { useRecipes } from "../feautures/recipes/UseRecipes";
-
-// import { useQueryCust } from "../contexts/QueryContext";
+import { useRecipes } from "../feautures/useRecipes";
 
 const StyledRecipeList = styled.ul`
   display: flex;

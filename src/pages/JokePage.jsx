@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Button from "../ui/Button";
 import { useState } from "react";
 import Row from "../ui/Row";
-import { useJoke } from "../feautures/recipes/useJoke";
+import { useJoke } from "../feautures/useJoke";
 import Spinner from "../ui/Spinner";
 import Error from "./Error";
 import { Link } from "react-router-dom";
