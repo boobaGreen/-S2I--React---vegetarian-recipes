@@ -11,9 +11,9 @@ const StyledSidebar = styled.aside`
   padding: 3.2rem 2.4rem;
   gap: 3.2rem;
 `;
-const StyledLogoEmpty = styled.div`
-  min-height: 12rem;
-`;
+// const StyledLogoEmpty = styled.div`
+//   min-height: 12rem;
+// `;
 
 function Sidebar() {
   const isDesktopOrLaptop = useMediaQuery({

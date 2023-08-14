@@ -1,7 +1,7 @@
 import Pie from "./Pie";
 import Heading from "../ui/Heading";
 import { useMediaQuery } from "react-responsive";
-import { devices } from "../const/constants";
+// import { devices } from "../const/constants";
 import { styled } from "styled-components";
 
 function Nutrition({ dataPieNutrient, dataPieCalories }) {
