@@ -7,12 +7,30 @@ import { useJoke } from "../feautures/recipes/useJoke";
 import Spinner from "../ui/Spinner";
 import Error from "./Error";
 import { Link } from "react-router-dom";
+const StyledTitle = styled.div`
+  font-size: 3rem;
+  font-weight: 700;
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  text-transform: uppercase;
+  font-family: "Courier";
+  -webkit-mask-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/8399/grunge.png");
+  -webkit-mask-size: 944px 604px;
+  mix-blend-mode: multiply;
+  color: #0a9928;
+  border: 0.5rem solid #0a9928;
+  -webkit-mask-position: 13rem 6rem;
+  transform: rotate(-14deg);
+  border-radius: 0;
+  margin-bottom: 3rem;
+`;
+
 const StyledJokePage = styled.main`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 85%;
-  margin-left: 10%;
+  width: 50%;
+  margin-left: 20%;
 `;
 const StyledSpeechBubble = styled.main`
   color: var(--color-brand-800);
@@ -44,9 +62,6 @@ const StyledSpeechBubble = styled.main`
 `;
 
 const Box = styled.div`
-  /* box */
-  /* 
-  background-color: var(--color-grey-0); */
   height: 80%;
   padding: 4.8rem;
   text-align: center;
@@ -82,6 +97,7 @@ function JokePage() {
           border: "solid 0.5rem var(--color-my-700)",
         }}
       >
+        <StyledTitle>Joke</StyledTitle>
         <StyledSpeechBubble>{joke.text}</StyledSpeechBubble>
         <Row type="horizontal" style={{ justifyContent: "space-around" }}>
           <Button

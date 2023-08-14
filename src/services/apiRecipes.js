@@ -1,7 +1,9 @@
 import apiClient from "./http-common";
 import { ApiKey } from "../const/const";
 
-const KEY = ApiKey;
+// const KEY = ApiKey;
+const KEY = import.meta.env.VITE_KEY_2;
+console.log("key : ", KEY);
 
 // const direction = "asc";
 

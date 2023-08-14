@@ -8,6 +8,8 @@ function Wine({ pairingText }) {
         borderRadius: "4rem",
         padding: "2rem",
         border: "solid 0.5rem var(--color-my-700)",
+        marginLeft: "2rem",
+        width: "85%",
       }}
     >
       <Heading style={{ fontSize: "4rem" }}>🍷 Wine</Heading>

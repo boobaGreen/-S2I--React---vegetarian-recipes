@@ -18,6 +18,7 @@ function WinePhoto({ productMatches }) {
         height: "30rem",
         width: "15rem",
         border: "solid 0.5rem var(--color-my-700)",
+        marginLeft: "2rem",
       }}
     >
       <Heading

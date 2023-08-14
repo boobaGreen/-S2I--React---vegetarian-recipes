@@ -7,6 +7,23 @@ import { useCurious } from "../feautures/recipes/useCurious";
 import Spinner from "../ui/Spinner";
 import Error from "./Error";
 import { Link } from "react-router-dom";
+const StyledTitle = styled.div`
+  font-weight: 700;
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  text-transform: uppercase;
+  border-radius: 1rem;
+  font-family: "Courier";
+  -webkit-mask-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/8399/grunge.png");
+  -webkit-mask-size: 944px 604px;
+  mix-blend-mode: multiply;
+  color: #d23;
+  border: 0.5rem double #d23;
+  transform: rotate(3deg);
+  -webkit-mask-position: 2rem 3rem;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+`;
 const StyledSpeechBubble = styled.main`
   color: var(--color-brand-800);
   background: #efefef;
@@ -78,6 +95,7 @@ function CuriousPage() {
           border: "solid 0.5rem var(--color-my-700)",
         }}
       >
+        <StyledTitle>Curiosity</StyledTitle>
         <StyledSpeechBubble>{curious.text}</StyledSpeechBubble>
         <Row type="horizontal" style={{ justifyContent: "space-around" }}>
           <Button
@@ -97,7 +115,7 @@ function CuriousPage() {
           </Button>
           <Link to={`/`}>
             <Button
-              size="small"
+              size="medium"
               style={{
                 cursor: "pointer",
                 color: "var(--color-pen-700)",
