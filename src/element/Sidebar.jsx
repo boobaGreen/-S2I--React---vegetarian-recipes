@@ -3,6 +3,7 @@ import Logo from "./Logo";
 import MainNav from "./MainNav";
 import { useMediaQuery } from "react-responsive";
 import LogoMini from "./LogoMini";
+import Social from "../element/Social";
 
 const StyledSidebar = styled.aside`
   grid-row: 1 / -1;
@@ -24,6 +25,7 @@ function Sidebar() {
     <StyledSidebar>
       {isDesktopOrLaptop ? <Logo /> : <LogoMini />}
       <MainNav />
+      <Social />
     </StyledSidebar>
   );
 }
