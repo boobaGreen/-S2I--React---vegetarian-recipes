@@ -14,10 +14,11 @@ const StyledPageNotFound = styled.main`
 
 const Box = styled.div`
   /* box */
-  background-color: var(--color-my-back);
-  border: 1px solid var(--color-my-pen);
+
+  background-image: url("/paper.jpg");
+  border: 5px solid var(--color-my-back);
   border-radius: var(--border-radius-md);
-  color: var(--color-my-pen);
+  color: var(--color-green-fix);
 
   padding: 4.8rem;
   flex: 0 1 96rem;

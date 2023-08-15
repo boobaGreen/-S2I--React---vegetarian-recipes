@@ -98,8 +98,7 @@ const StyledDivWine = styled.div`
 function Recipe({ recipe }) {
   const { id: idCustom } = useParams();
   const { isLoading, recipe: data, error } = useRecipe(idCustom);
-
-  if (isLoading) return null;
+  if (isLoading) return <Spinner />;
   if (error) return <Error />;
 
   const percentCarbs = data.nutrition.caloricBreakdown.percentCarbs;
