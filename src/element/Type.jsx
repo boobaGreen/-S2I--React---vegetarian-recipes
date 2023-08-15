@@ -56,8 +56,8 @@ function Type({ dishTypes }) {
           <button
             key={i}
             style={{
-              border: "solid 5px  #fcf6b9",
-              color: "#fcf6b9",
+              border: "solid 5px  var(--color-my-back)",
+              color: "var(--color-my-back)",
               backgroundColor: "transparent",
               backgroundImage: "url(/wood.webp)",
               borderRadius: "40px",
