@@ -40,7 +40,7 @@ function Ingredients({ extendedIngredients }) {
     color: "var(--color-green-fix)",
   };
   const styledSpanMini = {
-    fontSize: "1.2rem",
+    fontSize: "1.0rem",
     color: "var(--color-green-fix)",
   };
   const styledSpan = {

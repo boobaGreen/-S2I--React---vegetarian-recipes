@@ -44,7 +44,6 @@ const StyledGridContainer = styled.div`
 `;
 
 const StyledDivPhoto = styled.div`
-  background-image: url("./");
   grid-area: photo;
   width: 25rem;
   background-repeat: no-repeat;
