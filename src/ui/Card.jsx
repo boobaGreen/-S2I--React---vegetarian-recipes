@@ -35,7 +35,7 @@ const StyledCard = styled.li`
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: var(--shadow-lg);
-  border: solid 0.5rem var(--color-my-700);
+  border: solid 0.5rem var(--color-my-back);
   display: flex;
   padding: 1rem;
   width: 100%;
