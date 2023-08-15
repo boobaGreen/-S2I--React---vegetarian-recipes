@@ -12,6 +12,7 @@ const StyledSocial = styled.div`
   gap: 1rem;
 `;
 const StyledLinkedin = styled.a`
+  border-radius: 100px;
   transition: transform 250ms;
   display: inline-block;
   &:hover {
@@ -19,6 +20,7 @@ const StyledLinkedin = styled.a`
   }
 `;
 const StyledGithub = styled.a`
+  border-radius: 100%;
   transition: transform 250ms;
   display: inline-block;
   &:hover {
@@ -26,6 +28,8 @@ const StyledGithub = styled.a`
   }
 `;
 const StyledMail = styled.a`
+  border-radius: 100%;
+  color: #171515;
   margin: 0 1rem;
   transition: transform 250ms;
   display: inline-block;

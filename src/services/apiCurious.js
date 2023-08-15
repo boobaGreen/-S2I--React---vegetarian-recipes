@@ -1,7 +1,7 @@
 import apiClient from "./http-common";
-import { ApiKey } from "../const/const";
+import { apiKey } from "../const/apiKey";
 
-const KEY = ApiKey;
+const KEY = apiKey;
 
 export async function getCurious() {
   const { data, error } = await apiClient.get(

@@ -2,19 +2,15 @@ import { createContext, useContext, useReducer } from "react";
 
 const QueryContext = createContext();
 
-const offsetStartup = 0;
-const number = 12;
-const mdr = 999999;
-
 const initialState = {
-  maxReadyTime: mdr,
+  maxReadyTime: 999999,
   recipesList: [],
   search: "",
   diet: "vegetarian",
   intolerances: "",
   type: "",
-  number: number,
-  offset: offsetStartup,
+  number: 12,
+  offset: 0,
   sort: "random",
   direction: "asc", //desc
 };
@@ -25,7 +21,7 @@ function reducer(state, action) {
       return {
         ...state,
         search: action.payload,
-        offset: offsetStartup,
+        offset: 0,
       };
 
     case "page/next":

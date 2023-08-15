@@ -1,9 +1,8 @@
 import apiClient from "./http-common";
-import { ApiKey } from "../const/const";
 
-// const KEY = ApiKey;
-const KEY = import.meta.env.VITE_KEY_2;
-console.log("key : ", KEY);
+import { apiKey } from "../const/apiKey";
+
+const KEY = apiKey;
 
 export async function getRecipes(
   search,
