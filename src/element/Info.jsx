@@ -1,22 +1,23 @@
+import { HiOutlineUserGroup } from "react-icons/hi2";
+import { useMediaQuery } from "react-responsive";
+
 import IconVegan from "../ui/IconVegan";
 import IconGlutenFree from "../ui/IconGlutenFree";
 import IconTimer from "../ui/IconTimer";
 import IconMoney from "../ui/IconMoney";
-
 import { LuMilkOff } from "react-icons/lu";
-import { HiOutlineUserGroup } from "react-icons/hi2";
 import Heading from "../ui/Heading";
-import { useMediaQuery } from "react-responsive";
+
 const styleHeader = {
   marginBottom: "2rem",
   fontSize: "4rem",
-  color: "#184d19",
+  color: "var(--color-green-fix)",
 };
 
 const styledHeaderMini = {
   marginBottom: "1rem",
   fontSize: "3.2rem",
-  color: "#184d19",
+  color: "var(--color-green-fix)",
 };
 function Info({
   vegan,
@@ -40,8 +41,8 @@ function Info({
         backgroundImage: "url(/paper.jpg",
         borderRadius: "3rem",
         padding: "4rem",
-        color: "#184d19",
-        border: "solid 0.5rem var(--color-my-700)",
+        color: "var(--color-green-fix)",
+        border: "solid 0.5rem var(--color-my-back)",
         marginLeft: "2rem",
         marginRight: "2rem",
       }}
@@ -56,28 +57,32 @@ function Info({
             justifyContent: "center",
             alignItems: "center",
             marginTop: "3rem",
-            // marginLeft: "3rem",
             height: "10rem",
             gap: "2rem",
-            color: "#184d19",
+            color: "var(--color-green-fix)",
           }}
         >
           <p>{vegan ? <IconVegan dim={48} /> : null}</p>
           <p>{glutenFree ? <IconGlutenFree dim={48} /> : null}</p>
-          <div style={{ color: "#184d19" }}>
+          <div style={{ color: "var(--color-green-fix)" }}>
             {dairyFree ? (
-              <LuMilkOff style={{ fontSize: "4.5rem", color: "#184d19" }} />
+              <LuMilkOff
+                style={{ fontSize: "4.5rem", color: "var(--color-green-fix)" }}
+              />
             ) : null}
           </div>
         </div>
       ) : null}
       <p style={{ marginTop: "1.8rem" }}>
-        <IconTimer dim={48} style={{ color: "#184d19", margin: "3rem" }} />
-        <span style={{ marginLeft: "1.5rem", color: "#184d19" }}>
+        <IconTimer
+          dim={48}
+          style={{ color: "var(--color-green-fix)", margin: "3rem" }}
+        />
+        <span style={{ marginLeft: "1.5rem", color: "var(--color-green-fix)" }}>
           {readyInMinutes}min
         </span>
       </p>
-      <p style={{ color: "#184d19", margin: "3rem" }}>
+      <p style={{ color: "var(--color-green-fix)", margin: "3rem" }}>
         <IconMoney dim={48} />
         <span style={{ marginLeft: "1.5rem", color: "#184d19" }}>
           {pricePerServing < 5
@@ -86,12 +91,22 @@ function Info({
         </span>
       </p>
       <p
-        style={{ color: "#184d19", marginRight: "3rem", marginLeft: "1.5rem" }}
+        style={{
+          color: "var(--color-green-fix)",
+          marginRight: "3rem",
+          marginLeft: "1.5rem",
+        }}
       >
         <HiOutlineUserGroup
-          style={{ marginRight: "2rem", fontSize: "4.5rem", color: "#184d19" }}
+          style={{
+            marginRight: "2rem",
+            fontSize: "4.5rem",
+            color: "var(--color-green-fix)",
+          }}
         />
-        <span style={{ marginLeft: "1rem", color: "#184d19" }}>{servings}</span>
+        <span style={{ marginLeft: "1rem", color: "var(--color-green-fix)" }}>
+          {servings}
+        </span>
       </p>
     </div>
   );

@@ -5,10 +5,10 @@ import Row from "./Row";
 import { styled } from "styled-components";
 const StyledBtn = styled.button`
   font-size: 1.8rem;
-  color: var(--color-pen-700);
+  color: var(--color-my-pen);
   height: auto;
   width: auto;
-  background-color: var(--color-my-700);
+  background-color: var(--color-my-back);
   padding: 5px 10px;
   border-radius: 100%;
   &:hover {

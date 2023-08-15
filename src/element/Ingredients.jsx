@@ -12,7 +12,7 @@ const StyledIngredients = styled.div`
   border-radius: 5rem;
   background-image: url("/paper.jpg");
   max-width: 80%;
-  border: solid 0.5rem var(--color-my-700);
+  border: solid 0.5rem var(--color-my-back);
   margin-left: 2rem;
   margin-right: 2rem;
   @media (${devices.sm}) {
@@ -31,21 +31,21 @@ function Ingredients({ extendedIngredients }) {
   const styleHeader = {
     marginBottom: "2rem",
     fontSize: "4rem",
-    color: "#184d19",
+    color: "var(--color-green-fix)",
   };
 
   const styledHeaderMini = {
     marginBottom: "1rem",
     fontSize: "3.2rem",
-    color: "#184d19",
+    color: "var(--color-green-fix)",
   };
   const styledSpanMini = {
     fontSize: "1.2rem",
-    color: "#184d19",
+    color: "var(--color-green-fix)",
   };
   const styledSpan = {
     fontSize: "1.8rem",
-    color: "#184d19",
+    color: "var(--color-green-fix)",
   };
   const isLittle = useMediaQuery({
     query: "screen and (max-width: 700px)",
@@ -61,7 +61,7 @@ function Ingredients({ extendedIngredients }) {
         <div key={ingredient.id}>
           <p>
             <span>
-              <TbPoint color="#184d19" />
+              <TbPoint color="var(--color-green-fix)" />
             </span>
             <span style={styleIf2}>{ingredient.original}</span>
           </p>

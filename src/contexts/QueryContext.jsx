@@ -55,13 +55,11 @@ function reducer(state, action) {
         type: action.payload,
       };
     case "filter/time":
-      console.log("time:", action.payload);
       return {
         ...state,
         maxReadyTime: action.payload,
       };
     case "filter/order":
-      console.log("action-payload :", action.payload);
       return {
         ...state,
         sort: action.payload.order,

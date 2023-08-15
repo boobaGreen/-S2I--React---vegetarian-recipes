@@ -25,7 +25,7 @@ const StyledTitle = styled.div`
   margin-bottom: 3rem;
 `;
 const StyledSpeechBubble = styled.main`
-  color: var(--color-brand-800);
+  color: var(--color-my-pen);
   background: #efefef;
   border-radius: 4px;
   font-size: 1.2rem;
@@ -103,8 +103,8 @@ function CuriousPage() {
             size="small"
             style={{
               cursor: "pointer",
-              color: "var(--color-pen-700)",
-              backgroundColor: "var(--color-my-700)",
+              color: "var(--color-my-pen)",
+              backgroundColor: "var(--color-my-back)",
               padding: "0.5rem 1rem",
               marginLeft: "1rem",
               marginBottom: "1rem",
@@ -118,8 +118,8 @@ function CuriousPage() {
               size="medium"
               style={{
                 cursor: "pointer",
-                color: "var(--color-pen-700)",
-                backgroundColor: "var(--color-my-700)",
+                color: "var(--color-my-pen)",
+                backgroundColor: "var(--color-my-back)",
                 padding: "0.5rem 1rem",
                 marginLeft: "1rem",
                 marginBottom: "1rem",

@@ -1,7 +1,6 @@
 import Pie from "./Pie";
 import Heading from "../ui/Heading";
 import { useMediaQuery } from "react-responsive";
-// import { devices } from "../const/constants";
 import { styled } from "styled-components";
 
 function Nutrition({ dataPieNutrient, dataPieCalories }) {
@@ -12,7 +11,7 @@ function Nutrition({ dataPieNutrient, dataPieCalories }) {
     background-image: url("/paper.jpg");
     border-radius: 4rem;
     padding: 2rem;
-    border: solid 0.5rem var(--color-my-700);
+    border: solid 0.5rem var(--color-my-back);
     width: 86%;
     margin: 0rem 2rem 2rem 2rem;
   `;
@@ -35,13 +34,13 @@ function Nutrition({ dataPieNutrient, dataPieCalories }) {
   const styleHeader = {
     marginBottom: "2rem",
     fontSize: "4rem",
-    color: "#184d19",
+    color: "var(--color-green-fix)",
   };
 
   const styledHeaderMini = {
     marginBottom: "1rem",
     fontSize: "3.2rem",
-    color: "#184d19",
+    color: "var(--color-green-fix)",
   };
   const styleIf = isLittle ? styledHeaderMini : styleHeader;
   return (

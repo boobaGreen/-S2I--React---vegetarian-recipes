@@ -8,13 +8,13 @@ const StyledSpan = styled.span`
 const styleHeader = {
   marginBottom: "2rem",
   fontSize: "4rem",
-  color: "#184d19",
+  color: "var(--color-green-fix)",
 };
 
 const styledHeaderMini = {
   marginBottom: "1rem",
   fontSize: "3.2rem",
-  color: "#184d19",
+  color: "var(--color-green-fix)",
 };
 function Type({ dishTypes }) {
   const isLittle = useMediaQuery({
@@ -32,7 +32,7 @@ function Type({ dishTypes }) {
         backgroundImage: "url(/paper.jpg)",
         borderRadius: "4rem",
         padding: "2rem",
-        border: "solid 0.5rem var(--color-my-700)",
+        border: "solid 0.5rem var(--color-my-back)",
         width: "80%",
         marginLeft: "2rem",
         marginRight: "2rem",

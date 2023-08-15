@@ -4,7 +4,6 @@ import { devices } from "../const/constants";
 import { useMediaQuery } from "react-responsive";
 
 const StyledSearch = styled.input`
-  //sm
   width: 20rem;
   cursor: pointer;
   justify-self: center;
@@ -13,8 +12,8 @@ const StyledSearch = styled.input`
   font-size: 1.4rem;
   border-radius: 100px;
   transition: all 0.3s;
-  color: var(--color-pen-700);
-  background-color: var(--color-my-700);
+  color: var(--color-my-pen);
+  background-color: var(--color-my-back);
   @media ${devices.md} {
     width: 40rem;
     font-size: 1.6rem;
@@ -51,7 +50,6 @@ function Search() {
       className="search"
       type="text"
       placeholder={place}
-      // placeholder="Search.."
       value={search}
       onChange={(e) =>
         dispatch({ type: "search/update", payload: e.target.value })

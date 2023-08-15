@@ -8,7 +8,6 @@ function WinePhoto({ productMatches }) {
   const image = productMatches[0]?.imageUrl;
   const url = "url(" + image + ")";
 
-  // const description = productMatches[index].description;
   return (
     <div
       style={{
@@ -17,7 +16,7 @@ function WinePhoto({ productMatches }) {
         padding: "2rem",
         height: "30rem",
         width: "15rem",
-        border: "solid 0.5rem var(--color-my-700)",
+        border: "solid 0.5rem var(--color-my-back)",
         marginLeft: "2rem",
       }}
     >

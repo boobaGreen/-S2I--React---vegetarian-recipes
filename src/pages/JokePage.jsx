@@ -105,8 +105,8 @@ function JokePage() {
             size="small"
             style={{
               cursor: "pointer",
-              color: "var(--color-pen-700)",
-              backgroundColor: "var(--color-my-700)",
+              color: "var(--color-my-pen)",
+              backgroundColor: "var(--color-my-back)",
               padding: "0.5rem 1rem",
               marginLeft: "1rem",
               marginBottom: "1rem",
@@ -121,8 +121,8 @@ function JokePage() {
               size="small"
               style={{
                 cursor: "pointer",
-                color: "var(--color-pen-700)",
-                backgroundColor: "var(--color-my-700)",
+                color: "var(--color-my-pen)",
+                backgroundColor: "var(--color-my-back)",
                 padding: "0.5rem 1rem",
                 marginLeft: "1rem",
                 marginBottom: "1rem",

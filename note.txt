@@ -1,6 +1,6 @@
-GESTIONE ERRORI!!!!!!
-
+commenti 
 readme
+pulire e riordinare tutto
 
 
 export const baseURL = "https://api.spoonacular.com";

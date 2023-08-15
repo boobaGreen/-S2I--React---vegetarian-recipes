@@ -10,6 +10,5 @@ export function useJoke(uid) {
     queryKey: ["joke", uid],
     queryFn: () => getJoke(),
   });
-
   return { isLoading, error, joke };
 }

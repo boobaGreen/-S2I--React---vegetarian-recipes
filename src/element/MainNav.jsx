@@ -9,7 +9,7 @@ import {
 } from "react-icons/hi2";
 
 const NavList = styled.ul`
-  background-color: var(--color-my-700);
+  background-color: var(--color-my-back);
   border: solid 0.5rem white;
   border-radius: 5px;
   display: flex;
@@ -25,7 +25,7 @@ const StyledNavLink = styled(NavLink)`
     align-items: center;
     justify-content: space-between;
     gap: 1.2rem;
-    color: var(--color-pen-700);
+    color: var(--color-my-pen);
     font-size: 1.4rem;
     font-weight: 500;
 
@@ -33,12 +33,11 @@ const StyledNavLink = styled(NavLink)`
     transition: all 0.3s;
   }
 
-  /* This works because react-router places the active class on the active NavLink */
   &:hover,
   &:active,
   &.active:link,
   &.active:visited {
-    color: var(--color-pen--700);
+    color: var(--color-my-pen);
     background-color: var(--color-nav-hover);
     border-radius: var(--border-radius-sm);
   }
@@ -46,7 +45,7 @@ const StyledNavLink = styled(NavLink)`
   & svg {
     width: 2.4rem;
     height: 2.4rem;
-    color: var(--color-grey-400);
+    color: var(--color-my-pen);
     transition: all 0.3s;
   }
 
@@ -54,7 +53,7 @@ const StyledNavLink = styled(NavLink)`
   &:active svg,
   &.active:link svg,
   &.active:visited svg {
-    color: var(--color-brand-600);
+    color: var(--color-my-pen);
   }
 `;
 

@@ -1,13 +1,14 @@
 import { useLocation, useParams } from "react-router-dom";
-
+import { useState } from "react";
+import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
+
 import { AiOutlineClose } from "react-icons/ai";
 import { HiOutlineFunnel } from "react-icons/hi2";
+
 import Row from "../ui/Row";
 import Option from "./Option";
 import DarkModeToggle from "../ui/DarkModeToggle";
-import { useState } from "react";
-import { useMediaQuery } from "react-responsive";
 
 const StyledMini = styled.div`
   padding: 1rem;
@@ -27,10 +28,10 @@ const StyledHeader = styled.div`
 `;
 const StyledBtn = styled.button`
   font-size: 1.8rem;
-  color: var(--color-pen-700);
+  color: var(--color-my-pen);
   height: auto;
   width: auto;
-  background-color: var(--color-my-700);
+  background-color: var(--color-my-back);
   padding: 5px 10px;
   border-radius: 100%;
   &:hover {
@@ -51,8 +52,8 @@ const StyledTitle = styled.div`
   -webkit-mask-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/8399/grunge.png");
   -webkit-mask-size: 944px 604px;
   mix-blend-mode: multiply;
-  color: var(--color-vegan-logo);
-  border: 0.5rem solid var(--color-vegan-logo);
+  color: var(--color-my-logo);
+  border: 0.5rem solid var(--color-my-back);
   -webkit-mask-position: 13rem 6rem;
   transform: rotate(-3deg);
   border-radius: 0;
@@ -68,8 +69,8 @@ const StyledTitleMini = styled.div`
   -webkit-mask-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/8399/grunge.png");
   -webkit-mask-size: 944px 604px;
   mix-blend-mode: multiply;
-  color: var(--color-vegan-logo);
-  border: 0.2rem solid var(--color-vegan-logo);
+  color: var(--color-my-logo);
+  border: 0.2rem solid var(--color-my-logo);
   -webkit-mask-position: 13rem 6rem;
   transform: rotate(-1deg);
   border-radius: 0;
@@ -144,7 +145,6 @@ function Header() {
         style={{
           padding: "1rem 1rem 1rem 1rem",
           borderRadius: "2rem",
-          // backgroundImage: "url(/paper.jpg)",
         }}
       >
         <div

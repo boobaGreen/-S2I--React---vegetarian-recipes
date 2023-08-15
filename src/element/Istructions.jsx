@@ -35,13 +35,13 @@ function Istructions({ istructionsArray }) {
   const styleHeader = {
     marginBottom: "2rem",
     fontSize: "4rem",
-    color: "#184d19",
+    color: "var(--color-green-fix)",
   };
 
   const styledHeaderMini = {
     marginBottom: "1rem",
     fontSize: "3.2rem",
-    color: "#184d19",
+    color: "var(--color-green-fix)",
   };
   const styleIf = isLittle ? styledHeaderMini : styleHeader;
   return (
@@ -107,7 +107,7 @@ function Istructions({ istructionsArray }) {
           </button>
         )}
       </div>
-      <p style={{ color: "#184d19" }}>
+      <p style={{ color: "var(--color-green-fix)" }}>
         <span> - Step N.{index + 1} - </span>
         <span>{step}</span>
       </p>

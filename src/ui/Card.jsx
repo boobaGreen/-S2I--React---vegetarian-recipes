@@ -27,10 +27,13 @@ const StyledCardContainer = styled.ul`
 const StyledSpan = styled.span`
   display: inline-block;
   cursor: pointer;
-  color: var(--color-brand-800);
+  color: var(--color-my-back);
   font-size: 2.5rem;
 `;
 const StyledCard = styled.li`
+  background-image: url("/paper.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   box-shadow: var(--shadow-lg);
   border: solid 0.5rem var(--color-my-700);
   display: flex;
@@ -42,12 +45,12 @@ const StyledCard = styled.li`
 const StyledBlock = styled.div`
   display: flex;
   flex-grow: 1;
-  background-repeat: no-repeat;
-  background-size: cover;
+
+  border-radius: 3rem;
 `;
 const StyledButton = styled.button`
-  color: var(--color-pen-700);
-  background-color: var(--color-my-700);
+  color: var(--color-my-pen);
+  background-color: var(--color-my-back);
   padding: 0.5rem 1rem;
   margin-left: 1rem;
   margin-bottom: 1rem;
@@ -114,14 +117,17 @@ function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
   return (
     <StyledCardContainer>
       <StyledCard
-        style={{ backgroundImage: "url(/paper.jpg)", borderRadius: "4rem" }}
+        style={{
+          backgroundColor: "var(--color-my-back)",
+          borderRadius: "4rem",
+        }}
       >
         <StyledBlock
           style={{
             backgroundImage: url,
             width: "45%",
             borderRadius: "2rem",
-            border: "solid 0.25rem var(--color-my-700)",
+            border: "solid 0.25rem var(--color-my-back)",
           }}
         >
           <StyledDiv

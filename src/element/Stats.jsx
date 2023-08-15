@@ -4,8 +4,8 @@ import { useRecipes } from "../feautures/useRecipes";
 
 const ButtonStyled = styled.button`
   border-radius: 100px;
-  color: var(--color-pen-700);
-  background-color: var(--color-my-700);
+  color: var(--color-my-pen);
+  background-color: var(--color-my-back);
   font-size: 1.2rem;
   margin-top: 2rem;
   cursor: auto;
@@ -21,7 +21,7 @@ const ButtonStyled = styled.button`
 `;
 const ButtonNoClickStyled = styled.button`
   border-radius: 100px;
-  color: #184d19;
+  color: var(--color-green-fix);
 
   background-color: white;
   font-size: 1.2rem;
