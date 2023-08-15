@@ -3,7 +3,7 @@ import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FaRegEnvelope } from "react-icons/fa";
 import { styled } from "styled-components";
 const StyledSocial = styled.div`
-  margin-top: 25rem;
+  margin-top: 3rem;
   background: transparent;
   display: flex;
   flex-direction: column;
