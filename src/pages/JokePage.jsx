@@ -94,7 +94,7 @@ function JokePage() {
         style={{
           backgroundImage: "url(/paper.jpg)",
           borderRadius: "var(--border-radius-md)",
-          border: "solid 0.5rem var(--color-my-700)",
+          border: "solid 0.5rem var(--color-my-back)",
         }}
       >
         <StyledTitle>Joke</StyledTitle>

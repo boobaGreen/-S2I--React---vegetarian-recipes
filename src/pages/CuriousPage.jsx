@@ -25,7 +25,7 @@ const StyledTitle = styled.div`
   margin-bottom: 3rem;
 `;
 const StyledSpeechBubble = styled.main`
-  color: var(--color-my-pen);
+  color: var(--color-my-logo);
   background: #efefef;
   border-radius: 4px;
   font-size: 1.2rem;
@@ -92,7 +92,7 @@ function CuriousPage() {
         style={{
           backgroundImage: "url(/paper.jpg)",
           borderRadius: "var(--border-radius-md)",
-          border: "solid 0.5rem var(--color-my-700)",
+          border: "solid 0.5rem var(--color-my-back)",
         }}
       >
         <StyledTitle>Curiosity</StyledTitle>
