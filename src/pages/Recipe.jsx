@@ -44,7 +44,7 @@ const StyledGridContainer = styled.div`
 `;
 
 const StyledDivPhoto = styled.div`
-  background-image:url("./") ;
+  background-image: url("./");
   grid-area: photo;
   width: 25rem;
   background-repeat: no-repeat;
@@ -54,7 +54,7 @@ const StyledDivPhoto = styled.div`
   overflow: hidden;
   padding: 1rem;
   border-radius: 4rem;
-  border: solid 0.5rem var(--color-my-700);
+  border: solid 0.5rem var(--color-my-back);
   width: 85%;
   margin-left: 2rem;
   margin-right: 2rem;

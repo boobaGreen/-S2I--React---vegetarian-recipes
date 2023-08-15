@@ -4,8 +4,8 @@ import { useMediaQuery } from "react-responsive";
 import { styled } from "styled-components";
 
 const ButtonStyled = styled.button`
-  color: var(--color-pen-700);
-  background-color: var(--color-my-700);
+  color: var(--color-my-pen);
+  background-color: var(--color-my-back);
   padding: 1rem;
   border-radius: 10px;
   &:hover {
@@ -50,7 +50,7 @@ function Istructions({ istructionsArray }) {
         backgroundImage: "url(/paper.jpg)",
         borderRadius: "4rem",
         padding: "2rem",
-        border: "solid 0.5rem var(--color-my-700)",
+        border: "solid 0.5rem var(--color-my-back)",
         maxWidth: "95%",
         margin: "0rem 2rem",
       }}
