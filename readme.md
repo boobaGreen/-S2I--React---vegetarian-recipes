@@ -2,7 +2,7 @@
 
 SPA that enable you to find vegetarian recipes.
 
-## :question: Why :carrot: :broccoli:
+## :question: Why
 
 This project is the final practice for start2impact React.js course.<br>
 
