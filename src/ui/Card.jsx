@@ -29,6 +29,14 @@ const StyledSpan = styled.span`
   cursor: pointer;
   color: var(--color-my-back);
   font-size: 2.5rem;
+  &:hover {
+    outline: none;
+    transform: translateY(-3px);
+  }
+  &:active {
+    outline: none;
+    transform: translateY(-10px);
+  }
 `;
 const StyledCard = styled.li`
   background-image: url("/paper.jpg");

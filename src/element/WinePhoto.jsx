@@ -11,13 +11,16 @@ function WinePhoto({ productMatches }) {
   return (
     <div
       style={{
+        margin: "auto",
         backgroundImage: "url(/paper.jpg)",
         borderRadius: "4rem",
         padding: "2rem",
         height: "30rem",
         width: "15rem",
         border: "solid 0.5rem var(--color-my-back)",
-        marginLeft: "2rem",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
       }}
     >
       <Heading
@@ -38,11 +41,12 @@ function WinePhoto({ productMatches }) {
       <div
         style={{
           marginTop: "2.5rem",
+          marginLeft: "2.5rem",
           backgroundImage: url,
           backgroundRepeat: "no-repeat",
           backgroundSize: "contain",
-          height: "50%",
-          borderRadius: "10px",
+          height: "100%",
+          borderRadius: "20px",
         }}
       ></div>
     </div>

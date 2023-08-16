@@ -81,7 +81,7 @@ function Istructions({ istructionsArray }) {
               visibility: "hidden",
             }}
           >
-            Step s s
+            {!isLittle ? <span>Step {index}</span> : null} &lt;
           </button>
         )}
         <span>

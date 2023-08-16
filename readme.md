@@ -1,83 +1,173 @@
-<div id="top"></div>
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
-<a name="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-@@ -95,7 +96,7 @@ Of course, no one template will serve all projects since your needs may be diffe
+# VEGETARIAN RECIPES
 
-Use the `BLANK_README.md` to get started.
+SPA that enable you to find vegetarian recipes.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+## :question: Why :carrot: :broccoli:
 
-@@ -112,7 +113,7 @@ This section should list any major frameworks/libraries used to bootstrap your p
+This project is the final practice for start2impact React.js course.<br>
 
-- [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-- [![JQuery][JQuery.com]][JQuery-url]
+After studying and practicing step by step through tutorials, it's important to create your own project to actually practice.
+Vegetarian recipes website
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+The website you will create is designed for vegetarians. In fact, within the site the user will have the possibility to search exclusively for vegetarian recipes through the spoonacular API. Note that you will need to specify parameters to receive only certain categories, so read the documentation carefully.
 
-@@ -148,7 +149,7 @@ \_Below is an example of how you can instruct your audience on installing and set
-const API_KEY = 'ENTER YOUR API';
+API: https://spoonacular.com/food-api/docs
 
-```
+Here's what the site should include:
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+Search bar that allows you to search for all vegetarian recipes.
+Each recipe searched for must show at least the title and cover image.
+Clicking on a recipe will take you to a dedicated page, where more information will be displayed.
+Simple and easy to use UI and UX.
+Structure of the app organized and understandable.
+Responsive design.
 
+Even if the website you will create is not complex, it would be better to use some of the technologies you have studied.
 
+React Router
+Axios
+React Hooks
+Redux or Context API
 
-@@ -159,7 +160,7 @@ Use this space to show useful examples of how a project can be used. Additional
+## :computer: Languages
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+- HTML5
+- CSS3/SAAS
+- Javascript ES6
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+## :books: Libraries & Extra
 
+- [React.js](https://it.reactjs.org/)
+- [React Router](https://reactrouter.com/en/main)
+- [React Query](https://tanstack.com/query/v3/)
+- [Axios](https://axios-http.com/)
+- [React Icons](https://react-icons.github.io/react-icons/)
 
+- [Vite](https://vitejs.dev/guide/env-and-mode.html)
+- [Netlify](https://www.netlify.com/)
 
-@@ -176,7 +177,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
+## :globe_with_meridians: External Services
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+- [Spoonacular API](https://spoonacular.com/food-api)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+## 📚 Stack
 
+- React (Vite, React Router , React Query , Context Api, useReducer, useEffect , useState , Local Storage)
+- Axios
+- Javascript
+- Styled Components
+- SASS
+- HTML5
 
+## Clone the repository
 
-@@ -194,7 +195,7 @@ Don't forget to give the project a star! Thanks again!
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+- Deploy on https://www.netlify.com/
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+## Clone the repository
 
+`git clone https://github.com/boobaGreen/veg`
 
+### 1 - Install the dependencies
 
-@@ -203,7 +204,7 @@ Don't forget to give the project a star! Thanks again!
+`cd client`
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+`npm install`
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+### 2 - Create .env file (ref. to .env.example)
 
+### 3 - Run development mode or build it
 
+`npm run dev` for development mode, open the browser on `http://localhost:8080/`
 
-@@ -214,7 +215,7 @@ Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.c
+`npm run build` for production mode, open index.html in the /dist folder.
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+## 📃 License
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+[MIT](https://choosealicense.com/licenses/mit/)
 
+## 📧 Contact Me
 
+Any questions? Send me an e-mail here: [claudiodallara77@gmail.com](mailto:claudiodallara77@gmail.com)  
+You can find my Linkedin profile here: [https://www.linkedin.com/in/claudio-dall-ara-244816175/](https://www.linkedin.com/in/claudio-dall-ara-244816175/)
 
-@@ -232,7 +233,7 @@ Use this space to list resources you find helpful and would like to give credit
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+## CHOICE OF TECHONLOGY
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-```
+# VEG and the CITY :carrot: :broccoli:
+
+Fast and Veggie! :zap: :bell_pepper: <br>
+Search through thousands and thousands of recipes!
+
+## :question: Why
+
+This project is the final practice for start2impact React.js course.<br>
+
+## :bulb: How it works
+
+Search a new dish with your keyword. <br>
+You can filter the results by some parameters (diet,intollerance,type,max ready time).
+You can order the results for price,time,calories,n ingredients. and you can choose how many result per page(per request)
+Now you can see the detail for a specific dish ,view the cooking instructions, nutrions details and wine suggestion.
+
+You can find 2 extra section with curiosity and jokes ... around culinary theme ...try it!
+
+From the results lists, you can choose the 🤍 save it in your 🧡 "My favorites" area .
+No subscription required!\*
+
+`*use the LocalStorage, resetting browser data will make disappear your recipes.`
+
+## :computer: Languages
+
+- HTML5
+- CSS3
+- Javascript ES6
+
+## :books: Libraries
+
+- [React.js](https://it.reactjs.org/)
+- [React Router](https://reactrouter.com/en/main)
+- [Axios](https://axios-http.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Swiper](https://swiperjs.com/)
+- [React Icons](https://react-icons.github.io/react-icons/)
+- [React Line Ellipsis](https://www.npmjs.com/package/react-lines-ellipsis)
+
+## :globe_with_meridians: External Services
+
+- [Spoonacular API](https://spoonacular.com/food-api)
+
+## :floppy_disk: Installation
+
+First of all, you need Node.js installed.
+If you don't have it, you can download it here:
+[Node.js](https://nodejs.org/it/download/)
+After the installation, you're ready to go.
+
+### 1 - Clone the repository
+
+`git clone https://github.com/cristopherturazza/S2I-React/tree/main/vegandthecity`
+
+### 2 - Install the dependencies
+
+`npm install`
+
+### 3 - Build it!
+
+`npm run build`
+
+### 4 - Open in the browser
+
+Check out for index.html in the /build folder.
+
+## :zap: Try it!
+
+Elsewhere, you can simply try it here:
+[VEG and the CITY](https://vegandthecity.netlify.app/)
+
+## :page_with_curl: License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+## :e-mail: Contact Me
+
+Any questions? Send me an e-mail here: cristopherturazza@gmail.com <br>
+You can find my Linkedin profile here: https://www.linkedin.com/in/cristopher-turazza-0863a026/
