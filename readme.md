@@ -50,15 +50,6 @@ Redux or Context API
 
 - [Spoonacular API](https://spoonacular.com/food-api)
 
-## 📚 Stack
-
-- React (Vite, React Router , React Query , Context Api, useReducer, useEffect , useState , Local Storage)
-- Axios
-- Javascript
-- Styled Components
-- SASS
-- HTML5
-
 ## Clone the repository
 
 - Deploy on https://www.netlify.com/
