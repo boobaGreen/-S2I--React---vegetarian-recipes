@@ -1,4 +1,5 @@
 import Heading from "../ui/Heading";
+
 function WinePhoto({ productMatches }) {
   if (!productMatches) return null;
   const length = productMatches?.length;
@@ -11,12 +12,12 @@ function WinePhoto({ productMatches }) {
   return (
     <div
       style={{
-        margin: "auto",
+        marginRight: "6rem",
         backgroundImage: "url(/paper.jpg)",
         borderRadius: "4rem",
         padding: "2rem",
-        height: "30rem",
-        width: "15rem",
+        height: "100%",
+        width: "75%",
         border: "solid 0.5rem var(--color-my-back)",
         display: "flex",
         flexDirection: "column",
@@ -30,9 +31,9 @@ function WinePhoto({ productMatches }) {
       >
         <p
           style={{
+            width: "100%",
             display: "flex",
-            alignItems: "center",
-            justifyItems: "center",
+            justifyContent: "center",
           }}
         >
           {title}
@@ -41,7 +42,6 @@ function WinePhoto({ productMatches }) {
       <div
         style={{
           marginTop: "2.5rem",
-          marginLeft: "2.5rem",
           backgroundImage: url,
           backgroundRepeat: "no-repeat",
           backgroundSize: "contain",

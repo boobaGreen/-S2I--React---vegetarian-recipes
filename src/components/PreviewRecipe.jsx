@@ -1,10 +1,12 @@
-import { styled } from "styled-components";
 import { Tooltip } from "react-tooltip";
-import Heading from "./Heading";
-import IconVegan from "./IconVegan";
-import IconGlutenFree from "./IconGlutenFree";
-import IconTimer from "./IconTimer";
-import IconMoney from "./IconMoney";
+
+import { styled } from "styled-components";
+
+import Heading from "../ui/Heading";
+import IconVegan from "../ui/IconVegan";
+import IconGlutenFree from "../ui/IconGlutenFree";
+import IconTimer from "../ui/IconTimer";
+import IconMoney from "../ui/IconMoney";
 
 import { Link } from "react-router-dom";
 

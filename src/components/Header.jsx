@@ -8,7 +8,7 @@ import { HiOutlineFunnel } from "react-icons/hi2";
 
 import Row from "../ui/Row";
 import Option from "./Option";
-import DarkModeToggle from "../ui/DarkModeToggle";
+import DarkModeToggle from "./DarkModeToggle";
 
 const StyledMini = styled.div`
   padding: 1rem;

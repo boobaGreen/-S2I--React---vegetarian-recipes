@@ -1,7 +1,7 @@
+import { useState } from "react";
+import { styled } from "styled-components";
 import { AiOutlineStar } from "react-icons/ai";
 import { IconContext } from "react-icons";
-import { styled } from "styled-components";
-import { useState } from "react";
 
 const StyledEmptyStar = styled.div``;
 function IconStarEmpty({ color }) {

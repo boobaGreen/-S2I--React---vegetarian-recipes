@@ -1,7 +1,9 @@
+import { useMediaQuery } from "react-responsive";
+
+import { styled } from "styled-components";
+
 import Pie from "./Pie";
 import Heading from "../ui/Heading";
-import { useMediaQuery } from "react-responsive";
-import { styled } from "styled-components";
 
 function Nutrition({ dataPieNutrient, dataPieCalories }) {
   const isLittle = useMediaQuery({
@@ -12,7 +14,7 @@ function Nutrition({ dataPieNutrient, dataPieCalories }) {
     border-radius: 4rem;
     padding: 2rem;
     border: solid 0.5rem var(--color-my-back);
-    width: 86%;
+    width: 88%;
     margin: 0rem 2rem 2rem 2rem;
   `;
   const StyledGraph = styled.div`
@@ -49,7 +51,7 @@ function Nutrition({ dataPieNutrient, dataPieCalories }) {
         🧪 Nutrition
       </Heading>
       <StyledGraph>
-        <div style={{ width: "85%" }}>
+        <div style={{ maxWidth: "150%", maxHeight: "150%" }}>
           <Pie
             data={dataPieCalories}
             options={{
@@ -58,10 +60,10 @@ function Nutrition({ dataPieNutrient, dataPieCalories }) {
             }}
           />
         </div>
-        <div style={{ width: "85%" }}>
+        <div style={{ maxWidth: "150%", maxHeight: "150%" }}>
           <Pie
             data={dataPieNutrient}
-            options={{ responsive: false, maintainAspectRatio: false }}
+            options={{ responsive: true, maintainAspectRatio: false }}
           />
         </div>
       </StyledGraph>

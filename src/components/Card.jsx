@@ -1,15 +1,16 @@
-import { styled } from "styled-components";
-import { Tooltip } from "react-tooltip";
-import Heading from "./Heading";
-import IconVegan from "./IconVegan";
-import IconGlutenFree from "./IconGlutenFree";
-import IconTimer from "./IconTimer";
-import IconMoney from "./IconMoney";
-
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
+import { Tooltip } from "react-tooltip";
 
-//
+import { styled } from "styled-components";
+
+import Heading from "../ui/Heading";
+import IconVegan from "../ui/IconVegan";
+import IconGlutenFree from "../ui/IconGlutenFree";
+import IconTimer from "../ui/IconTimer";
+import IconMoney from "../ui/IconMoney";
+import { LuMilkOff } from "react-icons/lu";
+
 const StyledCardContainer = styled.ul`
   overflow: hidden;
   display: flex;
@@ -17,6 +18,7 @@ const StyledCardContainer = styled.ul`
   height: 30rem;
   width: 100%;
 
+  // media query for card views "column"
   @media (min-width: 800px) {
     width: 50%;
   }
@@ -35,7 +37,7 @@ const StyledSpan = styled.span`
   }
   &:active {
     outline: none;
-    transform: translateY(-10px);
+    transform: translateX(+6px);
   }
 `;
 const StyledCard = styled.li`
@@ -82,9 +84,11 @@ function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
     readyInMinutes,
     glutenFree,
     vegan,
+    dairyFree,
     pricePerServing,
   } = recipe;
 
+  console.log("recipe : ", recipe);
   const url = "url(" + image + ")";
 
   const isLittle = useMediaQuery({
@@ -96,9 +100,30 @@ function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
   });
 
   let dim;
+
   isLittle ? (dim = 32) : (dim = 42);
   if (isXxs) {
     dim = 26;
+  }
+
+  let styleIfMilk = {};
+  isLittle
+    ? (styleIfMilk = {
+        fontSize: "3.5rem",
+        color: "var(--color-green-fix)",
+        strokeWidth: "1px",
+      })
+    : (styleIfMilk = {
+        fontSize: "4.5rem",
+        color: "var(--color-green-fix)",
+        strokeWidth: "1px",
+      });
+  if (isXxs) {
+    styleIfMilk = {
+      fontSize: "2.5rem",
+      color: "var(--color-green-fix)",
+      strokeWidth: "1px",
+    };
   }
 
   let titleAbr;
@@ -194,6 +219,15 @@ function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
                     <Tooltip id="vegan-tooltip" openOnClick={["click"]} />
                   </StyledDiv>
                 ) : null}
+                {dairyFree ? (
+                  <StyledDiv
+                    data-tooltip-id="dairy-tooltip"
+                    data-tooltip-content="Dairy-Free"
+                  >
+                    <LuMilkOff style={styleIfMilk} />
+                    <Tooltip id="dairy-tooltip" openOnClick={["click"]} />
+                  </StyledDiv>
+                ) : null}
               </StyledBlock>
             </StyledBlock>
 
@@ -205,7 +239,9 @@ function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
                   justifyContent: "center",
                 }}
               >
-                <Heading as="h2">{titleAbr}</Heading>
+                <Heading as="h2" style={{ color: "var(--color-green-fix)" }}>
+                  {titleAbr}
+                </Heading>
               </StyledBlock>
             </StyledBlock>
             <StyledBlock
@@ -227,7 +263,9 @@ function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
                 data-tooltip-content="Time for Preparation & Cooking"
               >
                 <IconTimer dim={dim} />
-                <Heading as="h4">{readyInMinutes} min</Heading>
+                <Heading as="h4" style={{ color: "var(--color-green-fix)" }}>
+                  {readyInMinutes} min
+                </Heading>
                 <Tooltip id="timer-tooltip" openOnClick={["click"]} />
               </StyledBlock>
               <StyledBlock
@@ -242,11 +280,10 @@ function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
                 }}
                 data-tooltip-id="money-tooltip"
                 data-tooltip-content="Price per Serving"
-                data-tooltip-variant="success"
               >
                 <Tooltip id="money-tooltip" openOnClick={["click"]} />
                 <IconMoney dim={dim} />
-                <Heading as="h4">
+                <Heading as="h4" style={{ color: "var(--color-green-fix)" }}>
                   {pricePerServing < 5
                     ? 0.05
                     : (pricePerServing / 100).toFixed(2)}

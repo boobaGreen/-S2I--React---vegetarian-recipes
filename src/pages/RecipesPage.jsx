@@ -1,11 +1,12 @@
-import Spinner from "../ui/Spinner";
-import Error from "./Error";
-import Card from "../ui/Card";
-import { styled } from "styled-components";
+import { useRecipes } from "../hooks/useRecipes";
+import { useQueryCust } from "../contexts/QueryContext";
 import { useLocalStorageState } from "../hooks/useLocalStorageState";
 
-import { useQueryCust } from "../contexts/QueryContext";
-import { useRecipes } from "../feautures/useRecipes";
+import { styled } from "styled-components";
+
+import Card from "../components/Card";
+import Spinner from "../ui/Spinner";
+import Error from "./Error";
 
 const StyledRecipeList = styled.ul`
   display: flex;
@@ -16,7 +17,7 @@ const StyledRecipeList = styled.ul`
   /* position: absolute;   */
 `;
 
-function Recipes() {
+function RecipesPage() {
   const {
     search,
     diet,
@@ -78,4 +79,4 @@ function Recipes() {
   );
 }
 
-export default Recipes;
+export default RecipesPage;

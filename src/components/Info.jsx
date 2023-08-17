@@ -1,11 +1,14 @@
+import { Tooltip } from "react-tooltip";
+
 import { HiOutlineUserGroup } from "react-icons/hi2";
 import { useMediaQuery } from "react-responsive";
+
+import { LuMilkOff } from "react-icons/lu";
 
 import IconVegan from "../ui/IconVegan";
 import IconGlutenFree from "../ui/IconGlutenFree";
 import IconTimer from "../ui/IconTimer";
 import IconMoney from "../ui/IconMoney";
-import { LuMilkOff } from "react-icons/lu";
 import Heading from "../ui/Heading";
 
 const styleHeader = {
@@ -35,7 +38,7 @@ function Info({
   return (
     <div
       style={{
-        width: "80%",
+        width: "70%",
         display: "flex",
         flexDirection: "column",
         backgroundImage: "url(/paper.jpg",
@@ -62,13 +65,48 @@ function Info({
             color: "var(--color-green-fix)",
           }}
         >
-          <p>{vegan ? <IconVegan dim={48} /> : null}</p>
-          <p>{glutenFree ? <IconGlutenFree dim={48} /> : null}</p>
-          <div style={{ color: "var(--color-green-fix)" }}>
+          <p
+            style={{ cursor: "pointer" }}
+            data-tooltip-id="vegan-tooltip"
+            data-tooltip-content="Vegan"
+          >
+            {vegan ? (
+              <>
+                <IconVegan dim={48} />{" "}
+                <Tooltip id="vegan-tooltip" openOnClick={["click"]} />
+              </>
+            ) : null}
+          </p>
+          <p
+            style={{ cursor: "pointer" }}
+            data-tooltip-id="gluten-tooltip"
+            data-tooltip-content="Gluten-Free"
+          >
+            {glutenFree ? (
+              <>
+                <IconGlutenFree dim={48} />
+                <Tooltip id="gluten-tooltip" openOnClick={["click"]} />
+              </>
+            ) : null}
+          </p>
+          <div
+            data-tooltip-id="dairy-tooltip"
+            data-tooltip-content="Dairy-Free"
+            style={{ color: "var(--color-green-fix)", curosr: "pointer" }}
+          >
             {dairyFree ? (
-              <LuMilkOff
-                style={{ fontSize: "4.5rem", color: "var(--color-green-fix)" }}
-              />
+              <>
+                <LuMilkOff
+                  style={{
+                    fontSize: "4.5rem",
+                    color: "var(--color-green-fix)",
+                    cursor: "pointer",
+                    strokeWidth: "1px",
+                  }}
+                />
+
+                <Tooltip id="dairy-tooltip" openOnClick={["click"]} />
+              </>
             ) : null}
           </div>
         </div>
@@ -84,7 +122,7 @@ function Info({
       </p>
       <p style={{ color: "var(--color-green-fix)", margin: "3rem" }}>
         <IconMoney dim={48} />
-        <span style={{ marginLeft: "1.5rem", color: "#184d19" }}>
+        <span style={{ marginLeft: "1.5rem", color: "var(--color-green-fix)" }}>
           {pricePerServing < 5
             ? "0.05$"
             : `${(pricePerServing / 100).toFixed(2)}$`}

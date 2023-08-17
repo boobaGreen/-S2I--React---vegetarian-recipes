@@ -1,7 +1,9 @@
 import { useState } from "react";
-import Heading from "../ui/Heading";
 import { useMediaQuery } from "react-responsive";
+
 import { styled } from "styled-components";
+
+import Heading from "../ui/Heading";
 
 const ButtonStyled = styled.button`
   color: var(--color-my-pen);
@@ -51,7 +53,7 @@ function Istructions({ istructionsArray }) {
         borderRadius: "4rem",
         padding: "2rem",
         border: "solid 0.5rem var(--color-my-back)",
-        maxWidth: "95%",
+        maxWidth: "88%",
         margin: "0rem 2rem",
       }}
     >

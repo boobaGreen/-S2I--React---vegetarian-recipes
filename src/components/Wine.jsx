@@ -1,4 +1,5 @@
 import Heading from "../ui/Heading";
+
 function Wine({ pairingText }) {
   if (!pairingText) return null;
   return pairingText ? (

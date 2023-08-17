@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
-import styled from "styled-components";
 import { useMediaQuery } from "react-responsive";
+
+import styled from "styled-components";
 import {
   HiOutlineGift,
   HiOutlineHeart,

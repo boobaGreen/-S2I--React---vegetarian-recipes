@@ -1,6 +1,9 @@
-import { styled } from "styled-components";
-import Heading from "../ui/Heading";
 import { useMediaQuery } from "react-responsive";
+
+import { styled } from "styled-components";
+
+import Heading from "../ui/Heading";
+
 const StyledSpan = styled.span`
   color: var(--color-my-plate);
   font-size: 6rem;
@@ -33,7 +36,7 @@ function Type({ dishTypes }) {
         borderRadius: "4rem",
         padding: "2rem",
         border: "solid 0.5rem var(--color-my-back)",
-        width: "80%",
+        width: "70%",
         marginLeft: "2rem",
         marginRight: "2rem",
       }}

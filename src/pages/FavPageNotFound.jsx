@@ -1,6 +1,7 @@
+import { useMoveHome } from "../hooks/useMoveHome";
+
 import styled from "styled-components";
 
-import { useMoveHome } from "../hooks/useMoveHome";
 import Heading from "../ui/Heading";
 import Button from "../ui/Button";
 

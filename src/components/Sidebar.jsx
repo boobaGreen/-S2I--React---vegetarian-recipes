@@ -1,9 +1,11 @@
 import { useMediaQuery } from "react-responsive";
+
 import styled from "styled-components";
+
 import Logo from "./Logo";
 import MainNav from "./MainNav";
 import LogoMini from "./LogoMini";
-import Social from "../element/Social";
+import Social from "../components/Social";
 
 const StyledSidebar = styled.aside`
   grid-row: 1 / -1;

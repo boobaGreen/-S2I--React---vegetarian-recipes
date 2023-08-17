@@ -1,12 +1,14 @@
+import { useState } from "react";
+import { useCurious } from "../hooks/useCurious";
+import { Link } from "react-router-dom";
+
 import styled from "styled-components";
 
 import Button from "../ui/Button";
-import { useState } from "react";
 import Row from "../ui/Row";
-import { useCurious } from "../feautures/useCurious";
 import Spinner from "../ui/Spinner";
 import Error from "./Error";
-import { Link } from "react-router-dom";
+
 const StyledTitle = styled.div`
   font-weight: 700;
   display: inline-block;

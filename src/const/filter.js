@@ -12,6 +12,7 @@ export const dietArray = [
 ];
 export const intolerancesArray = [
   { value: "", label: "Intolerances...", disabled: true },
+  { value: "dairy", label: "dairy" },
   { value: "gluten", label: "gluten" },
   { value: "egg", label: "egg" },
   { value: "peanut", label: "peanut" },

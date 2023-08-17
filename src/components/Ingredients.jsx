@@ -1,8 +1,10 @@
-import { TbPoint } from "react-icons/tb";
-import Heading from "../ui/Heading";
-import { devices } from "../const/constants";
-import { styled } from "styled-components";
 import { useMediaQuery } from "react-responsive";
+
+import { TbPoint } from "react-icons/tb";
+import { styled } from "styled-components";
+
+import { devices } from "../const/constants";
+import Heading from "../ui/Heading";
 
 const StyledIngredients = styled.div`
   padding: 2rem;
@@ -11,7 +13,7 @@ const StyledIngredients = styled.div`
   align-items: start;
   border-radius: 5rem;
   background-image: url("/paper.jpg");
-  max-width: 80%;
+  min-width: 100%;
   border: solid 0.5rem var(--color-my-back);
   margin-left: 2rem;
   margin-right: 2rem;

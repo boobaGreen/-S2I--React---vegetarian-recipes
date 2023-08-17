@@ -1,6 +1,8 @@
-import Card from "../ui/Card";
-import { styled } from "styled-components";
 import { useLocalStorageState } from "../hooks/useLocalStorageState";
+
+import styled from "styled-components";
+
+import Card from "../components/Card";
 import FavPageNotFound from "./FavPageNotFound";
 
 const StyledRecipeList = styled.ul`
@@ -9,10 +11,9 @@ const StyledRecipeList = styled.ul`
   list-style: none;
   margin: 0;
   padding: 0;
-  /* position: absolute;   */
 `;
 
-function SearchList() {
+function FavouriteListPage() {
   const [favouriteList, setFavouriteList] = useLocalStorageState(
     [],
     "favouriteList"
@@ -46,4 +47,4 @@ function SearchList() {
   );
 }
 
-export default SearchList;
+export default FavouriteListPage;

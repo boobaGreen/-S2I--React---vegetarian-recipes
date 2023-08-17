@@ -1,8 +1,10 @@
+import { useDarkMode } from "../contexts/DarkModeContext";
+
+import { styled } from "styled-components";
 import { HiOutlineMoon, HiOutlineSun } from "react-icons/hi2";
 
-import { useDarkMode } from "../contexts/DarkModeContext";
-import Row from "./Row";
-import { styled } from "styled-components";
+import Row from "../ui/Row";
+
 const StyledBtn = styled.button`
   font-size: 1.8rem;
   color: var(--color-my-pen);

@@ -1,27 +1,22 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import AppLayout from "./ui/AppLayout";
-import GlobalStyles from "./styles/GlobalStyles";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { DarkModeProvider } from "./contexts/DarkModeContext";
 import { QueryProvider } from "./contexts/QueryContext";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
-import Recipes from "./pages/Recipes";
+import GlobalStyles from "./styles/GlobalStyles";
+import Recipes from "./pages/RecipesPage";
 import PageNotFound from "./pages/PageNotFound";
-import FavouriteList from "./pages/FavouriteList";
-import Recipe from "./pages/Recipe";
-
+import FavouriteList from "./pages/FavouriteListPage";
+import Recipe from "./pages/RecipePage";
 import Joke from "./pages/JokePage";
 import Curious from "./pages/CuriousPage";
+import AppLayout from "./components/AppLayout";
 
 function App() {
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: {
-        // staleTime: 5*60 * 1000, 5 min
-        // staleTime: 1 * 60 * 1000 1 min,
-        // staleTime: Infinity,
-        // cacheTime: Infinity,
         refetchOnMount: false,
         refetchOnReconnect: false,
         refetchOnWindowFocus: false,

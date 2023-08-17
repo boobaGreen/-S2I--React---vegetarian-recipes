@@ -1,16 +1,20 @@
 import { useParams } from "react-router-dom";
-import { useRecipe } from "../feautures/useRecipe";
-import { styled } from "styled-components";
-import Spinner from "../ui/Spinner";
-import Error from "./Error";
-import Info from "../element/Info";
-import Type from "../element/Type";
-import Nutrition from "../element/Nutrition";
-import Istructions from "../element/Istructions";
-import Ingredients from "../element/Ingredients";
-import Wine from "../element/Wine";
-import WinePhoto from "../element/WinePhoto";
+import { useRecipe } from "../hooks/useRecipe";
+
+
+import styled from "styled-components";
+
 import { devices } from "../const/constants";
+
+import Error from "./Error";
+import Info from "../components/Info";
+import Type from "../components/Type";
+import Nutrition from "../components/Nutrition";
+import Istructions from "../components/Istructions";
+import Ingredients from "../components/Ingredients";
+import WinePhoto from "../components/WinePhoto";
+import Wine from "../components/Wine";
+import Spinner from "../ui/Spinner";
 
 const StyledGridContainer = styled.div`
   display: grid;
@@ -94,7 +98,7 @@ const StyledDivWine = styled.div`
   padding: 0.25rem;
 `;
 
-function Recipe({ recipe }) {
+function RecipePage({ recipe }) {
   const { id: idCustom } = useParams();
   const { isLoading, recipe: data, error } = useRecipe(idCustom);
   if (isLoading) return <Spinner />;
@@ -205,4 +209,4 @@ function Recipe({ recipe }) {
   );
 }
 
-export default Recipe;
+export default RecipePage;

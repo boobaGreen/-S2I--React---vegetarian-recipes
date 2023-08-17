@@ -1,6 +1,7 @@
+import { useQueryCust } from "../contexts/QueryContext";
 import Select from "react-select";
 import { styled } from "styled-components";
-import { useQueryCust } from "../contexts/QueryContext";
+
 import { devices } from "../const/constants";
 import * as filter from "../const/filter";
 
@@ -71,7 +72,9 @@ function FilterSection() {
     });
   };
   return (
-    <StyledFilterSectionMain style={{ color: `var(--color-my-logo)` }}>
+    <StyledFilterSectionMain
+      style={{ color: `var(--color-my-logo)`, marginLeft: "-1rem" }}
+    >
       <StyledFilterSectionSub>
         <Select
           onChange={handleChangeNumber}
@@ -83,7 +86,7 @@ function FilterSection() {
             borderRadius: 0,
             colors: {
               ...theme.colors,
-              primary25: "var(--color-my-700)",
+              primary25: "var(--color-my-back)",
               primary: "var(--color-nav-hover)",
             },
           })}
@@ -99,7 +102,7 @@ function FilterSection() {
             borderRadius: 0,
             colors: {
               ...theme.colors,
-              primary25: "var(--color-my-700)",
+              primary25: "var(--color-my-back)",
               primary: "var(--color-nav-hover)",
             },
           })}
@@ -118,7 +121,7 @@ function FilterSection() {
             borderRadius: 0,
             colors: {
               ...theme.colors,
-              primary25: "var(--color-my-700)",
+              primary25: "var(--color-my-back)",
               primary: "var(--color-nav-hover)",
             },
           })}
@@ -133,7 +136,7 @@ function FilterSection() {
             borderRadius: 0,
             colors: {
               ...theme.colors,
-              primary25: "var(--color-my-700)",
+              primary25: "var(--color-my-back)",
               primary: "var(--color-nav-hover)",
             },
           })}
@@ -150,7 +153,7 @@ function FilterSection() {
             borderRadius: 0,
             colors: {
               ...theme.colors,
-              primary25: "var(--color-my-700)",
+              primary25: "var(--color-my-back)",
               primary: "var(--color-nav-hover)",
             },
           })}
@@ -165,7 +168,7 @@ function FilterSection() {
             borderRadius: 0,
             colors: {
               ...theme.colors,
-              primary25: "var(--color-my-700)",
+              primary25: "var(--color-my-back)",
               primary: "var(--color-nav-hover)",
             },
           })}

@@ -1,7 +1,9 @@
 import { useQueryCust } from "../contexts/QueryContext";
-import { styled } from "styled-components";
-import { devices } from "../const/constants";
 import { useMediaQuery } from "react-responsive";
+
+import { styled } from "styled-components";
+
+import { devices } from "../const/constants";
 
 const StyledSearch = styled.input`
   width: 20rem;

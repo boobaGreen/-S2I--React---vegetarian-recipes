@@ -1,7 +1,8 @@
+import { useMediaQuery } from "react-responsive";
+
 import FilterSection from "./FilterSection";
 import Search from "./Search";
 import Stats from "./Stats";
-import { useMediaQuery } from "react-responsive";
 
 function Option({ showFilter }) {
   const isSm = useMediaQuery({

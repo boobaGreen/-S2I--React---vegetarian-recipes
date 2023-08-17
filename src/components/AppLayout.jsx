@@ -1,8 +1,8 @@
 import { Outlet } from "react-router-dom";
 import styled from "styled-components";
-import Sidebar from "../element/Sidebar";
-import Header from "../element/Header";
 import { devices } from "../const/constants";
+import Sidebar from "./Sidebar";
+import Header from "./Header";
 
 const StyledAppLayout = styled.div`
   background-image: url("/wallBirgo.jpg");
@@ -17,7 +17,6 @@ const StyledAppLayout = styled.div`
 `;
 
 const Main = styled.main`
-  /* padding: 4rem 4.8rem 6.4rem; */
   overflow: scroll;
 `;
 
@@ -26,7 +25,6 @@ const Container = styled.div`
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  /* gap: 3.2rem; */
 `;
 
 function AppLayout() {
