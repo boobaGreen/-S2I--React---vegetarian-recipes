@@ -117,6 +117,7 @@ function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
           <StyledBlock
             style={{
               flexDirection: "column",
+              height: "100%",
             }}
           >
             <StyledBlock style={{ height: "33%" }}>
