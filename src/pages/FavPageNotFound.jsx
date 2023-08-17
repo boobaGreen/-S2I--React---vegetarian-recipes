@@ -1,47 +1,42 @@
-import { useMoveHome } from "../hooks/useMoveHome";
-
-import styled from "styled-components";
-
-import Heading from "../ui/Heading";
+import { Link } from "react-router-dom";
 import Button from "../ui/Button";
-
-const FavPageNotFound = styled.main`
-  margin: auto;
-  width: 50%;
-  margin-left: 20%;
-  border: solid 0.1rem var(--color-my-back);
-  background-image: url("/paper.jpg");
-  display: flex;
-  align-items: start;
-  border-radius: var(--border-radius-md);
-  justify-content: center;
-`;
-
-const Box = styled.div`
-  border-radius: var(--border-radius-md);
-  padding: 4.8rem;
-  width: 100%;
-  text-align: center;
-  border: solid 0.5rem var(--color-my-back);
-
-  & h1 {
-    margin-bottom: 3.2rem;
-  }
-`;
+import Row from "../ui/Row";
+import {
+  Box,
+  StyledCuriousPage,
+  StyledSpeechBubble,
+  StyledTitle,
+  buttonStyle,
+} from "../styles/styledComponents/styledCurious";
 
 function FavNotFound() {
-  const moveHome = useMoveHome();
-
   return (
-    <FavPageNotFound>
-      <Box>
-        <Heading as="h2">Your favorites list is empty...</Heading>
-        <Heading as="h2">❤️ to add!</Heading>
-        <Button onClick={moveHome} style={{ marginTop: "3rem" }}>
-          &larr; Start !
-        </Button>
+    <StyledCuriousPage>
+      <Box
+        style={{
+          backgroundImage: "url(/paper.jpg)",
+          borderRadius: "var(--border-radius-md)",
+          border: "solid 0.5rem var(--color-my-back)",
+        }}
+      >
+        <StyledTitle>❤️ to add!</StyledTitle>
+        <StyledSpeechBubble>
+          {"Your favorites list is empty..."}
+        </StyledSpeechBubble>
+        <Row type="horizontal" style={{ justifyContent: "space-around" }}>
+          <Link to={`/`}>
+            <Button
+              size="medium"
+              style={{
+                buttonStyle,
+              }}
+            >
+              &larr; Home
+            </Button>
+          </Link>
+        </Row>
       </Box>
-    </FavPageNotFound>
+    </StyledCuriousPage>
   );
 }
 

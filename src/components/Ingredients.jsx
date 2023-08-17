@@ -13,10 +13,10 @@ const StyledIngredients = styled.div`
   align-items: start;
   border-radius: 5rem;
   background-image: url("/paper.jpg");
-  min-width: 100%;
+  min-width: 88%;
   border: solid 0.5rem var(--color-my-back);
   margin-left: 2rem;
-  margin-right: 2rem;
+  margin-right: 6rem;
   @media (${devices.sm}) {
     width: 95%;
     max-width: 100%;

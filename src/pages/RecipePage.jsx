@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useRecipe } from "../hooks/useRecipe";
 
-
 import styled from "styled-components";
 
 import { devices } from "../const/constants";
@@ -35,7 +34,7 @@ const StyledGridContainer = styled.div`
   grid-gap: 2rem;
 
   @media (${devices.sm}) {
-    grid-template-rows: min-content auto min-content auto;
+    grid-template-rows: min-content auto min-content auto auto;
     grid-template-columns: 55% 1fr;
     grid-template-areas:
       "photo info"
