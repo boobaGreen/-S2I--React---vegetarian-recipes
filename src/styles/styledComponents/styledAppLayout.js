@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 import { devices } from "../../const/constants";
 
 const styledAppLayout = styled.div`
-  background-image: url("/wallBirgo.jpg");
+  /* background-image: url("/wallBirgo.jpg"); */
   display: grid;
   height: 100vh;
   grid-template-columns: 8rem 1fr;

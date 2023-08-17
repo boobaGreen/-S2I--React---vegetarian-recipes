@@ -6,10 +6,16 @@ import {
   styledContainer as Container,
   styledMain as Main,
 } from "../styles/styledComponents/styledAppLayout";
+import { useDarkMode } from "../contexts/DarkModeContext";
 
 function AppLayout() {
+  const { isDarkMode } = useDarkMode();
+  let styleBackground = {};
+  isDarkMode
+    ? (styleBackground = { backgroundImage: "url(/blue.jpeg)" })
+    : (styleBackground = { backgroundImage: "url(/wallLight.webp)" });
   return (
-    <StyledAppLayout>
+    <StyledAppLayout style={styleBackground}>
       <Header />
       <Sidebar />
       <Main>
