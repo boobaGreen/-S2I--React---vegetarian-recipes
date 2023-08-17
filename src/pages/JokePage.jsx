@@ -24,7 +24,7 @@ const StyledTitle = styled.div`
   -webkit-mask-position: 13rem 6rem;
   transform: rotate(-14deg);
   border-radius: 0;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 `;
 
 const StyledJokePage = styled.main`

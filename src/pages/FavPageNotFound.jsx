@@ -7,7 +7,8 @@ import Button from "../ui/Button";
 
 const FavPageNotFound = styled.main`
   margin: auto;
-  width: 80%;
+  width: 50%;
+  margin-left: 20%;
   border: solid 0.1rem var(--color-my-back);
   background-image: url("/paper.jpg");
   display: flex;
