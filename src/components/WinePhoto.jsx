@@ -1,5 +1,10 @@
 import Heading from "../ui/Heading";
 
+import {
+  styledWinePhoto,
+  DivWine,
+} from "../styles/styledComponents/styledWine";
+
 function WinePhoto({ productMatches }) {
   if (!productMatches) return null;
   const length = productMatches?.length;
@@ -10,20 +15,7 @@ function WinePhoto({ productMatches }) {
   const url = "url(" + image + ")";
 
   return (
-    <div
-      style={{
-        marginRight: "6rem",
-        backgroundImage: "url(/paper.jpg)",
-        borderRadius: "4rem",
-        padding: "2rem",
-        height: "100%",
-        width: "75%",
-        border: "solid 0.5rem var(--color-my-back)",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-      }}
-    >
+    <div style={styledWinePhoto}>
       <Heading
         style={{
           fontSize: "1.5rem",
@@ -39,17 +31,11 @@ function WinePhoto({ productMatches }) {
           {title}
         </p>
       </Heading>
-      <div
+      <DivWine
         style={{
-          marginTop: "2.5rem",
           backgroundImage: url,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "contain",
-          height: "100%",
-          minHeight: "20rem",
-          borderRadius: "20px",
         }}
-      ></div>
+      ></DivWine>
     </div>
   );
 }

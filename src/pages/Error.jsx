@@ -11,7 +11,7 @@ const StyledPageNotFound = styled.main`
   max-height: 30rem;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 `;
 
 const Box = styled.div`

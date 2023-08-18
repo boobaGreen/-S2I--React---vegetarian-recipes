@@ -11,17 +11,12 @@ import IconTimer from "../ui/IconTimer";
 import IconMoney from "../ui/IconMoney";
 import Heading from "../ui/Heading";
 
-const styleHeader = {
-  marginBottom: "2rem",
-  fontSize: "4rem",
-  color: "var(--color-green-fix)",
-};
-
-const styledHeaderMini = {
-  marginBottom: "1rem",
-  fontSize: "3.2rem",
-  color: "var(--color-green-fix)",
-};
+import {
+  styledHeader,
+  styledHeaderMini,
+  PrimaryDiv,
+  SecondDiv,
+} from "../styles/styledComponents/styledInfo";
 function Info({
   vegan,
   dairyFree,
@@ -33,38 +28,15 @@ function Info({
   const isLittle = useMediaQuery({
     query: "screen and (max-width: 700px)",
   });
-  const styleIf = isLittle ? styledHeaderMini : styleHeader;
+  const styleIf = isLittle ? styledHeaderMini : styledHeader;
   const badge = vegan || glutenFree || dairyFree;
   return (
-    <div
-      style={{
-        width: "70%",
-        display: "flex",
-        flexDirection: "column",
-        backgroundImage: "url(/paper.jpg",
-        borderRadius: "3rem",
-        padding: "4rem",
-        color: "var(--color-green-fix)",
-        border: "solid 0.5rem var(--color-my-back)",
-        marginLeft: "2rem",
-        marginRight: "2rem",
-      }}
-    >
+    <PrimaryDiv>
       <Heading as="h1" style={styleIf}>
         ℹ️ Info
       </Heading>
       {badge ? (
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            marginTop: "3rem",
-            height: "10rem",
-            gap: "2rem",
-            color: "var(--color-green-fix)",
-          }}
-        >
+        <SecondDiv>
           <p
             style={{ cursor: "pointer" }}
             data-tooltip-id="vegan-tooltip"
@@ -109,7 +81,7 @@ function Info({
               </>
             ) : null}
           </div>
-        </div>
+        </SecondDiv>
       ) : null}
       <p style={{ marginTop: "1.8rem" }}>
         <IconTimer
@@ -146,7 +118,7 @@ function Info({
           {servings}
         </span>
       </p>
-    </div>
+    </PrimaryDiv>
   );
 }
 

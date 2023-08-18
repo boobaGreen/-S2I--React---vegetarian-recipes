@@ -1,27 +1,12 @@
 import { useQueryCust } from "../contexts/QueryContext";
 import Select from "react-select";
-import { styled } from "styled-components";
 
-import { devices } from "../const/constants";
 import * as filter from "../const/filter";
 
-const StyledFilterSectionMain = styled.div`
-  margin-top: 1rem;
-  margin-left: 3rem;
-  border: solid 1rem var(--color-my-back);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-
-  @media ${devices.md} {
-    flex-direction: row;
-  }
-`;
-const StyledFilterSectionSub = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-`;
+import {
+  StyledFilterSectionSub,
+  StyledFilterSectionMain,
+} from "../styles/styledComponents/styledFilterSection";
 
 function FilterSection() {
   const { dispatch } = useQueryCust();
