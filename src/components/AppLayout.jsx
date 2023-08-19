@@ -14,11 +14,11 @@ function AppLayout() {
   isDarkMode
     ? (styleBackground = {
         backgroundImage: "url(/blue.jpeg)",
-        height: "150vh",
+        height: "180vh",
       })
     : (styleBackground = {
         backgroundImage: "url(/wallLight.webp)",
-        height: "150vh",
+        height: "180vh",
       });
   return (
     <StyledAppLayout style={styleBackground}>
