@@ -1,21 +1,35 @@
 import { useState } from "react";
 import { useCurious } from "../hooks/useCurious";
 import { Link } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
 
 import {
   Box,
   StyledCuriousPage,
   StyledSpeechBubble,
   StyledTitle,
+  StyledDiv,
   buttonStyle,
 } from "../styles/styledComponents/styledCurious";
 
 import Button from "../ui/Button";
-import Row from "../ui/Row";
 import Spinner from "../ui/Spinner";
 import Error from "./Error";
 
 function CuriousPage() {
+  const isLittle = useMediaQuery({
+    query: "screen and (max-width: 600px)",
+  });
+  let styleIf = {
+    flexDirection: "column",
+    gap: "1rem",
+  };
+  if (!isLittle) {
+    styleIf = {
+      flexDirection: "row",
+      gap: "1rem",
+    };
+  }
   const currentDate = new Date();
   const timestamp = currentDate.getTime();
 
@@ -37,16 +51,22 @@ function CuriousPage() {
       <Box>
         <StyledTitle>🌼 Curiosity</StyledTitle>
         <StyledSpeechBubble>{curious.text}</StyledSpeechBubble>
-        <Row type="horizontal" style={{ justifyContent: "space-around" }}>
-          <Button
-            onClick={handleClick}
-            size="medium"
-            style={{
-              buttonStyle,
-            }}
-          >
-            Another...
-          </Button>
+        <StyledDiv style={styleIf}>
+          <Link to={``}>
+            <Button
+              onClick={handleClick}
+              size="medium"
+              style={{
+                buttonStyle,
+              }}
+            >
+              {!isLittle ? (
+                <p>Another...</p>
+              ) : (
+                <p style={{ fontSize: "2rem" }}> + </p>
+              )}
+            </Button>
+          </Link>
           <Link to={`/`}>
             <Button
               size="medium"
@@ -54,10 +74,14 @@ function CuriousPage() {
                 buttonStyle,
               }}
             >
-              &larr; Home
+              {!isLittle ? (
+                <p>&larr; Home</p>
+              ) : (
+                <p style={{ height: "2.8rem", width: "1.4rem" }}>&larr;</p>
+              )}
             </Button>
           </Link>
-        </Row>
+        </StyledDiv>
       </Box>
     </StyledCuriousPage>
   );

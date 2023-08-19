@@ -14,17 +14,17 @@ const StyledTitle = styled.div`
   border: 0.5rem double #d23;
   transform: rotate(3deg);
   -webkit-mask-position: 2rem 3rem;
-  font-size: 2rem;
+  font-size: 1.6rem;
   margin-bottom: 3rem;
 `;
 const StyledSpeechBubble = styled.main`
   color: var(--color-my-logo);
   background: #efefef;
   border-radius: 4px;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   line-height: 1.3;
   margin: 0 auto 40px;
-  max-width: 400px;
+  max-width: 600px;
   padding: 15px;
   position: relative;
 
@@ -68,14 +68,27 @@ const Box = styled.div`
     margin-bottom: 3.2rem;
   }
 `;
+
+const StyledDiv = styled.div`
+  display: flex;
+  justify-content: space-around;
+`;
 const buttonStyle = {
+  maxWidth: "3rem",
   cursor: "pointer",
   color: "var(--color-my-pen)",
   backgroundColor: "var(--color-my-back)",
-  padding: "0.5rem 1rem",
+  padding: "0.25rem 0.5rem",
   marginLeft: "1rem",
   marginBottom: "1rem",
   borderRadius: "40px",
 };
 
-export { Box, StyledCuriousPage, StyledSpeechBubble, StyledTitle, buttonStyle };
+export {
+  Box,
+  StyledCuriousPage,
+  StyledSpeechBubble,
+  StyledTitle,
+  buttonStyle,
+  StyledDiv,
+};
