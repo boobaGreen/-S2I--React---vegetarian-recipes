@@ -1,7 +1,5 @@
 import { styled } from "styled-components";
 
-import { devices } from "../../const/constants";
-
 const StyledTitle = styled.div`
   font-weight: 700;
   display: inline-block;
@@ -55,13 +53,16 @@ const StyledCuriousPage = styled.main`
 `;
 
 const Box = styled.div`
-  max-width: 50%;
-  background-image: url(/paper.jpg);
+  max-width: 80%;
+  background-image: url("/paper.jpg");
   border-radius: var(--border-radius-md);
   border: solid 0.5rem var(--color-my-back);
   padding: 4.8rem;
   flex: 0 1 96rem;
   text-align: center;
+  @media (min-width: 800px) {
+    width: 50%;
+  }
 
   & h1 {
     margin-bottom: 3.2rem;

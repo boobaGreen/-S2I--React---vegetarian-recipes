@@ -7,7 +7,7 @@ export const NavList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
-  min-width: 6rem;
+  min-width: 5.5rem;
 `;
 
 export const StyledNavLink = styled(NavLink)`
@@ -20,7 +20,6 @@ export const StyledNavLink = styled(NavLink)`
     color: var(--color-my-pen);
     font-size: 1.4rem;
     font-weight: 500;
-
     padding: 1.2rem 2.4rem;
     transition: all 0.3s;
   }
