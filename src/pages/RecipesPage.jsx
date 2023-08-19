@@ -2,20 +2,11 @@ import { useRecipes } from "../hooks/useRecipes";
 import { useQueryCust } from "../contexts/QueryContext";
 import { useLocalStorageState } from "../hooks/useLocalStorageState";
 
-import { styled } from "styled-components";
-
 import Card from "../components/Card";
 import Spinner from "../ui/Spinner";
 import Error from "./Error";
 
-const StyledRecipeList = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  padding: 1rem 2rem 2rem 1rem;
-  /* position: absolute;   */
-`;
+import { StyledRecipeList } from "../styles/styledComponents/styledRecipeList";
 
 function RecipesPage() {
   const {

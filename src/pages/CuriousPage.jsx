@@ -35,7 +35,7 @@ function CuriousPage() {
   return (
     <StyledCuriousPage>
       <Box>
-        <StyledTitle>Curiosity</StyledTitle>
+        <StyledTitle>🌼 Curiosity</StyledTitle>
         <StyledSpeechBubble>{curious.text}</StyledSpeechBubble>
         <Row type="horizontal" style={{ justifyContent: "space-around" }}>
           <Button

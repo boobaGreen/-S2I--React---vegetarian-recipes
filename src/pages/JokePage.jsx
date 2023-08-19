@@ -41,12 +41,12 @@ function JokePage() {
           border: "solid 0.5rem var(--color-my-back)",
         }}
       >
-        <StyledTitle>Joke</StyledTitle>
+        <StyledTitle>😂 Joke</StyledTitle>
         <StyledSpeechBubble>{joke.text}</StyledSpeechBubble>
         <Row type="horizontal" style={{ justifyContent: "space-around" }}>
           <Button
             onClick={handleClick}
-            size="medium"
+            size="small"
             style={{
               buttonStyle,
             }}

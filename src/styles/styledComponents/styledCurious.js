@@ -1,4 +1,7 @@
 import { styled } from "styled-components";
+
+import { devices } from "../../const/constants";
+
 const StyledTitle = styled.div`
   font-weight: 700;
   display: inline-block;
@@ -45,23 +48,14 @@ const StyledSpeechBubble = styled.main`
   }
 `;
 const StyledCuriousPage = styled.main`
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50%;
-  margin-left: 20%;
 `;
-const buttonStyle = {
-  cursor: "pointer",
-  color: "var(--color-my-pen)",
-  backgroundColor: "var(--color-my-back)",
-  padding: "0.5rem 1rem",
-  marginLeft: "1rem",
-  marginBottom: "1rem",
-  borderRadius: "40px",
-};
 
 const Box = styled.div`
+  max-width: 50%;
   background-image: url(/paper.jpg);
   border-radius: var(--border-radius-md);
   border: solid 0.5rem var(--color-my-back);
@@ -73,4 +67,14 @@ const Box = styled.div`
     margin-bottom: 3.2rem;
   }
 `;
+const buttonStyle = {
+  cursor: "pointer",
+  color: "var(--color-my-pen)",
+  backgroundColor: "var(--color-my-back)",
+  padding: "0.5rem 1rem",
+  marginLeft: "1rem",
+  marginBottom: "1rem",
+  borderRadius: "40px",
+};
+
 export { Box, StyledCuriousPage, StyledSpeechBubble, StyledTitle, buttonStyle };

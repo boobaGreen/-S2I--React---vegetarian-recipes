@@ -85,7 +85,7 @@ function Header() {
         type="horizontal"
         justify="center"
         style={{
-          padding: "1rem 1rem 1rem 1rem",
+          padding: "1rem ",
           borderRadius: "2rem",
         }}
       >

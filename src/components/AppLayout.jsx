@@ -12,13 +12,19 @@ function AppLayout() {
   const { isDarkMode } = useDarkMode();
   let styleBackground = {};
   isDarkMode
-    ? (styleBackground = { backgroundImage: "url(/blue.jpeg)" })
-    : (styleBackground = { backgroundImage: "url(/wallLight.webp)" });
+    ? (styleBackground = {
+        backgroundImage: "url(/blue.jpeg)",
+        height: "130vh",
+      })
+    : (styleBackground = {
+        backgroundImage: "url(/wallLight.webp)",
+        height: "130vh",
+      });
   return (
     <StyledAppLayout style={styleBackground}>
       <Header />
       <Sidebar />
-      <Main>
+      <Main style={{ marginTop: "2rem" }}>
         <Container>
           <Outlet />
         </Container>
