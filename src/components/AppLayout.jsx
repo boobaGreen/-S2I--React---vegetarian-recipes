@@ -20,11 +20,12 @@ function AppLayout() {
         backgroundImage: "url(/wallLight.webp)",
         height: "180vh",
       });
+
   return (
     <StyledAppLayout style={styleBackground}>
       <Header />
       <Sidebar />
-      <Main style={{ marginTop: "2rem" }}>
+      <Main style={{ marginTop: "2rem", overflow: "auto" }}>
         <Container>
           <Outlet />
         </Container>

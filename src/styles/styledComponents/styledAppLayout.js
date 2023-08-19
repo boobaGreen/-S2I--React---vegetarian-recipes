@@ -5,7 +5,6 @@ import { devices } from "../../const/constants";
 const styledAppLayout = styled.div`
   /* background-image: url("/wallBirgo.jpg"); */
   display: grid;
-  height: 100vh;
   grid-template-columns: 8rem 1fr;
   grid-template-rows: auto 1fr;
 
@@ -22,7 +21,12 @@ const styledContainer = styled.div`
 `;
 
 const styledMain = styled.main`
-  overflow: scroll;
+  overflow: hidden;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 export { styledAppLayout, styledContainer, styledMain };

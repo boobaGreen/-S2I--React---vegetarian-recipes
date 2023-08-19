@@ -6,5 +6,6 @@ export const StyledRecipeList = styled.ul`
   list-style: none;
   margin: 0;
   padding: 1rem 2rem 2rem 1rem;
-  /* position: absolute;   */
+  overflow: auto;
+
 `;
