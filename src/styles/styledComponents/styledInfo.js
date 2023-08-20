@@ -1,13 +1,11 @@
 import { styled } from "styled-components";
 
 export const styledHeader = {
-  marginBottom: "2rem",
   fontSize: "4rem",
   color: "var(--color-green-fix)",
 };
 
 export const styledHeaderMini = {
-  marginBottom: "1rem",
   fontSize: "3.2rem",
   color: "var(--color-green-fix)",
 };
