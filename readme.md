@@ -4,7 +4,7 @@ SPA that enable you to find vegetarian recipes.
 
 ## :zap: Try it!
 
-Elsewhere, you can simply try it here:
+You can simply try it here:
 [vegetarian recipes](https://starlit-haupia-04c521.netlify.app/)
 
 ## :question: Why
