@@ -36,15 +36,15 @@ function MainNav() {
           </StyledNavLink>
         </li>
         <li>
-          <StyledNavLink to="/joke" style={styleIf}>
-            <HiOutlineFaceSmile />
-            {isDesktopOrLaptop ? <span>Joke</span> : null}
-          </StyledNavLink>
-        </li>
-        <li>
           <StyledNavLink to="/curious" style={styleIf}>
             <HiOutlineGift />
             {isDesktopOrLaptop ? <span>Curiousity</span> : null}
+          </StyledNavLink>
+        </li>
+        <li>
+          <StyledNavLink to="/joke" style={styleIf}>
+            <HiOutlineFaceSmile />
+            {isDesktopOrLaptop ? <span>Joke</span> : null}
           </StyledNavLink>
         </li>
       </NavList>
