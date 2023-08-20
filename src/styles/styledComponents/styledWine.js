@@ -9,12 +9,12 @@ export const principalDiv = {
 };
 
 export const styledWinePhoto = {
-  marginRight: "6rem",
+  marginLeft: "2rem",
   backgroundImage: "url(/paper.jpg)",
   borderRadius: "4rem",
   padding: "2rem",
   height: "100%",
-  width: "75%",
+  width: "85%",
   border: "solid 0.5rem var(--color-my-back)",
   display: "flex",
   flexDirection: "column",

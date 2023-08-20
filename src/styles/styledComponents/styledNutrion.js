@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const StyleNutry = styled.div`
+  width: 85%;
   background-image: url("/paper.jpg");
   border-radius: 4rem;
   padding: 2rem;
   border: solid 0.5rem var(--color-my-back);
-  width: 88%;
   margin: 0rem 2rem 2rem 2rem;
 `;
 
