@@ -2,6 +2,11 @@
 
 SPA that enable you to find vegetarian recipes.
 
+## :zap: Try it!
+
+Elsewhere, you can simply try it here:
+[vegetarian recipes](https://starlit-haupia-04c521.netlify.app/)
+
 ## :question: Why
 
 This project is the final practice for start2impact React.js course.<br>
