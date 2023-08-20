@@ -33,29 +33,27 @@ const StyledGridContainer = styled.div`
   }
 `;
 
-const StyledDivPhoto = styled.div`
-  grid-area: photo;
-
+const StyledPhoto = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 0.25rem;
   overflow: hidden;
-  padding: 1rem;
   border-radius: 4rem;
   border: solid 0.5rem var(--color-my-back);
-  width: 85%;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  width: 95%;
+  height: 100%;
+
   @media (${devices.sm}) {
     width: 100%;
   }
 `;
+
+const StyledDivPhoto = styled.div`
+  grid-area: photo;
+  padding: 0.25rem;
+`;
 const StyledInfo = styled.div`
   grid-area: info;
-  padding: 1rem;
-  width: 85%;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  padding: 0.25rem;
 `;
 const StyledDivType = styled.div`
   grid-area: type;
@@ -66,10 +64,8 @@ const StyledDivNutrion = styled.div`
   padding: 0.25rem;
 `;
 const StyledDivIngredients = styled.div`
-  width: 100%;
   grid-area: ingredients;
   padding: 0.25rem;
-  display: flex;
 `;
 const StyledDivIstructions = styled.div`
   grid-area: istructions;
@@ -96,4 +92,5 @@ export {
   StyledDivIstructions,
   StyledDivWinePhoto,
   StyledDivWine,
+  StyledPhoto,
 };

@@ -21,6 +21,7 @@ import {
   StyledDivIstructions,
   StyledDivWinePhoto,
   StyledDivWine,
+  StyledPhoto,
 } from "../styles/styledComponents/styledRecipePage";
 
 function RecipePage({ recipe }) {
@@ -96,11 +97,13 @@ function RecipePage({ recipe }) {
         <StyledDivIstructions>
           <Istructions istructionsArray={istructionsArray} />
         </StyledDivIstructions>
-        <StyledDivPhoto
-          style={{
-            backgroundImage: `url(${image})`,
-          }}
-        ></StyledDivPhoto>
+        <StyledDivPhoto>
+          <StyledPhoto
+            style={{
+              backgroundImage: `url(${image})`,
+            }}
+          ></StyledPhoto>
+        </StyledDivPhoto>
         <StyledInfo>
           <Info
             vegan={vegan}

@@ -31,7 +31,7 @@ function Ingredients({ extendedIngredients }) {
       </Heading>
       {uniqueIngredients.map((ingredient) => (
         <div key={ingredient.id}>
-          <p>
+          <p style={{ display: "flex", marginTop: "1.2rem" }}>
             <span>
               <TbPoint color="var(--color-green-fix)" />
             </span>

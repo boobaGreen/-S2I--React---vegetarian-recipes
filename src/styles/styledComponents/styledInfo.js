@@ -13,7 +13,7 @@ export const styledHeaderMini = {
 };
 
 export const PrimaryDiv = styled.div`
-  width: 100%;
+  width: 95%;
   display: flex;
   flex-direction: column;
   background-image: url("/paper.jpg");

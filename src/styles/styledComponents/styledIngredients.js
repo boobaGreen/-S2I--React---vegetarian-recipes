@@ -9,9 +9,9 @@ export const StyledIngredients = styled.div`
   align-items: start;
   border-radius: 5rem;
   background-image: url("/paper.jpg");
-  width: 100%;
+  width: 95%;
   border: solid 0.5rem var(--color-my-back);
-  margin-right: 2rem;
+
   @media (${devices.sm}) {
     width: 100%;
   }
@@ -29,10 +29,10 @@ export const styledHeaderMini = {
   color: "var(--color-green-fix)",
 };
 export const styledSpanMini = {
-  fontSize: "1.0rem",
+  fontSize: "1.5rem",
   color: "var(--color-green-fix)",
 };
 export const styledSpan = {
-  fontSize: "1.8rem",
+  fontSize: "1.5rem",
   color: "var(--color-green-fix)",
 };

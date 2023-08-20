@@ -1,12 +1,16 @@
 import styled from "styled-components";
 
+import { devices } from "../../const/constants";
+
 export const StyleNutry = styled.div`
-  width: 85%;
+  width: 95%;
   background-image: url("/paper.jpg");
   border-radius: 4rem;
   padding: 2rem;
   border: solid 0.5rem var(--color-my-back);
-  margin: 0rem 2rem 2rem 2rem;
+  @media (${devices.sm}) {
+    width: 98.3%;
+  }
 `;
 
 export const StyledGraph = styled.div`
@@ -15,6 +19,8 @@ export const StyledGraph = styled.div`
   justify-content: center;
   align-items: center;
   gap: 3rem;
+  width: 90%;
+  height: 90%;
 
   @media (min-width: 820px) {
     flex-direction: row;

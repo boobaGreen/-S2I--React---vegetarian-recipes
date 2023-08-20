@@ -1,5 +1,7 @@
 import { styled } from "styled-components";
 
+import { devices } from "../../const/constants";
+
 export const ButtonStyled = styled.button`
   color: var(--color-my-pen);
   background-color: var(--color-my-back);
@@ -17,9 +19,12 @@ export const PrincipalDiv = styled.div`
   border-radius: 4rem;
   padding: 2rem;
   border: solid 0.5rem var(--color-my-back);
-  max-width: 88%;
-  margin: 0rem 2rem;
+  width: 95%;
+  @media (${devices.sm}) {
+    width: 98.3%;
+  }
 `;
+
 export const SecondDiv = styled.div`
   display: flex;
   flex-direction: row;

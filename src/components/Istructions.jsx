@@ -63,7 +63,7 @@ function Istructions({ istructionsArray }) {
           <DisableButton>Step s s</DisableButton>
         )}
       </SecondDiv>
-      <p style={{ color: "var(--color-green-fix)" }}>
+      <p style={{ color: "var(--color-green-fix)", fontSize: "1.5rem" }}>
         <span> - Step N.{index + 1} - </span>
         <span>{step}</span>
       </p>
