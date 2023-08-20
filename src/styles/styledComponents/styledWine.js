@@ -20,6 +20,7 @@ export const styledWinePhoto = {
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
+  alignItems: "center",
 };
 
 export const DivWine = styled.div`

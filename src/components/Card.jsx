@@ -178,7 +178,10 @@ function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
               >
                 <IconTimer dim={dim} />
                 <Heading as="h4" style={{ color: "var(--color-green-fix)" }}>
-                  {readyInMinutes} min
+                  {readyInMinutes}
+                </Heading>
+                <Heading as="h4" style={{ color: "var(--color-green-fix)" }}>
+                  min
                 </Heading>
                 <Tooltip id="timer-tooltip" openOnClick={["click"]} />
               </StyledBlockTimer>
@@ -192,6 +195,8 @@ function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
                   {pricePerServing < 5
                     ? 0.05
                     : (pricePerServing / 100).toFixed(2)}
+                </Heading>
+                <Heading as="h4" style={{ color: "var(--color-green-fix)" }}>
                   $
                 </Heading>
               </StyledBlockPrice>

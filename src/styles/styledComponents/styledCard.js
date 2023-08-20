@@ -44,7 +44,6 @@ const StyledCard = styled.li`
 `;
 const StyledBlock = styled.div`
   display: flex;
-  flex-grow: 1;
 
   border-radius: 3rem;
 `;
@@ -96,7 +95,8 @@ const StyledBlockTimer = styled.div`
   flex-grow: 1;
   border-radius: 3rem;
   flex-direction: column;
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
   justify-content: space-around;
   align-items: center;
   cursor: pointer;

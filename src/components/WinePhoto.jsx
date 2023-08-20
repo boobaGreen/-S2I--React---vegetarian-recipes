@@ -34,6 +34,7 @@ function WinePhoto({ productMatches }) {
       <DivWine
         style={{
           backgroundImage: url,
+          width: "50%",
         }}
       ></DivWine>
     </div>

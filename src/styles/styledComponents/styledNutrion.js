@@ -7,7 +7,7 @@ export const StyleNutry = styled.div`
   width: 95%;
   background-image: url("/paper.jpg");
   border-radius: 4rem;
-  padding: 2rem;
+
   border: solid 0.5rem var(--color-my-back);
   @media (${devices.sm}) {
     width: 98.3%;
@@ -17,9 +17,7 @@ export const StyleNutry = styled.div`
 export const StyledGraph = styled.div`
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
-
   max-width: 85%;
   max-height: 85%;
 
