@@ -13,6 +13,7 @@ const StyledSidebar = styled.aside`
   flex-direction: column;
   padding: 3.2rem 2.4rem;
   gap: 3.2rem;
+  align-items: center;
 `;
 
 function Sidebar() {

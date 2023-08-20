@@ -18,7 +18,7 @@ export const PrimaryDiv = styled.div`
   flex-direction: column;
   background-image: url("/paper.jpg");
   border-radius: 3rem;
-  padding: 4rem;
+  /* padding: 2rem; */
   color: var(--color-green-fix);
   border: solid 0.5rem var(--color-my-back);
 `;

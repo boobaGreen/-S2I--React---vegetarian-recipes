@@ -4,7 +4,7 @@ export const principalDiv = {
   borderRadius: "4rem",
   padding: "2rem",
   border: "solid 0.5rem var(--color-my-back)",
-  marginLeft: "2rem",
+
   width: "85%",
 };
 
