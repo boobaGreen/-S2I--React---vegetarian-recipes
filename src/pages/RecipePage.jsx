@@ -57,7 +57,7 @@ function RecipePage({ recipe }) {
   const pairingText = winePairing.pairingText;
 
   const dataPieNutrient = {
-    labels: ["Carb", "Prot", "Fats"],
+    labels: ["Carb", "Prot", "Fat"],
     datasets: [
       {
         label: "%",
@@ -72,19 +72,19 @@ function RecipePage({ recipe }) {
           "rgba(54, 162, 235, 1)",
           "rgba(255, 206, 86, 1)",
         ],
-        borderWidth: 1,
+        borderWidth: 2,
       },
     ],
   };
   const dataPieCalories = {
-    labels: [`kcal per serving`, `kcal rest of the day`],
+    labels: [`kcal/serving`, `day percent`],
     datasets: [
       {
         label: `%`,
         data: [percentOfDailyNeedsCal, 100 - percentOfDailyNeedsCal],
         backgroundColor: ["rgba(255, 99, 132, 0.2)", "rgba(54, 162, 235, 0.2)"],
         borderColor: ["rgba(255, 99, 132, 1)", "rgba(54, 162, 235, 1)"],
-        borderWidth: 1,
+        borderWidth: 2,
       },
     ],
   };

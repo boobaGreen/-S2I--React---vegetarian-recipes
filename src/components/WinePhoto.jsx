@@ -10,7 +10,7 @@ function WinePhoto({ productMatches }) {
   const length = productMatches?.length;
 
   if (length < 1) return null;
-  const title = productMatches[0]?.title; // mettere random!
+  const title = productMatches[0]?.title;
   const image = productMatches[0]?.imageUrl;
   const url = "url(" + image + ")";
 

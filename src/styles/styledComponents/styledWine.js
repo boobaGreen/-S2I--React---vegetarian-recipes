@@ -29,5 +29,4 @@ export const DivWine = styled.div`
   background-size: contain;
   height: 100%;
   min-height: 20rem;
-  border-radius: 20px;
 `;
