@@ -95,7 +95,7 @@ const StyledBlockTimer = styled.div`
   display: flex;
   flex-grow: 1;
   border-radius: 3rem;
-  flex-direction: "column";
+  flex-direction: column;
   max-width: 100%;
   justify-content: space-around;
   align-items: center;

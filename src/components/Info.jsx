@@ -28,6 +28,9 @@ function Info({
   const isLittle = useMediaQuery({
     query: "screen and (max-width: 700px)",
   });
+  const isLittle2 = useMediaQuery({
+    query: "screen and (max-width: 700px)",
+  });
   const styleIf = isLittle ? styledHeaderMini : styledHeader;
   const badge = vegan || glutenFree || dairyFree;
   return (
