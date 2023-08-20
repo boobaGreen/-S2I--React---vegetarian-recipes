@@ -86,6 +86,7 @@ function Info({
           </div>
         </SecondDiv>
       ) : null}
+
       <p style={{ marginTop: "1.8rem" }}>
         <IconTimer
           dim={48}

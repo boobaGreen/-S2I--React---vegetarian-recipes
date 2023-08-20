@@ -35,9 +35,8 @@ const StyledGridContainer = styled.div`
 
 const StyledDivPhoto = styled.div`
   grid-area: photo;
-  width: 25rem;
-  background-repeat: no-repeat;
 
+  background-repeat: no-repeat;
   background-size: cover;
   padding: 0.25rem;
   overflow: hidden;
@@ -53,7 +52,10 @@ const StyledDivPhoto = styled.div`
 `;
 const StyledInfo = styled.div`
   grid-area: info;
-  padding: 0.25rem;
+  padding: 1rem;
+  width: 85%;
+  margin-left: 2rem;
+  margin-right: 2rem;
 `;
 const StyledDivType = styled.div`
   grid-area: type;
