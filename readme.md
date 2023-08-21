@@ -67,7 +67,7 @@ Redux or Context API
 
 ## Clone the repository
 
-`git clone https://github.com/boobaGreen/veg`
+`git clone https://github.com/boobaGreen/-S2I--React---vegetarian-recipes`
 
 ### 1 - Install the dependencies
 
