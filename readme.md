@@ -38,10 +38,6 @@ Axios
 React Hooks
 Redux or Context API
 
-## :computer: Technology decision
-
-![Screenshot](screenshot-1.png)
-
 ## :computer: Languages
 
 - HTML5
@@ -58,6 +54,8 @@ Redux or Context API
 
 - [Vite](https://vitejs.dev/guide/env-and-mode.html)
 - [Netlify](https://www.netlify.com/)
+
+![Screenshot](screenshot-1.png)
 
 ## :globe_with_meridians: External Services
 
