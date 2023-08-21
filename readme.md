@@ -1,4 +1,4 @@
-# VEGETARIAN RECIPES
+# 🌿 VEGETARIAN RECIPES 🍽
 
 SPA that enable you to find vegetarian recipes.
 
