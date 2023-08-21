@@ -87,7 +87,11 @@ function Info({
         </SecondDiv>
       ) : null}
       {/* Second Part of Info ( Timer , Price and Number of servings ) */}
-      <p style={{ marginTop: "1.8rem" }}>
+      <p
+        style={{ marginTop: "1.8rem", cursor: "pointer" }}
+        data-tooltip-id="timer-tooltip"
+        data-tooltip-content="Time for Preaparation & Cooking"
+      >
         <IconTimer
           dim={48}
           style={{ color: "var(--color-green-fix)", margin: "3rem" }}
@@ -96,7 +100,16 @@ function Info({
           {readyInMinutes}min
         </span>
       </p>
-      <p style={{ color: "var(--color-green-fix)", margin: "3rem" }}>
+      <Tooltip id="timer-tooltip" openOnClick={["click"]} />
+      <p
+        data-tooltip-id="price-tooltip"
+        data-tooltip-content="Price per serving"
+        style={{
+          color: "var(--color-green-fix)",
+          margin: "3rem",
+          cursor: "pointer",
+        }}
+      >
         <IconMoney dim={48} />
         <span style={{ marginLeft: "1.5rem", color: "var(--color-green-fix)" }}>
           {pricePerServing < 5
@@ -104,11 +117,15 @@ function Info({
             : `${(pricePerServing / 100).toFixed(2)}$`}
         </span>
       </p>
+      <Tooltip id="price-tooltip" openOnClick={["click"]} />
       <p
+        data-tooltip-id="serving-tooltip"
+        data-tooltip-content="Serving Number"
         style={{
           color: "var(--color-green-fix)",
           marginRight: "3rem",
           marginLeft: "1.5rem",
+          cursor: "pointer",
         }}
       >
         <HiOutlineUserGroup
@@ -122,6 +139,7 @@ function Info({
           {servings}
         </span>
       </p>
+      <Tooltip id="serving-tooltip" openOnClick={["click"]} />
     </PrimaryDiv>
   );
 }

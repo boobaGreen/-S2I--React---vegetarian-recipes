@@ -30,6 +30,7 @@ const StyledSpan = styled.span`
   }
 `;
 const StyledCard = styled.li`
+  overflow: hidden;
   background-image: url("/paper.jpg");
   background-repeat: no-repeat;
   background-size: cover;
