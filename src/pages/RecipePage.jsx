@@ -83,7 +83,7 @@ function RecipePage({ recipe }) {
     ],
   };
   const dataPieCalories = {
-    labels: [`kcal/serving`, `day percent`, ""],
+    labels: [`kcal/serving`, `day percent`, "     "],
     datasets: [
       {
         label: `%`,
