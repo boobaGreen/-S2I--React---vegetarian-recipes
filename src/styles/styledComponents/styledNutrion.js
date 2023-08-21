@@ -18,16 +18,18 @@ export const StyledGraph = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 85%;
-  max-height: 85%;
+  width: 95%;
+  height: 95%;
+  width: 95%;
+  margin: auto;
+  margin-bottom: 2rem;
 
   @media (min-width: 820px) {
     flex-direction: row;
     align-items: center;
-    width: 85%;
-    height: 85%;
+    width: 95%;
+    height: 95%;
     justify-content: center;
-    margin: auto;
   }
 `;
 

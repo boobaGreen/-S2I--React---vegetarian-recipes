@@ -22,19 +22,33 @@ function Nutrition({ dataPieNutrient, dataPieCalories }) {
         🧪 Nutrition
       </Heading>
       <StyledGraph>
-        <div style={{ maxWidth: "100%", maxHeight: "100%" }}>
+        <div
+          style={{
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
           <Pie
             data={dataPieCalories}
             options={{
-              responsive: false,
+              responsive: true,
               maintainAspectRatio: false,
             }}
           />
         </div>
-        <div style={{ maxWidth: "100%", maxHeight: "100%" }}>
+        <div
+          style={{
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
           <Pie
             data={dataPieNutrient}
-            options={{ responsive: false, maintainAspectRatio: false }}
+            options={{ responsive: true, maintainAspectRatio: false }}
           />
         </div>
       </StyledGraph>

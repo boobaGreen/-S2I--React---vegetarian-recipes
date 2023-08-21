@@ -83,13 +83,21 @@ function RecipePage({ recipe }) {
     ],
   };
   const dataPieCalories = {
-    labels: [`kcal/serving`, `day percent`],
+    labels: [`kcal/serving`, `day percent`, ""],
     datasets: [
       {
         label: `%`,
-        data: [percentOfDailyNeedsCal, 100 - percentOfDailyNeedsCal],
-        backgroundColor: ["rgba(255, 99, 132, 0.2)", "rgba(54, 162, 235, 0.2)"],
-        borderColor: ["rgba(255, 99, 132, 1)", "rgba(54, 162, 235, 1)"],
+        data: [percentOfDailyNeedsCal, 100 - percentOfDailyNeedsCal, 0],
+        backgroundColor: [
+          "rgba(255, 99, 132, 0.2)",
+          "rgba(54, 162, 235, 0.2)",
+          " rgba(255,255,255,0)",
+        ],
+        borderColor: [
+          "rgba(255, 99, 132, 1)",
+          "rgba(54, 162, 235, 1)",
+          " rgba(255,255,255,0)",
+        ],
         borderWidth: 2,
       },
     ],
