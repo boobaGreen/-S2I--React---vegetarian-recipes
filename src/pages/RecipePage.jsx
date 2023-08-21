@@ -25,11 +25,14 @@ import {
 } from "../styles/styledComponents/styledRecipePage";
 
 function RecipePage({ recipe }) {
+  // get the ID for react query request from the useParams ( from url )
   const { id: idCustom } = useParams();
+  // get the recipe with custom hook useRecipe ( id is necessary)
   const { isLoading, recipe: data, error } = useRecipe(idCustom);
   if (isLoading) return <Spinner />;
   if (error) return <Error />;
 
+  //setcion for nutrion data
   const percentCarbs = data.nutrition.caloricBreakdown.percentCarbs;
   const percentFat = data.nutrition.caloricBreakdown.percentFat;
   const percentProtein = data.nutrition.caloricBreakdown.percentProtein;
@@ -40,7 +43,7 @@ function RecipePage({ recipe }) {
   if (data.analyzedInstructions[0]) {
     istructionsArray = data.analyzedInstructions[0]?.steps;
   }
-
+  // section for all the pricipal data
   const {
     vegan,
     glutenFree,
@@ -53,9 +56,12 @@ function RecipePage({ recipe }) {
     extendedIngredients,
     winePairing,
   } = data;
+
+  // section for wine data
   const productMatches = winePairing.productMatches;
   const pairingText = winePairing.pairingText;
 
+  //setting the doughnut chart (pie chart object for nutrion)
   const dataPieNutrient = {
     labels: ["Carb", "Prot", "Fat"],
     datasets: [

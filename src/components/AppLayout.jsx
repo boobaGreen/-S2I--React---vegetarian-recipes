@@ -7,6 +7,7 @@ import {
   styledMain as Main,
 } from "../styles/styledComponents/styledAppLayout";
 import { useDarkMode } from "../contexts/DarkModeContext";
+// custom hook for theme
 
 function AppLayout() {
   const { isDarkMode } = useDarkMode();
@@ -20,6 +21,7 @@ function AppLayout() {
         backgroundImage: "url(/wallLight.webp)",
         height: "180vh",
       });
+  // Outlet changing with react router , Header and Sidebar remain fix in the primcipal AppLayout
   return (
     <StyledAppLayout style={styleBackground}>
       <Header />

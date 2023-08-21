@@ -1,3 +1,5 @@
+// all the date for the FILTER SECTION /src/components/FilterSection.jsx
+
 export const optionsArray = [
   { value: 6, label: "6 per page" },
   { value: 12, label: "12 per page" },

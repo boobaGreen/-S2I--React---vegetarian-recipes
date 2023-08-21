@@ -5,6 +5,8 @@ import FavPageNotFound from "./FavPageNotFound";
 
 import { StyledRecipeList } from "../styles/styledComponents/styledFav";
 
+// use local storage object to save the favourite list
+
 function FavouriteListPage() {
   const [favouriteList, setFavouriteList] = useLocalStorageState(
     [],

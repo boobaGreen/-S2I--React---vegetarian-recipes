@@ -30,12 +30,13 @@ function CuriousPage() {
       gap: "1rem",
     };
   }
+  // add to the query the TimeStamp to avoid that react query avoids fetching a new request because it has the same data in the input query
+  
   const currentDate = new Date();
   const timestamp = currentDate.getTime();
 
   const [timeStampKey, setTimeStampKey] = useState(timestamp);
 
-  // const uid = useRef(timestamp);
   const { isLoading, curious, error } = useCurious(timeStampKey);
 
   function handleClick() {

@@ -21,6 +21,7 @@ function Type({ dishTypes }) {
     dishTypeExists = true;
   }
   if (!dishTypeExists) return null;
+  // if there are some value in type array :view them , else dont return NULL
   return (
     <div style={principalDiv}>
       <Heading as="h1" style={styleIf}>

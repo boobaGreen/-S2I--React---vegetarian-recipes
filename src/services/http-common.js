@@ -1,3 +1,5 @@
+// axios setting for all the request in the app
+
 import axios from "axios";
 import { baseURL } from "../const/apiKey";
 

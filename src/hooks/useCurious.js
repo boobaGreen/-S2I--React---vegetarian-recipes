@@ -1,3 +1,5 @@
+// custom hook to manage the query for a new Curiosity
+
 import { useQuery } from "@tanstack/react-query";
 import { getCurious } from "../services/apiCurious";
 

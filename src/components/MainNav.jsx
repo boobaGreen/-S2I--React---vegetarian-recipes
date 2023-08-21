@@ -19,7 +19,7 @@ function MainNav() {
   const styleIf = {
     padding: !isDesktopOrLaptop ? "1.2rem 1.2rem" : "1.2rem 2.4rem",
   };
-
+  // if mobile only icon if desktop icon+text in the sidebar mainnav
   return (
     <nav>
       <NavList>

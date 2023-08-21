@@ -1,3 +1,5 @@
+// page to display when favourite list is empty
+
 import { useMoveBack } from "../hooks/useMoveBack";
 
 import Heading from "../ui/Heading";

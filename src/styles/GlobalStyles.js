@@ -1,9 +1,5 @@
-// #fcf6b9
-//#017f00 vegan logo
-// #184d19
-//#184d19
-//#f3f4f6
-//"#059669" pen on chart
+// global varible settings
+
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`

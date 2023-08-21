@@ -1,3 +1,5 @@
+// page to display when favourite list is empty
+
 import { Link } from "react-router-dom";
 import Button from "../ui/Button";
 import Row from "../ui/Row";

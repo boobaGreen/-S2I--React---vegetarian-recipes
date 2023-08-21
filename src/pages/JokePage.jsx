@@ -16,6 +16,8 @@ import {
 } from "../styles/styledComponents/styledCurious";
 import { useMediaQuery } from "react-responsive";
 
+// add to the query the TimeStamp to avoid that react query avoids fetching a new request because it has the same data in the input query
+
 function JokePage() {
   const isLittle = useMediaQuery({
     query: "screen and (max-width: 600px)",

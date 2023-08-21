@@ -1,3 +1,5 @@
+// constant used in mediaquery settings
+
 const breakpoints = {
   xs: "350px",
   sm: "700px",

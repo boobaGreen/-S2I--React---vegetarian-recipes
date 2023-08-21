@@ -1,3 +1,5 @@
+// api request for have a recipes list from api spoonacular.com
+
 import { apiKey } from "../const/apiKey";
 import apiClient from "./http-common";
 

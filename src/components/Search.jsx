@@ -11,6 +11,7 @@ function Search() {
     query: "(max-width: 1024px)",
   });
   const { dispatch, search } = useQueryCust();
+  // custom hook for handle queurycustum with context api , then the query pass to query react fo send to the server api
 
   const place = isSm
     ? "Search..."

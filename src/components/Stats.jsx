@@ -18,7 +18,7 @@ function Stats() {
     offset,
     maxReadyTime,
   } = useQueryCust();
-
+  // useQueryCust (context api) and useRecipes (react quuery) are two custom hook to manage filter and search bar data
   const {
     isLoading,
     recipes: data,
@@ -32,10 +32,11 @@ function Stats() {
     offset,
     maxReadyTime
   );
-  if (isLoading) return null;
+  if (isLoading) return null; // no return spinner because there are already a spinner in search main div , with the same "time"
   if (error) return null;
   const totResultsLast = data.totalResults;
 
+  // calculate the total page and actual page to display in UI
   let page = Math.trunc(offset / number) + 1;
 
   let pages = 1;
@@ -60,6 +61,8 @@ function Stats() {
     dispatch({ type: "page/prev" });
   }
   // ButtonNoClickStyled is use for mantain space in html page
+
+  // If a button is hidden in UI , i prefer to set on hidden but consider the space for maintain the distance betwwen htm element
   return (
     <div style={principalDiv}>
       {prevPageExist ? (

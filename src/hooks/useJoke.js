@@ -1,3 +1,5 @@
+// custom hook to manage the query for a new Joke
+
 import { useQuery } from "@tanstack/react-query";
 import { getJoke } from "../services/apiJoke";
 

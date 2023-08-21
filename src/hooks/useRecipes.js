@@ -1,3 +1,5 @@
+// custom hook to manage the query for a recipes list with more informations ( id it is it is necessary )
+
 import { useQuery } from "@tanstack/react-query";
 import { getRecipes } from "../services/apiRecipes";
 

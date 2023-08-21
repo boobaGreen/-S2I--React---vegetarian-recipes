@@ -11,7 +11,7 @@ const Img = styled.img`
   height: 12rem;
   width: auto;
 `;
-
+// logo for desktop ( logo mini for mobile )
 function Logo() {
   return (
     <Link to={`/`}>

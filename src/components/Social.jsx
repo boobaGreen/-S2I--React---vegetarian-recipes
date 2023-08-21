@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FaRegEnvelope } from "react-icons/fa";
-
+// section for contacts ( in sidebar)
 const StyledSocial = styled.div`
   margin-top: 3rem;
   background: transparent;

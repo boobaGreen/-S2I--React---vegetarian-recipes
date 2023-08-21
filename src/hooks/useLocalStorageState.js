@@ -1,3 +1,5 @@
+// custom hook to manage the LocalStorage for Favoutites
+
 import { useState, useEffect } from "react";
 
 export function useLocalStorageState(initialState, key) {

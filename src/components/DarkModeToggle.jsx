@@ -8,6 +8,7 @@ import Row from "../ui/Row";
 
 function DarkModeToggle() {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
+  // custom hooks for context api theme mode
 
   return (
     <StyledBtn onClick={toggleDarkMode}>

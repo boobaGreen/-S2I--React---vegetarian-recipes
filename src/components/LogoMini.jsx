@@ -10,7 +10,7 @@ const StyledLogo = styled.div`
 `;
 
 const Img = styled.img``;
-
+// logo for desktop ( logo mini for mobile )
 function LogoMini() {
   return (
     <Link to={`/`}>

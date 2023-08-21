@@ -4,7 +4,7 @@ import {
   styledWinePhoto,
   DivWine,
 } from "../styles/styledComponents/styledWine";
-
+// if there are some wine photo suggestion display the first one ,else retutn NULL
 function WinePhoto({ productMatches }) {
   if (!productMatches) return null;
   const length = productMatches?.length;

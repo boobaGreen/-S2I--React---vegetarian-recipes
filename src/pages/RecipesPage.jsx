@@ -7,7 +7,7 @@ import Spinner from "../ui/Spinner";
 import Error from "./Error";
 
 import { StyledRecipeList } from "../styles/styledComponents/styledRecipeList";
-
+//
 function RecipesPage() {
   const {
     search,
@@ -20,7 +20,8 @@ function RecipesPage() {
     sort,
     direction,
   } = useQueryCust();
-
+  // useQueryCustom is a custom hook ( contec api ) where are located the filter and principal search word variabile
+  // useRecipes is a custom hook to make the react query request for the recipes list to display
   const {
     isLoading,
     recipes: data,
@@ -41,6 +42,8 @@ function RecipesPage() {
     [],
     "favouriteList"
   );
+
+  // local storage custom hook to manage the favouritee list
   function handleAddRecipe(recipe) {
     setFavouriteList((favouriteList) => [...favouriteList, recipe]);
   }
