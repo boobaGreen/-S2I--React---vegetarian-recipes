@@ -34,6 +34,10 @@ Axios
 React Hooks
 Redux or Context API
 
+## :computer: Technology decision
+
+![Screenshot](screenshot-1.png)
+
 ## :computer: Languages
 
 - HTML5
