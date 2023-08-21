@@ -61,7 +61,7 @@ Redux or Context API
 
 - [Spoonacular API](https://spoonacular.com/food-api)
 
-## Clone the repository
+## Deploy
 
 - Deploy on https://www.netlify.com/
 
