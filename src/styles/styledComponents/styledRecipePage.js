@@ -6,7 +6,7 @@ const StyledGridContainer = styled.div`
   margin-bottom: 4rem;
   display: grid;
   grid-template-rows: 20rem auto min-content auto auto auto auto auto;
-  grid-template-columns: 100%;
+  grid-template-columns: 95%;
   grid-template-areas:
     /* "photo info" */
     "photo"
