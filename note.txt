@@ -1,10 +1,9 @@
-commenti da finire 
-mettere o in readme o in presentazione colori e variabili css 
-spiegare la gestione delle api key e di env
-scrivere di spoonacular.com nella presentazione
+ 
+
+
+
 gestione file e cartelle ++ packege jsone nella presentazione o nel readme
 parlare in generale del mio apprendiment rdi react della volonta di voler usare diversi strumenti a seconda del tipo di micro utilizzo nel progetto
-freccia in curios e joke troppo piccola
 
 
 export const baseURL = "https://api.spoonacular.com";
