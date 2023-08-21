@@ -20,7 +20,6 @@ function AppLayout() {
         backgroundImage: "url(/wallLight.webp)",
         height: "180vh",
       });
-
   return (
     <StyledAppLayout style={styleBackground}>
       <Header />

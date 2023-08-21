@@ -1,6 +1,9 @@
-commenti 
-readme
-pulire e riordinare tutto
+commenti da finire 
+mettere o in resdme oo in presntazioni colori e variabili css 
+spiegare la gestione delle api key e di env
+scrivere di spoonacular.com nella presentazione
+gestione file e cartelle ++ packege jsone nella presentazione o nel readme
+
 
 
 export const baseURL = "https://api.spoonacular.com";

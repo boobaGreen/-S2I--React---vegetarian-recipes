@@ -95,13 +95,16 @@ function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
 
   return (
     <StyledCardContainer>
+      {/* Card */}
       <StyledCard>
+        {/* Left section Card*/}
         <StyledImgBlock style={{ backgroundImage: url }}>
+          {/* Photo section Card*/}
           <StyledInfoPics>
+            {/* Heart and More Info section */}
             <StyledSpan onClick={clickHandle} style={{ marginLeft: "0.5rem" }}>
               {alreadyIncludes() ? <span>❤️</span> : <span>🤍</span>}
             </StyledSpan>
-
             <Link to={`/recipes/${id}/${titleToPass}`}>
               {!isLittle ? (
                 <StyledButton>More Info</StyledButton>
@@ -114,6 +117,7 @@ function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
           </StyledInfoPics>
         </StyledImgBlock>
         <StyledInfoBlock style={{ width: "50%" }}>
+          {/* Right section Card*/}
           <StyledBlock
             style={{
               flexDirection: "column",
@@ -121,6 +125,7 @@ function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
             }}
           >
             <StyledBlock style={{ height: "33%" }}>
+              {/* First row of right card section ( badge Vegan - Gluten Free - Dairy Free ) */}
               <StyledBlockInfo2>
                 {glutenFree ? (
                   <StyledDiv
@@ -153,6 +158,7 @@ function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
             </StyledBlock>
 
             <StyledBlock style={{ height: "33%" }}>
+              {/* Second row of right card section ( Title ) */}
               <StyledBlock
                 style={{
                   flexDirection: "column",
@@ -172,6 +178,7 @@ function Card({ recipe, handleAddRecipe, favouriteList, handleDeleteRecipe }) {
                 paddingLeft: "2rem",
               }}
             >
+              {/* Last row of right card section ( Timer and Price ) */}
               <StyledBlockTimer
                 data-tooltip-id="timer-tooltip"
                 data-tooltip-content="Time for Preparation & Cooking"

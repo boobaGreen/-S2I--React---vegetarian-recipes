@@ -7,7 +7,9 @@ function Wine({ pairingText }) {
   return pairingText ? (
     <div style={principalDiv}>
       <Heading style={{ fontSize: "4rem" }}>🍷 Wine</Heading>
-      <div style={{ padding: "3rem", color: "#184d19" }}>{pairingText}</div>
+      <div style={{ padding: "3rem", color: "var(--color-green-fix)" }}>
+        {pairingText}
+      </div>
     </div>
   ) : null;
 }

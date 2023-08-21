@@ -52,14 +52,14 @@ function Stats() {
   if (number - offset <= 0) {
     prevPageExist = true;
   }
-
+  // Custom query useQueryCust()/dispatch mantain the actual pagge update with ReactQuery Context (contexts/QueryContext.jsx)
   function onNextPage() {
     dispatch({ type: "page/next" });
   }
   function onPrevPage() {
     dispatch({ type: "page/prev" });
   }
-
+  // ButtonNoClickStyled is use for mantain space in html page
   return (
     <div style={principalDiv}>
       {prevPageExist ? (

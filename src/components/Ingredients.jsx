@@ -12,18 +12,20 @@ import {
   styledSpan,
 } from "../styles/styledComponents/styledIngredients";
 
+// delete similar ingridients frome the recipe ingredients list
 function Ingredients({ extendedIngredients }) {
   function getUniqueListBy(arr, key) {
     return [...new Map(arr.map((item) => [item[key], item])).values()];
   }
 
   const uniqueIngredients = getUniqueListBy(extendedIngredients, "id");
-
+  // media query section
   const isLittle = useMediaQuery({
     query: "screen and (max-width: 700px)",
   });
   const styleIf = isLittle ? styledHeaderMini : styleHeader;
   const styleIf2 = isLittle ? styledSpanMini : styledSpan;
+
   return (
     <StyledIngredients>
       <Heading as="h1" style={styleIf}>

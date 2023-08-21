@@ -33,11 +33,13 @@ function Info({
   const badge = vegan || glutenFree || dairyFree;
   return (
     <PrimaryDiv>
+      {/* Info Section in recipe detail page */}
       <Heading as="h1" style={styleIf}>
         ℹ️ Info
       </Heading>
       {badge ? (
         <SecondDiv>
+          {/* First row of Info ( badge Vegan - Gluten Free - Dairy Free ) */}
           <p
             style={{ cursor: "pointer" }}
             data-tooltip-id="vegan-tooltip"
@@ -84,7 +86,7 @@ function Info({
           </div>
         </SecondDiv>
       ) : null}
-
+      {/* Second Part of Info ( Timer , Price and Number of servings ) */}
       <p style={{ marginTop: "1.8rem" }}>
         <IconTimer
           dim={48}

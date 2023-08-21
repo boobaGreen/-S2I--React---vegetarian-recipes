@@ -8,6 +8,7 @@ import {
   StyledFilterSectionMain,
 } from "../styles/styledComponents/styledFilterSection";
 
+// Custom query useQueryCust() mantain the filter and search variabile update with ReactQuery Context (contexts/QueryContext.jsx)
 function FilterSection() {
   const { dispatch } = useQueryCust();
   const handleChangeNumber = (selectedOption) => {

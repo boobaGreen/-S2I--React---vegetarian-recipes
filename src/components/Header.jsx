@@ -32,6 +32,9 @@ function Header() {
   const isSm = useMediaQuery({
     query: "(max-width: 700px)",
   });
+
+  /*RETURN HEADER IN DESKTOP MODE"*/
+
   if (!isSm)
     return (
       <StyledHeader>
@@ -45,6 +48,7 @@ function Header() {
             borderRadius: "2rem",
           }}
         >
+          {/*If we are in recipe detail page(if title exists) then display title of recipe in header else display the app title "Vegetraian Recipe"*/}
           {title ? (
             <StyledTitle> {title}</StyledTitle>
           ) : (
@@ -59,6 +63,7 @@ function Header() {
             marginRight: "5rem",
           }}
         >
+          {/*If we are in  search page(home page) display the filter"*/}
           {pageTest === "/recipes" ? (
             !showFilter ? (
               <StyledBtn onClick={handleShowFilter}>
@@ -76,9 +81,11 @@ function Header() {
           )}
           <DarkModeToggle />
         </Row>
+        {/*If we are in  search page(home page) display the option section (search and navigate result)"*/}
         {pageTest === "/recipes" ? <Option showFilter={showFilter} /> : null}
       </StyledHeader>
     );
+  /*RETURN HEADER IN MOBILE MODE"*/
   return (
     <div>
       <Row

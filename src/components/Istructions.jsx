@@ -46,9 +46,11 @@ function Istructions({ istructionsArray }) {
             style={{
               disable: "true",
             }}
+            /*disable button is for mantain space in html dom*/
           >
-            {!isLittle ? <span>Step {index}</span> : null} &lt;
+            {!isLittle ? <span>Step {index}</span> : null} &lt; /
           </DisableButton>
+          /*disable button is for mantain space in html dom*/
         )}
         <span>
           <span style={{ fontSize: "6rem" }}>🍳</span>
@@ -60,6 +62,7 @@ function Istructions({ istructionsArray }) {
             {!isLittle ? <span> {index + 2} Step</span> : null}
           </ButtonStyled>
         ) : (
+          /*disable button is for mantain space in html dom*/
           <DisableButton>Step s s</DisableButton>
         )}
       </SecondDiv>
