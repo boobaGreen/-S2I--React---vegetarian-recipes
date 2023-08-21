@@ -7,7 +7,7 @@ SPA that enable you to find vegetarian recipes.
 You can simply try it here:
 [vegetarian recipes](https://starlit-haupia-04c521.netlify.app/)
 
-## Presentation Canvas (italian)
+## Canvas presentation (italian)
 
 https://www.canva.com/design/DAFsHq6Sawo/m_16Y22JtmoY4NnWxPfjjg/edit?utm_content=DAFsHq6Sawo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
